@@ -1,0 +1,48 @@
+= 2.1  |  Executive Management
+
+If an event occurs that disrupts normal computer operations, the executive management team will inspect and assess the aftermath of the event.  If the event dictates an extended outage in operations, the executive management team will declare a state of disaster initiating the IT Disaster Recovery Plan.
+
+This team is composed of Wells' executive management that is responsible for the coordination of the entire Business Continuity Plan for Wells' Enterprises.
+
+*The following is the executive organizational chart is as it pertains to the Information Technology department.*
+
+====
+*Executive Management*
+[cols="4*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+|Office#
+
+|Mike Wells
+|CEO & President
+|712-540-1178
+|712-548-2292
+
+|Liam Killeen
+|EVP & COO
+|312-804-0009
+|712-500-5807
+
+|Jeremy Pinkerman
+|EVP & CFO
+|712-541-1812
+|712-548-5503
+
+|Erick Opsahl
+|SVP & GC
+|712-541-4670
+|712-548-5635
+
+|Ryan Schaap
+|VP IT & CIO
+|712-202-4453
+|712-500-5848
+
+|Mary Davis
+|Executive Admin Assistant
+|712-346-8210
+|712-346-8210
+|===
+====

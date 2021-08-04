@@ -1,0 +1,54 @@
+= N04 | Network Available | 10 MIN
+
+- *From Drn9ka*
+
+----
+DRn9k# ping 172.23.10.1 (server Farm)
+
+
+PING 172.23.10.1 (172.23.10.1): 56 data bytes
+
+
+--- 172.23.10.1 ping statistics ---
+
+
+5 packets transmitted, 5 packets received, 0.00% packet loss
+----
+
+
+
+----
+DRn9k# ping 172.25.100.1 (SICP User Vlan)
+
+
+PING 172.25.100.1 (172.25.100.1): 56 data bytes
+
+
+--- 172.25.100.1 ping statistics ---
+
+
+5 packets transmitted, 5 packets received, 0.00% packet loss
+----
+
+
+
+----
+DRn9k# ping 172.21.100.1 (NICP user vlan)
+
+
+PING 172.21.100.1 (172.21.100.1): 56 data bytes
+
+
+--- 172.21.100.1 ping statistics ---
+
+
+5 packets transmitted, 5 packets received, 0.00% packet loss
+
+
+DRn9k#
+----
+
+
+
+
+- *If above is successful no further action required.*

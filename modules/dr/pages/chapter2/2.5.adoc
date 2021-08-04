@@ -1,0 +1,161 @@
+= 2.5  |  Information Technology Team
+
+- Group of IT specialists that may be activated by the Crisis Management Team to restore the technology infrastructure, computer systems, and data
+
+* Use the Disaster Recovery outline as a roadmap to efficiently and accurately prepare the Tier 0 and Tier 1 tasks to assume the role as Wells Enterprises, Inc.'s production environment
+
+* Record all changes and enhancements to the existing Disaster Recovery Plan
+
+* Configure data replication and data saving to the existing storage devices
+
+* When Tier 0 & 1 are operational, start the Tier 2 machines, databases, applications, and applicable appliances.
+
+* Tier 3 is the last set of servers to start when all other prior tiers are functional.
+
+== Information Technology Director
+
+- The IT Technology Director will focus on the critical functions from the impact of the disaster.  The IT Technology Director needs to have a solid understanding of both the Information Technology and Support teams.
+
+* Follows Disaster Recovery manual Chapter 4 to track the progress of the recovery
+
+* Provide timely updates to the Crisis Management Leader on the progress of the IT Team
+
+* Is familiar with the entire IT structure; environment, processes, and an operational understanding
+
+* Run interference on unforeseen alternate site issues and anything else that comes up
+
+* Coordinate schedules, accommodations, and food during the alternate data center start-up
+
+* Directs and tracks the steps when moving from the alternate data center to the corporate data center
+
+====
+*Information Technology Team*
+[cols="4*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+|Home#
+
+|Mike Kooistra
+|Director of Technology
+|712-540-1142
+|
+
+|Mike Murad
+|Security Engineer
+|712-541-9788
+|
+
+|Ron Zellers
+|SR MGR of Enterprise Computing
+|712-540-4369
+|
+
+|Dan Waldschmitt
+|SR Database Administrator
+|712-540-5583
+|712-548-4678
+
+|Stacy Dempster
+|Database Analyst
+|712-539-1427
+|712-938-2512
+
+|Scott Linden
+|SR System Engineer
+|712-540-5674
+|
+
+|Doug Tinklenberg
+|System Engineer
+|712-441-5228
+|
+
+|Nick Cook
+|System Engineer
+|712-635-0614
+|
+
+|Jason Verros
+|System Engineer
+|712-898-0932
+|712-943-3631
+
+|Jeff Crawford
+|SR MGR IT Security & Apps Admin
+|712-540-4756
+|712-546-7196
+
+|Blake Mullins
+|SR System Administrator
+|712-203-1042
+|402-404-2878
+
+|Brian Held
+|System Administrator
+|712-251-7125
+|
+
+|Dustin Riedemann
+|Associate System Administrator
+|712-540-1732
+|
+
+|Aileen Meyer
+|Service Desk MGR
+|712-389-2661
+|712-943-5693
+
+|Teresa Held
+|Lead Service Desk Technician
+|712-540-5676
+|
+
+|Sandra Eickholt
+|SR Service Desk Technician
+|712-291-9738
+|
+
+|Jeff Wolthuizen
+|MGR of Technology
+|712-539-2285
+|
+
+|Mark Vos
+|SR Network Engineer
+|712-540-1189
+|
+
+|John Johnson
+|Network Engineer
+|712-540-1589
+|
+
+|Leo Brennen
+|SR Network Administrator
+|712-539-2939
+|712-546-1697
+
+|Randy Schiltz
+|Network Engineer
+|712-540-5682
+|712-786-3285
+
+|Greg Haverdink
+|SR Audio Visual Engineer
+|712-737-4712
+|
+
+|Todd Nilson
+|Security Analyst
+|712-301-1370
+|
+
+|Jeff Priestley
+|Associate System Engineer
+|712-253-2580
+|
+|===
+====
+

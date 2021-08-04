@@ -1,0 +1,22 @@
+= 1.0 |   Disaster Recovery Plan Guide
+
+*The IT Disaster Recovery Plan (DRP) is based on the following facts:*
+
+- That a contract is in place with the alternate data center provider which adequately covers the infrastructure and services defined in the contract.
+
+- That the IT DRP addresses the recovery of the IT capability of the business.  It does not provide for the recovery of other departments or areas of the business possibly affected by the same event.
+
+- That the level of the plan detail is based on the premise that sufficient and knowledgeable IT staff will execute the recovery actions.
+
+- That the IT DRP is designed to recover from a worst-case event; that computer operations from the corporate data center has been suspended, interrupted, or destroyed.
+
+- That the worst-case scenario extends from 8 hours to an undetermined time such as days, weeks, or months.
+
+- That the mission critical applications and data are replicated continually to the alternate data center.
+
+- That if a cyber-attack occurred and data was corrupted at the corporate data center, that data is replicated to the alternate data center.  If a cyber-attack corrupted data in both the corporate and alternate data center, VTL (virtual tape library) data would be used to restore systems and data.  RTO (Recovery Time Objective) and RPO (Recovery Point Objective) will be adversely affected.
+
+- That similar and like equipment are already in place at the alternate data center allowing for the immediate recovery once a disaster has been declared.
+
+- While operating at the alternate data center, the quality of service provided to users and computer equipment will be degradated due to limited available resources.
+

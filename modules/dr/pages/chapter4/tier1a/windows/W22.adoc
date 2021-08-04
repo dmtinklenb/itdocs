@@ -1,0 +1,13 @@
+= W22 | IGNITION SYSTEM (PWV001IGN, PWV002IGN, PWV003IGN) PWV004IGN) | 15 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier1a/linux/L15.adoc[L15], xref:chapter4/tier1a/linux/L16.adoc[L16] must be completed before this step.
+===================
+
+- pwv001ign (172.23.110.116),
+- pwv002ign (172.23.110.117)
+- pwv003ign (17.23.110.9)
+- pwv004ign (172.23.110.10)
+
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

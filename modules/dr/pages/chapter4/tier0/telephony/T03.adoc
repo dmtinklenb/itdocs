@@ -1,0 +1,8 @@
+= T03 | Audio Codes | 05 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/network/N04.adoc[N04] must be completed before this step.
+===================
+
+== Audio Codes Paging Gateway Hot (redundant gateway, always online/HOT, no steps necessary
+- Verify gateway is working via http://172.27.99.9

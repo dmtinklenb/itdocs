@@ -1,0 +1,58 @@
+=  W37 | Lawson (PWV001HRPR) | 05 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier1c/linux/L28.adoc[L28] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+This server is still utilized in payroll preparations/processing
+
+- PWV001HRPR                    COLD     (172.23.110.130)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*
+
+.Startup Notes
+[NOTE]
+===============================
+. Once PLV014HRDB is up and the HRPRD database is available, PWV001HRPR can be started.
++
+----
+ssh@root plv014hrdb
+vi /etc/fstab
+----
++
+. Remove the # symbol in from of the WEI-HRPR and work cifs lines
+. Save your changes:
++
+----
+:wq
+----
++
+. Once the file is saved enter this command:     mount      Mount each CIFS file individually with the 'mount' command.
+. Verify that the file systems are mounted by entering:
++
+----
+df -h
+----
++
+. If they are mounted you will see.   //pwv001hrpr/WEI-HRPR   and   //pwv001hrpr/photos     at the bottom of the  df -h listing
+. When this is complete:
++
+----
+vi /etc/fstab
+----
++
+. Put the # symbol in front the of the WEI-HRPR and work cifs lines in the /etc/fstab file.
+ .. Use the letter 'i' to insert the # sign.  Be careful.  Use the lettter 'j' to navigate down.
+ .. At the WEI-HRPR line hit the letter 'i' to insert.
+ .. Hit 'shift-3' to put a # sign as the beginning character on that line
+ .. Hit the Esc button
+ .. To save your changes:
++
+----
+:wq
+----
++
+===============================
+

@@ -1,0 +1,68 @@
+= 2.2 | Damage Assessment and Recovery Team
+
+If an event occurs in the corporate data center, the Damage Assessment and Recovery Team will work in conjunction with the Executive Management team when assessing and determining the results of an event at the corporate location.
+
+== Damage Assessment
+
+After an event, inspecting and detailing the extent of the damage is a mission critical task.  In a total data center outage, all content of the data center must be replaced.  The difficult job is considering partial damage to the data center and what components are operational and which must be replaced.  This will be an extensive effort.  It's imperative that each member of the Damage Assessment Team inspect, test what they are responsible for, and create comprehensive documentation detailing the status of their equipment.
+
+There are too many 'what if' scenarios to list that can cause damage to a data center.  The key is knowing what is functional and what has to be replaced.  A report (damage assessment summary) that describes the status of the data center and equipment will be escalated upward to the Crisis Management group and ultimately the Executive Management group.
+
+== Damage Assessment Team
+
+This team consists of the personnel essential to evaluate the damages incurred at the corporate headquarters.  The safety and well-being of employees and visitors is the
+main focal point of the disaster recovery plan.  The structural integrity of the building and the facilities are the main focus in providing a safe workplace.  If entry into the
+building has been prohibited, Wells' damage assessment team must wait until the 'all clear' has been declared by local, state, or federal authority before entering the building.
+
+IT Damage Assessment members will determine the extent of the damage to the data center including structural, electrical, and HVAC systems.  Computer equipment,
+telephony, and networking equipment will also be inspected.
+
+When the inspections are completed, the Damage Assessment Team will meet and create a Damage Assessment Summary written report defining the extent of the damage.  If the corporate headquarters is deemed unsafe and damaged beyond repair, this team will make a recommendation to the Executive Management Committee to declare an IT disaster and initiate the IT Disaster Recovery Plan.
+
+== Recovery Team
+
+The Recovery Team has the same members as the Damage Assessment Team.  The Disaster Recovery Plan can be declared for various outages such as total destruction of the data center to a toxic event causing evacuation of the area while the data center is intact.
+
+The justification is that those inspecting the building and data center after an event will be those responsible for preparing the return to the corporate data center if the Disaster Recovery Plan is activated.  They have the expertise to obtain the specific services and equipment needed to return to the corporate data center.
+
+The damage assessment summary will be instrumental in preparing the corporate data center to operate the business computers again.
+
+The Senior Manager of Office Services and Facilities will act as the liaison addressing needs between the IT group and other business units.
+
+====
+*Damage Assessment and Recovery Team*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+
+|Deb McCannon
+|SR MGR Office Services & Facilities
+|712-540-1162
+
+|Ryan Schaap
+|VP IT & CIO
+|712-202-4453
+
+|Mike Kooistra
+|Director of Technology
+|712-540-1142
+
+|Ron Zellers
+|SR MGR of Enterprise Computing
+|712-540-4369
+
+|Jeff Wolthuizen
+|MGR of Technology
+|712-539-2285
+
+|Mark Vos
+|SR Network Engineer
+|712-540-1189
+
+|Penny Wichers
+|Security
+|712-541-8381
+|===
+====

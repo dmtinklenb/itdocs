@@ -1,0 +1,67 @@
+= 1.5 | Business Continuity
+
+*A business continuity program should not only address recovery - it should also address prevention.*
+
+*Wells Enterprises, Inc. has enterprise level environments in place that will prevent events that can potentially cause outages and prevent data from being lost.*
+
+- Continual data replication to DR site
+
+ * Mission critical data replicated to the DR site is as current as possible when an event happens that breaks the link between the corporate data center and the DR data center
+
+ * Wells will be able to restore mission critical data almost to the point-in-time that the link failed
+
+- Veeam backups
+
+ * Mission critical data is replicated to the DR site based upon Service Level Agreement (SLA)
+
+ * Veeam backups are used if the replicated data at the DR site cannot be used
+
+- Pure snapshots
+
+ * Create these snapshots before altering the VM configuration, data, etc. to preserve the image if the need to revert back should occur
+
+ * Eliminates the backup window, decreases the amount of downtime associated with backup to zero
+
+ * Recover applications in seconds
+
+ * Keep the business online during migration, backup and other data center activitities
+
+- Virtual machine snapshots
+
+ * Snapshots can be created when the VM is active or powered off
+
+ * The data includes all of the files that comprise the virtual machine (disks, memory, network interface cards, etc.)
+
+ * Snapshots can revert a VM back to the point-in-time when a snapshot was created, saving the machine's configuration if an upgrade or enhancement corrupted the machine
+
+- High availability clusters
+
+ * Are a group of computers that support server applications that can be utilized with minimal down-time
+
+ * Use high-availability software which provides redundancies in clusters that provide continued service when system components fail
+
+ * Build redundancy into a cluster eliminating single points of failure, including multiple network connections and data storage connected via storage area networks
+
+- Enterprise class Cisco UCS* and Dell* hardware provides
+
+ * High-availability
+
+ * Redundancy
+
+ * Clustering
+
+ * Ability to create snapshots
+
+- SAN environment
+
+ * Redundant, high-performance network allowing each virtual machine to access share storage
+
+ * Virtual SANs are scalable and provide ease of management
+
+- Patching
+
+ * Red Hat VM updates, Oracle patching, and Windows updates are key to keeping the hardware / software up-to-date
+
+ * Helps with security measures that potentially eliminate or greatly reduce the effects of cyber-attacks
+
+ * Keeping the hardware / software at the latest versions helps in problem determination when calling support services

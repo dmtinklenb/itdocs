@@ -1,0 +1,328 @@
+= 2.B | IT Calling Tree
+
+*The IT group will use a hierarchy calling tree to contact IT team members.*
+
+*During a declared disaster, the CIO, directors, and managers are responsible for contacting their direct reports.*
+
+*The following charts show the calling tree responsibilities.*
+
+====
+*Ryan Schaap - VP IT & CIO*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Mike Kooistra
+|Technology Director
+|712-540-1142
+
+|Jasen Heaton
+|Applications Director
+|712-301-8995
+
+|Scott Grosenheider
+|Applications Director
+|712-540-5412
+
+|Kevin Wadle
+|SR IT Application Manager
+|712-305-1632
+|===
+*Mike Kooistra - Technology Director*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Jeff Crawford
+|SR MGR IT Security & Apps Admin
+|712-540-4756
+
+|Ron Zellers
+|SR MGR Enterprise Computing
+|712-540-4369
+
+|Jeff Wolthuizen
+|Technology Manager
+|712-539-2285
+
+|Aileen Meyer
+|Service Desk Manager
+|712-389-2661
+|===
+*Jeff Crawford - SR MGR IT Security & App Admin*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Todd Nilson
+|IT Security Analyst
+|712-301-1370
+
+|Mike Murad
+|IT Security Engineer
+|712-541-9788
+
+|Blake Mullins
+|SR Systems Administrator
+|712-203-1042
+
+|Brian Held
+|Systems Administrator
+|712-251-7125
+
+|Dustin Riedemann
+|Associate Systems Administrator
+|712-540-1732
+|===
+*Ron Zellers - SR MGR Enterprise Computing*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Dan Waldschmitt
+|SR Database Analyst
+|712-548-4678
+
+|Stacy Dempster
+|Database Analyst
+|712-539-1427
+
+|Scott Linden
+|SR Systems Engineer
+|712-540-5674
+
+|Doug Tinklenberg
+|Systems Engineer
+|712-540-0934
+
+|Nick Cook
+|Systems Engineer
+|712-635-0614
+
+|Jason Verros
+|Systems Engineer
+|712-898-0932
+|===
+*Jeff Wolthuizen - Technology Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Mark Vos
+|SR Network Engineer
+|712-540-1189
+
+|John Johnson
+|Network Engineer
+|712-540-1589
+
+|Leo Brennan
+|SR Network Engineer
+|712-539-2939
+
+|Randy Schiltz
+|Network Engineer
+|712-540-5682
+
+|Greg Haverdink
+|SR Audio Video Engineer
+|712-737-4712
+|===
+*Jasen Heaton - Applications Director*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Holli Pogeler
+|SR Software Architect
+|712-301-8818
+
+|Diane Riediger
+|Finance Manager
+|712-944-5366
+
+|Kerri Riedemann
+|HR Manager
+|712-540-2310
+
+|Sandy Pauley
+|IT Data Services Manager
+|712-546-1640
+|===
+*Scott Grosenheider - Applications*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Buffy Schrauner
+|Software Architect
+|712-277-0562
+
+|Kevin Mayer
+|Master Data Manager
+|712-548-4010
+
+|Ron De Kok
+|S&OP/Sales Manager
+|712-546-4532
+
+|Kyle Herzog
+|Marketing Manager
+|712-546-6116
+|===
+*Kyle Herzog - Marketing Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Steve Schmidt
+|Systems Analyst
+|712-540-4573
+
+|Mike Huseman
+|Programmer
+|712-749-0170
+
+|Curt Van Wyk
+|Systems Analyst
+|605-759-1569
+|===
+*Diane Riediger - Finance Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Erica Doyle
+|Systems Analyst
+|712-539-8344
+|===
+*Kerri Riedemann - HR Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Amber Faust
+|Systems Analyst
+|712-539-1037
+|===
+*Sandy Pauley - IT Data Services Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|John Barbagallo
+|SR Systems Analyst
+|712-202-1362
+
+|Xianmin XU
+|Computer Programmer
+|605-670-8716
+
+|Adilyn Regennitter
+|Computer Programmer
+|503-949-5824
+
+|David Vander Leest
+|Software Architect
+|712-943-3051
+
+|Scott Taylor
+|SR Systems Analyst
+|712-546-4000 x7138
+|===
+*Kevin Wadle - SR Manager IT Applications*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Peter Verschoor
+|Software Architect
+|712-277-0562
+
+|Dave Sherrill
+|Logistics Manager
+|712-898-4033
+|===
+*Dave Sherrill - Logisitics/CS Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Craig Brightwell
+|Systems Analyst
+|515-556-4810
+
+|Janel Hansen
+|Systems Analyst
+|605-660-3161
+
+|Aaron Culler
+|Systems Analyst
+|712-541-9024
+|===
+*Kevin Mayer - Master Data Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Jim Pierce
+|Programmer Analyst
+|712-221-9514
+
+|Chad Winter
+|SR Systems Analyst
+|515-778-0446
+|===
+*Ron DeKok - S&OP / Sales Manager*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Contact Number
+
+|Craig Feldman
+|Business Analyst
+|712-540-4742
+
+|Jason Brandt
+|Systems Analyst
+|712-541-9445
+
+|Barb Koskovich
+|Systems Analyst
+|712-253-4128
+
+|Miquel Rodriquez
+|Computer Programmer
+|712-291-5822
+|===
+====
+

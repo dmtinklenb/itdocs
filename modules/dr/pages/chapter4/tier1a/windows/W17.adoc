@@ -1,0 +1,17 @@
+= W17 | Process Controls Engine Room (PWV045ER*) | 30 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- PWV045ERDA1 (172.22.120.12)
+- PWV045ERDA2 (172.22.120.13)
+- PWV045ERENG (172.22.120.10)
+- PWV045ERFTD (172.22.120.11)
+- PWV045ERHMI1 (172.22.120.14)
+- PWV045ERHMI2 (172.22.120.15)
+- PWV045ERRD1 (172.22.120.16)
+- PWV045ERRD2 (172.22.120.17)
+
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

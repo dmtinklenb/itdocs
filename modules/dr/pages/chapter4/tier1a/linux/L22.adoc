@@ -1,0 +1,12 @@
+= L22 | WEBPRD DB (plv003webdb) | 15 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+==  plv003webdb (172.26.1.17) | COLD
+
+*WEBPRD (Database) (WEBPRD Datastore, DMZ Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.
+- Database should autostart

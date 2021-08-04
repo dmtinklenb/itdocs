@@ -1,0 +1,267 @@
+= S03 | Starting NetApp Storage | 30 MIN
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+
+===================
+IMPORTANT: xref:chapter4/tier0/linux/L01.adoc[L01] must be completed before this step.
+===================
+
+====
+*lem-netapp-deploy-prod*
+
+- Description: NetApp Deploy Appliance
+- IP Address: 172.23.6.219
+- VLAN: 6 - Network adapter 1
+- ESXi Cluster: Apps
+- Datastore: 71-Netapp-Prod-Deploy
+====
+====
+*lem-netapp-prod*
+
+- Description: NetApp Cluster Interface
+- IP Address: 172.23.6.220
+====
+====
+*lem-netapp-prod-01*
+
+- Description: NetApp Cluster Node 1
+- IP Address: 172.23.6.221
+- VLAN: 6 - Network adapter 1
+- VLAN: 6 - Network adapter 2
+- VLAN: NetApp-Non-Routed - Network adapter 3
+- VLAN: NetApp-Non-Routed - Network adapter 4
+- VLAN: NetApp-Non-Routed - Network adapter 5
+- VLAN: NetApp-Non-Routed - Network adapter 6
+- VLAN: 6 - Network adapter 7
+- ESXi Cluster: Apps
+- Datastore: 71-Netapp-Prod-01
+====
+====
+*lem-netapp-prod-02*
+
+- Description: NetApp Cluster Node 2
+- IP Address: 172.23.6.222
+- VLAN: 6 - Network adapter 1
+- VLAN: 6 - Network adapter 2
+- VLAN: NetApp-Non-Routed - Network adapter 3
+- VLAN: NetApp-Non-Routed - Network adapter 4
+- VLAN: NetApp-Non-Routed - Network adapter 5
+- VLAN: NetApp-Non-Routed - Network adapter 6
+- VLAN: 6 - Network adapter 7
+- ESXi Cluster: Apps
+- Datastore: 71-Netapp-Prod-02
+====
+
+== Boot VM's
+
+. Open a browser and go to https://dav010vctr.bluebunny.com/ui or https://172.27.97.12/ui and login as the administrator@vsphere.local user.
+
++
+image::S03-01.jpg[]
++
+
+. Click on the "VMs and Templates" view icon.
+
++
+image::S03-02.jpg[]
++
+
+. Navigate the tree in the left pane to the LEM-Netapp-Deploy-Prod VM.
+
++
+image::S03-03.jpg[]
++
+
+. Click on the "Actions" menu and select "Edit Settings...".
+
++
+image::S03-04.jpg[]
++
+
+. Verify that the Network adapter(s) has the VLAN set and it is correct. Then verify the Connect checkbox is checked and click the OK button.
+
++
+image::S03-05.jpg[]
++
+
+. To boot the VM click on the "Actions" menu select "Power" then select "Power On".
+
++
+image::S03-06.jpg[]
++
+
+. Navigate the tree in the left pane to the lem-netapp-prod-01 VM
+
++
+image::S03-07.jpg[]
++
+
+. Click on the "Actions" menu and select "Edit Settings...".
+
++
+image::S03-08.jpg[]
++
+
+. Verify that the Network adapter(s) has the VLAN set and it is correct. Then verify the Connect checkbox is checked and click the OK button.
+
++
+image::S03-09.jpg[]
++
+
+. To boot the VM click on the "Actions" menu select "Power" then select "Power On".
+
++
+image::S03-10.jpg[]
++
+
+. Navigate the tree in the left pane to the lem-netapp-prod-02 VM.
+
++
+image::S03-11.jpg[]
++
+
+. Click on the "Actions" menu and select "Edit Settings...".
+
++
+image::S03-12.jpg[]
++
+
+. Verify that the Network adapter(s) has the VLAN set and it is correct. Then verify the Connect checkbox is checked and click the OK button.
+
++
+image::S03-13.jpg[]
++
+
+. To boot the VM click on the "Actions" menu select "Power" then select "Power On".
+
++
+image::S03-14.jpg[]
++
+
+
+== Replicated, Copied or Moved VMs
+
+. If the VM was replicated, copied or moved after you power on the VM the message shown below.
+
++
+image::S03-15.jpg[]
++
+
+. In the "Answer Question" window you have a choice to:
+- Cancel: Will stop the VM from booting.
+- I Moved It: Will start the VM as is.
+- I Copied It: Will change the MAC address and start the VM.
+
+Make your selection and click the OK button.
+
+*NOTE: When at DR you want to use the "I Moved It" option.*
+
+image::S03-16.jpg[]
+
+== Console Access
+
+. To monitor the VM as it is booting you can access the console by clicking on the console icon at the top or clicking on the console links.
+
++
+image::S03-17.jpg[]
++
+
+. Select "Web Console" and click the "Launch" button in the "Launch Console" window.
+
++
+image::S03-18.jpg[]
++
+
+. A console screen should pop up in another browser tab or window.
+
++
+image::S03-19.jpg[]
++
+
+
+== Fixing the LDAP and DNS Servers
+
+.Note
+[NOTE]
+The servers we use for DNS resolution at the corporate office are different than the servers we use at DR so we need to point the SVMs to the DR DNS servers.
+
+. Open a browser and go to https://lem-netapp-prod.bluebunny.com or https://172.23.6.220 and login as the admin user.
+
++
+image::S03-20.jpg[]
++
+
+. Click on the "Storage" side tab
+
++
+image::S03-21.jpg[]
++
+
+. Click on the "SVM" side subtab
+
++
+image::S03-22.jpg[]
++
+
+. Click on the "fileprod" SVM.
+
++
+image::S03-23.jpg[]
++
+
+. Click on the "SVM Settings" link.
+
++
+image::S03-24.jpg[]
++
+
+. Click on "LDAP Client"
+
++
+image::S03-25.jpg[]
++
+
+. Click on "Edit"
+
++
+image::S03-26.jpg[]
++
+
+. In "Preferred Active Directory Servers" select the 172.27.98.101 IP Address. Click the "Up" button until 172.27.98.101 is at the top of the list. Then click the "Save and Close" button.
+
++
+image::S03-27.jpg[]
++
+
+. Click on "DNS/DDNS"
+
++
+image::S03-28.jpg[]
++
+
+. Click on "Edit"
+
++
+image::S03-29.jpg[]
++
+
+. In "Name Servers" select the 172.27.98.101 IP Address. Click the "Up" button until 172.27.98.101 is at the top of the list. Then click the "OK" button.
+
++
+image::S03-30.jpg[]
++
+
+. Select "nasprd" from the "SVM" drop down and repeat steps 6 - 11.
+
++
+image::S03-31.jpg[]
++
+
+
+
+
+
+
+
+

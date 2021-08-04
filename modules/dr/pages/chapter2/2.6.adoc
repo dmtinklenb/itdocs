@@ -1,0 +1,200 @@
+= 2.6    |  Support Team
+
+- A group that may be activated by the Crisis Management Team to help manage the various activities necessitated by the incident or disaster.
+
+* After Tier 0 and Tier 1 tasks have been completed, the various support teams thoroughly test the applications.
+
+* When the Support Teams validates that the applications are functioning correctly, they release it back to the Critical Management Team
+
+====
+*Applications Team - Jasen Heaton*
+[cols="4*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+|Home#
+
+|Holli Pogeler
+|SR Software Architect
+|712-229-8818
+|
+
+|Diane Riediger
+|Finance Manager
+|712-944-5366
+|
+
+|Erica Doyle
+|System Analyst
+|712-539-8344
+|
+
+|Kerri Riedemann
+|HR Manager
+|712-540-2310
+|
+
+|Amber Faust
+|System Analyst
+|712-539-1037
+|
+
+|Sandy Pauley
+|IT Data Services Manager
+|712-546-1640
+|
+
+|John Barbagallo
+|SR System Analyst
+|712-898-5064
+|712-266-3189
+
+|Xianmin XU
+|Computer Programmer
+|605-670-8716
+|
+
+|Adilyn Regenritter
+|Programmer Analyst
+|503-949-5824
+|
+
+|David Vander Leest
+|Software Architect
+|712-943-3051
+|
+
+|Scott Taylor
+|SR System Analyst
+|712-254-4000 x7038
+|
+
+|Jasen Heaton
+|Applications Director
+|712-301-8995
+|
+|===
+*Applications Team - Scott Grosenheider*
+[cols="4*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+|Home#
+
+|Scott Grosenheider
+|Applications Director
+|712-540-5412
+|
+
+|Buffy Shrauner
+|Software Architect
+|712-277-0562
+|
+
+|Kevin Mayer
+|Master Data Manager
+|712-540-2240
+|712-548-4010
+
+|Jim Pierce
+|Programmer Analyst
+|712-540-2240
+|712-221-9514
+
+|Chad Winter
+|Senior Systems Analyst
+|515-778-0446
+|
+
+|Ron De Kok
+|S&OP Sales Manager
+|712-540-7043
+|712-546-4532
+
+|Craig Feldman
+|Business Analyst
+|712-540-4742
+|
+
+|Jason Brandt
+|Senior Systems Analyst
+|712-541-9445
+|
+
+|Barbara Koskovich
+|System Analyst
+|712-253-4128
+|402-494-3421
+
+|Miquel Rodriquez
+|Computer Programmer
+|712-291-5822
+|
+
+|Kyle Herzog
+|Marketing Manager
+|712-546-6116
+|712-541-2295
+
+|Steve Schmidt
+|System Analyst
+|712-540-4573
+|
+
+|Mike Huseman
+|Computer Programmer
+|712-749-0170
+|
+
+|Curt Van Wyk
+|System Analyst
+|605-759-1569
+|
+|===
+*Applications Team - Kevin Wadle*
+[cols="4*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+|Home#
+
+|Kevin Wadle
+|Senior IT Applications Manager
+|712-305-1632
+|712-546-8331
+
+|Peter Verschoor
+|Senior Software Architect
+|712-540-8455
+|
+
+|Michael Coats
+|Programmer Analyst
+|712-661-9844
+|
+
+|Dave Sherrill
+|Logistics/CS Manager
+|712-898-4033
+|
+
+|Craig Brightwell
+|Business Analyst
+|515-556-4810
+|
+
+|Janel Hansen
+|Systems Analyst
+|605-660-3161
+|
+
+|Aaron Culler
+|Systems Analyst
+|712-541-9024
+|
+|===
+====
+

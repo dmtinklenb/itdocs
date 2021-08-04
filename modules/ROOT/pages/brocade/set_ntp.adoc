@@ -1,0 +1,22 @@
+= NTP - Brocade - Setting Time Server on Brocade Fibre Channel Switch
+
+== Login to the Brocade fibre channel switch as the root user.
+----
+ssh root@brocadeswitch
+----
+
+== View the current time server.
+----
+> tsclockserver
+Active NTP Server      172.23.5.242
+Configured NTP Server List  172.23.5.242
+----
+
+== Change the time server
+----
+> tsclockserver 172.23.10.113
+
+or
+
+> tsclockserver pwv001dc1.bluebunny.com
+----

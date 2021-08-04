@@ -1,0 +1,13 @@
+= W12 | RING CENTRAL FOR BUSINESS (DWV088SFB1, DWV088SFB2, DWV088SFB3, DWV051SFBE1, DWV051SFBE2) | 20 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- dwv088sfb1 (172.27.98.111)
+- dwv088sfb2 (172.27.98.112)
+- dwv088sfb3 (172.27.98.113)
+- dwv051sfbe1 (172.27.98.92)
+- dwv051sfbe2 (172.27.98.93)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

@@ -1,0 +1,434 @@
+= Veeam Backup Overview
+
+*Wells Enterprises uses link:https://www.veeam.com/vm-backup-recovery-replication-software.html?ad=menu-products[Veeam Backup & Replication] software to backup all data in the following production environments:*
+
+* Hyper-V
+* VMWare
+* NetApp
+* Oracle
+
+*The entire Veeam backup infrastucture is managed by the Veeam B&R Console on pwv011vmmgr.*
+
+*The rest of the infrastructure consists of physical and virtual machines that function as hosts for storage repositories, NFS mounts or proxies (data movers) as listed in the tables below.*
+
+*The scale-out backup repository consists of one or more local backup repositories called performance tier, and object storage repositories (AWS) for long-term and archive storage: capacity tier and archive tier.  Backups are written first to the performance tier and then automatically copied to the capacity tier in AWS where the files are immutable for 11 days.*
+
+== Le Mars Backup Infrastructure
+
+====
+Servers
+[cols="5*^",options="header"]
+|===
+|Device Name
+|Operating System
+|Role
+|Physical
+|vSphere
+
+|pwv011vmmgr
+a|image::windows.png[align=center]
+|Management
+|
+a|image::vcenter.png[link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|pws011vmprxy
+a|image::windows.png[align=center]
+|Repository/Proxy
+|*
+|
+
+|plv001rmanprxy1
+a|image::redhat.png[align=center]
+|RMAN Repo/Proxy
+|
+a|image::vcenter.png[link=https://pav010vctrdb.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|plv001rmanprxy2
+a|image::redhat.png[align=center]
+|RMAN Repo/Proxy
+|
+a|image::vcenter.png[link=https://pav010vctrdb.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|plv001veeamprxy
+a|image::redhat.png[align=center]
+|NFS Backup Proxy
+|
+a|image::vcenter.png[link=https://pav010vctrapps.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|pwv001veeamprx1
+a|image::redhat.png[align=center]
+|Virtual Proxy
+|
+a|image::vcenter.png[link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|pwv001veeamprx2
+a|image::redhat.png[align=center]
+|Virtual Proxy
+|
+a|image::vcenter.png[link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|===
+
+Storage
+[cols="6*^",options="header"]
+|===
+|Repository
+|Storage
+|Type
+|Host
+|Path
+|Capacity
+
+|ReFS-Repo-LeMars-E
+|Cisco Local
+a|image::windows.png[align=center]
+|pws011vmprxy
+|E:\Backups
+|4.4 TB
+
+|ReFS-Repo-LeMars-H
+|NetApp
+a|image::windows.png[align=center]
+|pws011vmprxy
+|H:\Backups
+|49 TB
+
+|ReFS-Repo-LeMars-I
+|NetApp
+a|image::windows.png[align=center]
+|pws011vmprxy
+|I:\Backups
+|49 TB
+
+|RMAN-NetApp-1
+|NetApp
+a|image::linux.png[align=center]
+|plv001rmanprxy1
+|/rmanrepo1/backups
+|11 TB
+
+|RMAN-NetApp-2
+|NetApp
+a|image::linux.png[align=center]
+|plv001rmanprxy2
+|/rmanrepo2/backups
+|11 TB
+
+|RMAN-Pure-3
+|Pure Storage
+a|image::linux.png[align=center]
+|plv001rmanprxy1
+|/rmanrepo3/backups
+|10 TB
+
+|RMAN-Pure-4
+|Pure Storage
+a|image::linux.png[align=center]
+|plv001rmanprxy2
+|/rmanrepo4/backups
+|10 TB
+
+|RMAN-Pure-5
+|Pure Storage
+a|image::linux.png[align=center]
+|plv001rmanprxy1
+|/rmanrepo5/backups
+|10 TB
+
+|RMAN-Pure-6
+|Pure Storage
+a|image::linux.png[align=center]
+|plv001rmanprxy2
+|/rmanrepo6/backups
+|10 TB
+
+|RMAN-Pure-7
+|Pure Storage
+a|image::linux.png[align=center]
+|plv001rmanprxy1
+|/rmanrepo7/backups
+|10 TB
+
+|RMAN-Pure-8
+|Pure Storage
+a|image::linux.png[align=center]
+|plv001rmanprxy2
+|/rmanrepo8/backups
+|10 TB
+
+|AWS-Repo-LeMars
+|Amazon S3
+a|image::aws.png[align=center]
+|pws011vmprxy
+|amazonS3://wellsenterprises-veeam-lemars
+|Unlimited
+
+|AWS-Repo-RMAN-1
+|Amazon S3
+a|image::aws.png[align=center]
+|plv001rmanprxy1
+|amazonS3://wellsenterprises-veeam-lemars
+|Unlimited
+
+|AWS-Repo-RMAN-2
+|Amazon S3
+a|image::aws.png[align=center]
+|plv001rmanprxy2
+|amazonS3://wellsenterprises-veeam-lemars
+|Unlimited
+
+|AWS-Repo-RMAN-3
+|Amazon S3
+a|image::aws.png[align=center]
+|plv001rmanprxy1
+|amazonS3://wellsenterprises-veeam-lemars
+|Unlimited
+
+|AWS-Repo-RMAN-4
+|Amazon S3
+a|image::aws.png[align=center]
+|plv001rmanprxy2
+|amazonS3://wellsenterprises-veeam-lemars
+|Unlimited
+
+|===
+
+Scale-Out Repositories
+[cols="6*^",options="header"]
+|===
+|LeMars AWS
+|LeMars REFS
+|LeMars RMAN 1
+|LeMars RMAN 2
+|LeMars RMAN 3
+|LeMars RMAN 4
+
+|ReFS-LeMars-Repo-H
+|ReFS-Repo-LeMars-E
+|RMAN-NetApp-1
+|RMAN-NetApp-2
+|RMAN-Pure-3
+|RMAN-Pure-4
+
+|ReFS-LeMars-Repo-I
+|
+|AWS-Repo-RMAN-1
+|AWS-Repo-RMAN-2
+|RMAN-Pure-5
+|RMAN-Pure-6
+
+|AWS-Repo-LeMars
+|
+|
+|
+|RMAN-Pure-7
+|RMAN-Pure-8
+
+|
+|
+|
+|
+|AWS-Repo-RMAN-3
+|AWS-Repo-RMAN-4
+|===
+====
+
+== Dunkirk Backup Infrastructure
+
+====
+Servers
+[cols="5*^",options="header"]
+|===
+|Device Name
+|Operating System
+|Role
+|Physical
+|vSphere
+
+|pws048cvmedia
+a|image::windows.png[align=center]
+|Repo/Proxy
+|*
+|
+
+|===
+
+Storage
+[cols="6*^",options="header"]
+|===
+|Repository
+|Storage
+|Type
+|Host
+|Path
+|Capacity
+
+|Repository-Dunkirk-G
+|Cisco Local
+a|image::windows.png[align=center]
+|pws048cvmedia
+|G:\Backups
+|6.1 TB
+
+|Repository-Dunkirk-H
+|Cisco Local
+a|image::windows.png[align=center]
+|pws048cvmedia
+|H:\Backups
+|6.1 TB
+
+|Repository-Dunkirk-I
+|Cisco Local
+a|image::windows.png[align=center]
+|pws048cvmedia
+|I:\Backups
+|6.1 TB
+
+|===
+
+Scale-Out Repositories
+[cols="1*^"]
+|===
+|Dunkirk AWS Scale-Out Repository
+
+|Repository-Dunkirk-G
+
+|Repository-Dunkirk-H
+
+|Repository-Dunkirk-I
+
+|AWS-Repo-Dunkirk
+|===
+====
+== Henderson Backup Infrastructure
+
+====
+Servers
+[cols="5*^",options="header"]
+|===
+|Device Name
+|Operating System
+|Role
+|Physical
+|vSphere
+
+|pws089hvvmprxy
+a|image::windows.png[align=center]
+|Repo/Proxy
+|*
+|
+
+|===
+
+Storage
+[cols="6*^",options="header"]
+|===
+|Repository
+|Storage
+|Type
+|Host
+|Path
+|Capacity
+
+|ReFS-Repo-Henderson
+|Cisco Local
+a|image::windows.png[align=center]
+|pws089hvvmprxy
+|E:\Backups
+|1.5 TB
+
+|===
+
+Scale-Out Repositories
+[cols="1*^",options="header"]
+|===
+|Henderson AWS Scale-Out Repository
+
+|ReFS-Repo-Henderson
+
+|AWS-Repo-Henderson
+
+|===
+====
+
+== Sioux City (DR) Backup Infrastructure
+
+====
+Servers
+[cols="5*^",options="header"]
+|===
+|Device Name
+|Operating System
+|Role
+|Physical
+|vSphere
+
+|dws088vmprxy
+a|image::windows.png[align=center]
+|Repo/Proxy
+|*
+|
+
+|dwv088vmmgr
+a|image::windows.png[align=center]
+|DR Mgmt Console
+|
+a|image::vcenter.png[link=https://dav010vctr.bluebunny.com:5480/,window=_blank,align=center,width=30]
+
+|===
+
+Storage
+[cols="6*^",options="header"]
+|===
+|Repository
+|Storage
+|Type
+|Host
+|Path
+|Capacity
+
+|ReFS-Repo-SiouxCity-H
+|NetApp
+a|image::windows.png[align=center]
+|dws088vmprxy
+|H:\Backups
+|49 TB
+
+|ReFS-Repo-SiouxCity-I
+|NetApp
+a|image::windows.png[align=center]
+|dws088vmprxy
+|I:\Backups
+|49 TB
+
+|RMAN-DR-E
+|NetApp
+a|image::windows.png[align=center]
+|dws088vmprxy
+|E:\Backups
+|11 TB
+
+|RMAN-DR-F
+|NetApp
+a|image::windows.png[align=center]
+|dws088vmprxy
+|F:\Backups
+|11 TB
+
+|===
+Scale-Out Repositories
+[cols="1*^",options="header"]
+|===
+|Sioux City ReFS Scale-Out Repository
+
+|ReFS-Repo-SiouxCity-H
+
+|ReFS-Repo-SiouxCity-I
+
+|===
+====
+
+
+
+
+

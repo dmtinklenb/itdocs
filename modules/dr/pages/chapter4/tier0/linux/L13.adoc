@@ -1,0 +1,9 @@
+=  L13 | DNS Management Server (PAV010IPAM (172.23.5.254) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+This server is not necessary.  It does help with IP and DNS management by providing a better view of these two. 

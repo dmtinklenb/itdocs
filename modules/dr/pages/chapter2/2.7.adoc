@@ -1,0 +1,3 @@
+= 2.7 | IT Organization Chart
+
+image::2.7-01.jpg[]

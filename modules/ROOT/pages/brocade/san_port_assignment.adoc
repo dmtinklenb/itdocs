@@ -1,0 +1,4 @@
+[%header,format=csv]
+|===
+include::{attachmentsdir}/LeMars-SAN-Port-Assignments.csv[]
+|===

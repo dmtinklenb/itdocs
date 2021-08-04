@@ -1,0 +1,67 @@
+= L04 | OIDPRD DB (plv044oiddb) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+DBAs will use  DWV088DC1 (172.27.98.101),  DWV088DC2 (172.27.98.102),  DWV088DC3 (172.27.98.103), and DWV088DC4 (172.27.98.104) for domain controllers.
+
+*Needed for Oracle Applications to authenticate*
+
+Refer to xref:chapter4/appendix/A17.adoc[Appendix - A17] for changing /etc/resolv.conf - needs to be done on each server
+
+- For RHEL6 change /etc/resolv.conf on hosts after this change.
+- For RHEL7 change to /etc/resolv.conf.custom on hosts for this change.
+- Add  172.27.98.101 as the first nameserver and 172.27.98.103 as the secondary nameserver.
+
+*plv044oiddb (172.23.5.26) | COLD | OIDPRD DB (OIDPRD Datastore, Database Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix - A02] on starting a VM server and finding the vCenter where it lives
+- DB Starts Automatically.
+
+*ssh root@plv044oiddb*
+----
+su -oracle
+
+ --start oid app server
+
+cd /sysop/bin/astech
+
+./start_OID.sh
+----
+
+*[red]#PAUSE HERE FOR DBA STEPS#*
+
+. OID - Active Directory Synchronization (Synchronization): http://plv044oiddb.bluebunny.com:7001/em
+
+. Expand Identity and Access
+
+. Right-click DIP
+
+. Administration --> Synchronization Profiles
+
+. AD_Sync --> Edit
+
+. Change host to dwv088dc1.bluebunny.com
+
+. OID - What to Authenticate Against (External Authentication): http://plv044oiddb.bluebunny.com:7005/odsm
+
+. Advanced --> oidexplg_bind_ad Optional
+
+. Properties --> Flex Fields --> Edit host & host2 to dwv088dc3.bluebunny.com & dwv088dc4.bluebunny.com
+
+. Advanced --> oidexplg_compare_ad
+
+. Optional Properties --> Flex Fields --> Edit host & host2 to dwv088dc3.bluebunny.com & dwv088dc4.bluebunny.com
+
+. OID - Restart Services:
+----
+/sysop/bin/astech/stop_OID.sh
+
+/sysop/bin/astech/start_OID.sh
+----
+
+
+

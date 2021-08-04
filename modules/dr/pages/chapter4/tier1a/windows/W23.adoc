@@ -1,0 +1,12 @@
+= W23 | Engineering Workstation (PWV045PENG) | 5 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+
+- pwv045peng (172.22.120.36)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*
+
+

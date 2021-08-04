@@ -1,0 +1,76 @@
+= A10  | Appendix 10 ( NETWORK - DR-TEST ONLY STEPS )
+
+.PRE-TEST
+[NOTE]
+*Shutdown ALL services on Solarwinds01 For DR Devices*
+
+
+== FAIL OVER TO TEST STATE
+
+. Shutdown Vlan198 on DR-N9k
+. Physical task on DR-WAN-RTR unplug interface G0/1 (1G connection to Lemars) (ON BACK)
+. Physical task on DR-WAN-RTR  (unplug connection to MPLS network S1/1:1.64) (FORNT PORT1)
+. Physical task on DR-ASA unplug G0/0 (30M connection to the internet)
+. Console into (Cisco console cable using USB -> DB9 connector) and Login to DRN9K (might need to used CW2k creds)
+- “IP Route 172.26.1.0 255.255.255.0 172.27.96.10” (DMZ-ROUTING)
+- Bring up interface E130/1/21 via no shut
+- Bring up interface E130/1/22 via no shut
+- Verify routing table "sho ip rou" and "sho ip rou vrf  DR-VRF" sho int vlan 60, sho int vlan 61
+- You should now see 172.23.5,6,10,110,150.x networks in the routing table.
+. Bring up the Switch in the class room.
+- DRN9k  int E140/1/23 no shut
+- DRN9k  int E140/1/24 no shut
+
+
+. Bring UP DMZ
+- Connect to DR-ASA-A / Bring up DMZ
+- DR-ASA-A<CONFIG>#int gig 0/3 <enter>
+- DR-ASA-A<CONFIG-IF>#no shut <enter>
+- DR-ASA-A<CONFIG-IF>#int gig 0/0 <enter>
+- ip address 204.126.23.130 255.255.254.0
+- Connect Micro-switch from int g0/0 on DR-ASA-A  (int g0/0 is currenty in DR-BBGTW g0/1)
+- Assign testing ip addresses to users (204.126.22.x/23)
+NOTES:
+• Outside addresses for DMZ testing:  204.126.22.55-65 or 204.126.23.55-65
+• DR-USER DHCP Scope is in VLAN1
+
+
+Return to xref:chapter4/tier0/network/N01.adoc[N01]
+
+
+
+== Return to Normal STATE (NON_DR_TEST)
+
+. Login in to DR-ASA-A
+- Shut down  Interface GigabitEthernet0/3 "DMZ"
+- interface GigabitEthernet0/0 ip address 204.126.23.130 255.255.255.128
+- disconnect Micro-switch from int g0/0 on DR-ASA-A and move back to  DR-BBGTW g0/1
+. Login to DR-ASW-A
+- Shut Down interface E 130/1/21
+- Shut Down interface E 130/1/22
+- Shut Down interface E 1/40/1/23 (DR Classroom switch port)
+- Shut Down interface E 1/40/1/24 (DR Classroom switch port)
+- No IP Route 172.26.1.0 255.255.255.0 172.27.96.10
+- CLEAR IP ROUTE *
+- Bring UP interface VLAN198
+. Login to DR-WAN-RTR
+- CLEAR IP ROUTE *
+- Verify the routes are correct
+
+
+. “Physical task on DR-WAN-RTR patch in interface G0/1 (200M to Le Mars) (ON BACK)
+. Physical task on DR-WAN-RTR  patch in interface for S1/1:1.64 for MPLS ( FRONT PORT1)
+. Physical task on DR-ASA patch in  G0/0 (30M connection to the internet)
+. Verify the routes are correct
+. Ping Corp Devices
+- Ping 172.23.10.1
+- Ping spscdsw01
+- Ping npmcdsw01
+. VPN to Corp and ping
+- Ping draswa
+- Ping drwanrtr
+- Check email for tickets or issues.
+
+.Post-Test
+[NOTE]
+Start Services on Solarwinds01

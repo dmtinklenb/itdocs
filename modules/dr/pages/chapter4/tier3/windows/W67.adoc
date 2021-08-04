@@ -1,0 +1,11 @@
+= W67 | Object Management Group (PWV001OMG) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+
+- PWV001OMG (172.23.10.224)
+
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

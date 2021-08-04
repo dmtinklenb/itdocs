@@ -1,0 +1,41 @@
+= 2.4 | Disaster Recovery Coordinator
+
+The IT Disaster Recovery Coordinator directs IT disaster response/crisis management activities in compliance with the IT  disaster recovery plan and helps provide and coordinate disaster preparedness training with respect to the organization’s information technologies, helping ensure business continuity.
+
+-  Disaster Recovery Coordinator Duties and Responsibilities
+
+* Work with Business Continuity management to ensure that the disaster recovery (crisis management) and business continuity plans drive disaster recovery strategy and procedures.
+
+* Establish and maintain the overall plans for executing all DR procedures and understand their interdependencies.
+
+* Work with the IT technical staff to ensure that disaster recovery solutions are adequate, in place, maintained, and tested as part of the regular operational life cycle.
+
+* Develop and understand all testing necessary for a successful DR execution.
+
+* Schedule and lead all DR exercises.
+
+* Provide ongoing feedback for risk management, mitigation, and prevention.
+
+* Regularly report Disaster Recovery activities to upper management.
+
+====
+*Disaster Recovery Coordinator*
+[cols="3*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+
+|Ryan Schaap
+|VP IT & CIO
+|712-202-4453
+
+|Mike Kooistra
+|Director of Technology
+|712-540-1142
+
+|Ron Zellers
+|SR MGR of Enterprise Computing
+|712-540-4369
+|===
+====

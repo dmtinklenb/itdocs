@@ -1,0 +1,104 @@
+= RedHat Enterprise Linux 8 Minimal Installation
+:author: Scott Linden
+:email: <sdlinden@bluebunny.com>
+
+.**ASSUMPTIONS:**
+* The IP Address has been assigned and added to DNS.
+* The system is using one 60 GB hard disk or RAID set that appears as one LUN.
+
+
+.**Steps:**
+. Insert the RedHat Enterprise Linux 8 Server Boot CD or ISO into the CD/DVD drive.
+. Turn on the system. (Make sure the system is setup to boot from CD.)
+. At the boot screen select "Install Red Hat Enterprise Linux 8.X" and press <ENTER>.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall01.jpg[1,width=50%]
+. At the "Welcome" screen select "English (Unitied States)" and click the "Continue" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall02.jpg[2,width=50%]
+. At the "Installation Summary" screen select "Network & Hostname".
++
+image::redhat/rhel8mininstall/RHEL8MinInstall03.jpg[3,width=50%]
+. At the "Network & Hostname" screen enter the hostname for the new server in the Host name text box and click the "Apply" button. Then click the "Configure" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall04.jpg[4,width=50%]
+. At the "Editing ens192" screen s
+  .. Select the "IPv4 Settings" tab.
+  .. Change the Method dropdown to Manual and click the "Add" button.
+  .. Enter the IP Address, Netmask and Gateway.
+  .. Enter the DNS servers separated with commas.
+  .. Enter the Search domain and click the "Save" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall05.jpg[5,width=50%]
+  .. Back on the "Network & Hostname" screen turn on the interface and click the "Done" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall06.jpg[6,width=50%]
+. At the "Installation Summary" screen select "KDUMP".
++
+image::redhat/rhel8mininstall/RHEL8MinInstall07.jpg[7,width=50%]
+. At the "KDUMP" screen uncheck the "Enable kdump" checkbox and click the "Done" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall08.jpg[8,width=50%]
+. At the "Installation Summary" screen select "Installation Destination".
++
+image::redhat/rhel8mininstall/RHEL8MinInstall09.jpg[9,width=50%]
+. At the "Installation Destination" screen select the 60 GiB disk and click on the "Custom" radial button then click the "Done" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall10.jpg[10,width=50%]
+. At the "Manual Partitioning" screen click on the "Click here to create them automatically" link.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall11.jpg[11,width=50%]
+. Modify the partitions to match the following then click the "Done" button.
++
+[source]
+* /boot   1024 MiB   sda1
+* /       31 GiB     vg00-rootlv
+* swap    8 GiB      vg00-swaplv
+* /tmp    10 GiB     vg00-tmplv
+* /var    10 GiB     vg00-varlv
++
+
+image::redhat/rhel8mininstall/RHEL8MinInstall12.jpg[12,width=50%]
+. At the "Summary of Changes" screen click on the "Accept Changes" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall13.jpg[13,width=50%]
+. At the "Installation Summary" screen select "Softwre Selection".
++
+image::redhat/rhel8mininstall/RHEL8MinInstall14.jpg[14,width=50%]
+. At the "Software Selection" screen select "Minimal Install" and click the "Done" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall15.jpg[15,width=50%]
+. At the "Installation Summary" screen select "Time & Date".
++
+image::redhat/rhel8mininstall/RHEL8MinInstall16.jpg[16,width=50%]
+. At the "Time & Date" screen change the city to "Chicago" and click the "Done" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall17.jpg[17,width=50%]
+. At the "Installation Summary" screen click on the "Begin Installation" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall16.jpg[16,width=50%]
+. At the "User Settings" screen click on "Root Password".
++
+image::redhat/rhel8mininstall/RHEL8MinInstall18.jpg[18,width=50%]
+. At the "Root Password" screen enter the root password twice and click the "Done" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall19.jpg[19,width=50%]
+. At the "User Settings" screen click on "User Creation"
++
+image::redhat/rhel8mininstall/RHEL8MinInstall20.jpg[20,width=50%]
+. At the "Create User" screen enter the information for the administrative user and click the "Advanced" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall21.jpg[21,width=50%]
+. At the "Advanced User Configuration" screen enter the information for the administrative user and click the "Save Changes" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall21.jpg[22,width=50%]
+. At the "User Settings" screen click the "Finish configuration" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall22.jpg[23,width=50%]
+. When the installation is finished click the "Reboot" button.
++
+image::redhat/rhel8mininstall/RHEL8MinInstall23.jpg[24,width=50%]
+
+
+
+

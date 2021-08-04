@@ -1,0 +1,81 @@
+= N01 | Modify Routing Statement on DR-ASW-A | 05 MIN |
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+===================
+IMPORTANT: xref:chapter4/tier0/storage/S01.adoc[S01] must be completed before this step.
+===================
+
+*N01 - N04 takes roughly 55 minutes to complete*
+
+*DR-ASW-A (172.27.96.131)*
+
+For a DR Test - Refer to xref:chapter4/appendix/A10.adoc[Appendix - A10] ( Network DR Test Only Steps )
+
+For an actual DR Event there are 2 options:
+1) we have access to a classroom or
+2) we must perform all work in the data center.
+
+Wherever our work area is, the infrastructure cabling must be configured by Long Lines staff so Wells can connect to our equipment in a classroom.
+
+If we work in the datacenter, we'll put a switch on a table and run cables with which to connect laptops.
+
+== Classroom
+
+1. WHAT SWITCH, CABLE - LOCATION TERA TERM, USER/PASSWORD (stays in datacenter not on network)  [red]#(Label all equipment)#
+2. connect console -> open tera term -> choose serial -> select comm port -> enter
+3. prompt to enter password pops up -> > shows up -> enter 'en' (to enable) -> enter
+4. enter next password (high security) -> # appears -> start commands
++
+*Start the Putty Program*
++
+image::N01-01.jpg[]
+
+5. IN THE HOST NAME (OR IP ADDRESS) ENTER THE IP OF DRN9K
+6. USE SSH AS THE CONNECTION TYPE
+7. CLICK THE LOAD OPTION ON THE RIGHT MIDDLE OF THE SCREEN AND OPEN OPTION
+8. GO TO 'SSH TO DRN9K' LINE AND CONTINUE
+
+== Data Center
+
+1. USE A DR LAPTOP WITH WELLS DOMAIN ACCESS AND PUTTY INSTALLED
+2. USING AN ETHERNET CABLE, CONNECT THE LAPTOP TO DR-N5K-100 ON PORT 424
+3. LOG ON AS
+
+----
+- SSH to DRN9K (172.27.96.2)
+
+- Username: draswa <enter>
+
+- Password: xxxxxx <enter>
+
+- DRN9K>enable <enter>
+
+- DRN9K>enablePWD <enter>
+
+- DRN9K# config t <enter>
+
+- DRN9K<CONFIG># int eth 130/1/21 <enter>
+
+- DRN9K<CONFIG-IF># no shut <enter>
+
+- DRN9K<CONFIG># int eth 130/1/22 <enter>
+
+- DRN9K<CONFIG-IF># no shut <enter>
+
+- DRN9K<CONFIG-IF>#exit <enter>
+
+- DRN9K<CONFIG>#ip route 0.0.0.0 0.0.0.0 172.27.96.10
+
+- DRN9K<CONFIG>#ip route 172.26.1.0 255.255.255.0 172.27.96.10
+
+- DRN9K<CONFIG-IF># end <enter>
+
+- DRN9K# copy running-config startup-config <enter>
+
+- DRN9K# exit - hit enter
+----
+
+
+
+

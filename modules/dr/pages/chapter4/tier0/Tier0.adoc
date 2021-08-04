@@ -1,0 +1,139 @@
+= Tier 0 | 0-4 Hours
+
+.Note
+[NOTE]
+Tier 0 is for disaster testing only.  [red]#Not for an actual disaster.#
+
+== Domain Controllers and DNS Servers
+
+====
+*Production*
+[cols="2*"]
+|===
+|PWV001DC1
+|172.23.10.113
+
+|PWV001DC2
+|172.23.10.115
+
+|PWV001DC3
+|172.23.10.69
+
+|PWV001DC4
+|172.23.10.150
+|===
+
+*DR*
+[cols="2*"]
+|===
+|DWV088DC1
+|172.27.98.101
+
+|DWV088DC2
+|172.27.98.102
+
+|DWV088DC3
+|172.27.98.103
+
+|DWV088DC4
+|172.27.98.104
+|===
+
+====
+
+== Tier 0 Linux / Windows Server Names and IP Addresses
+
+====
+*Blade Chassis*
+[cols="3*"]
+|===
+|SUXUCS001
+|172.27.100.151
+|CISCO UCS
+|===
+
+*Physical Blade Servers*
+[cols="3*"]
+|===
+|DAV010VCTR
+|127.27.97.12
+|Windows VMWare vCenter Infrastructure Server
+|===
+
+*ESX Servers at DR*
+[cols="3*"]
+|===
+|des071esx20
+|172.27.97.105
+|Apps
+
+|des071esx21
+|172.27.97.106
+|Apps
+
+|des071esx22
+|172.27.97.107
+|Apps
+
+|des071esx30
+|172.27.97.225
+|DB
+
+|des071esx31
+|172.27.97.226
+|DB
+
+|des074esx20
+|172.27.97.120
+|DMZ
+
+|des075esx20
+|172.27.97.140
+|DMZ Large CPU
+
+|des076esx31
+|172.27.100.31
+|VDI
+
+|des076esx32
+|172.27.100.32
+|VDI
+
+|des076esx33
+|172.27.100.33
+|VDI
+
+|des076esx34
+|172.27.100.34
+|VDI
+
+|des077esx21
+|172.27.97.42
+|Windows
+
+|des077esx22
+|172.27.97.43
+|Windows
+
+|des077esx23
+|172.27.97.44
+|Windows
+
+|des077esx24
+|172.27.97.45
+|Windows
+
+|des078esx31
+|172.27.97.32
+|Process Controls
+
+|des078esx32
+|172.27.97.53
+|Process Controls
+
+|des079esx20
+|172.27.97.104
+|Quad CPU
+|===
+====
+

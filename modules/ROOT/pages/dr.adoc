@@ -1,0 +1,316 @@
+:author: Doug Tinklenberg
+:email: <dmtinklenb@bluebunny.com>
+
+:frame: all
+:grid: all
+
+[width="100%",options="header"]
+[cols="^,^,^", frame=none, grid=none]
+|====================
+3+| Welcome to Wells IT Docs {set:cellbgcolor:#1885c7}
+3+| *Disaster Recovery Data Center* {set:cellbgcolor:#d6d3cf}
+| link:http://plv001antora.bluebunny.com/itdocs/index.html[Le Mars] {set:cellbgcolor:} | *Sioux City* | link:http://plv001antora.bluebunny.com/itdocs/remote.html[Remote]
+|====================
+
+[width="100%",options="header"]
+[cols="22,5,5,5,5,1,16,5,5,1,9,3,3,3,3,3,3,3", frame=none, grid=none]
+|====================
+5+| *Server* {set:cellbgcolor:#1885c7}
+|  {set:cellbgcolor:#000000}
+3+| *Storage* {set:cellbgcolor:#1885c7}
+|  {set:cellbgcolor:#000000}
+8+| *Links* {set:cellbgcolor:#1885c7}
+
+5+| *Cisco UCS* {set:cellbgcolor:#d6d3cf}
+|  {set:cellbgcolor:#000000}
+3+| *Brocade* {set:cellbgcolor:#d6d3cf}
+|  {set:cellbgcolor:#000000}
+8+| *Wells* {set:cellbgcolor:#d6d3cf}
+
+
+| *Device* {set:cellbgcolor:#a9e2f3}
+| *UCSM*
+| *Cluster*
+| *CIMC1*
+| *CIMC2*
+|  {set:cellbgcolor:#000000}
+3+| https://dwv001sanadmin.bluebunny.com/dcm-client/dcmclient.jnlp[BNA Client] {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| http://bunnynet.bluebunny.com/is/DisasterRecovery[DR Documentation] {set:cellbgcolor:}
+
+| suxhx001
+| https://suxhx001.bluebunny.com/[UCSM]
+| https://des076-msc.bluebunny.com/[Hyperflex]
+|
+|
+| {set:cellbgcolor:#000000}
+3+| https://dwv001sanadmin.bluebunny.com/[dwv001sanadmin]{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| http://bunnynet.bluebunny.com/[Bunnynet]{set:cellbgcolor:}
+
+| suxucs001 | https://suxucs001.bluebunny.com[UCSM]
+|
+|
+|
+|{set:cellbgcolor:#000000}
+3+| https://drsan6520-a.bluebunny.com/[Brocade 6520a]{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| http://pwv001sdm.bluebunny.com:8080/CAisd/pdmweb.exe[Helpdesk]{set:cellbgcolor:}
+
+| des078esx31
+|
+|
+| https://cimc-des078esx31.bluebunny.com/[des078esx31,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+3+| https://drsan6520-b.bluebunny.com/[Brocade 6520b]{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| http://usdnet.bluebunny.com/[ServiceDesk]{set:cellbgcolor:}
+
+| des078esx32
+|
+|
+| https://cimc-des078esx32.bluebunny.com/[des078esx32,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+|{set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| http://www.wellshr.com/[Oracle HCM]{set:cellbgcolor:}
+
+| dws088vmprxy
+|
+|
+| https://cimc-dws088vmprxy.bluebunny.com/[dws088vmprxy,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+3+| *Pure Storage* {set:cellbgcolor:#d6d3cf}
+|  {set:cellbgcolor:#000000}
+8+| https://portal.manage.microsoft.com/#HelpDeskDialog[InTune Portal]{set:cellbgcolor:}
+
+| https://intersight.com/[Cisco Intersight,window=_blank]
+|
+|
+|
+|
+|{set:cellbgcolor:#000000}
+3+| https://suxpurem50.bluebunny.com/[SUXPureM50]{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+|
+|
+|
+|
+|
+|{set:cellbgcolor:#000000}
+3+| https://pure1.purestorage.com/[Pure1]{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| *Misc.* {set:cellbgcolor:#d6d3cf}
+
+| *VMware* {set:cellbgcolor:#1885c7}
+|
+|
+|
+|
+|{set:cellbgcolor:#000000}
+|{set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| https://plv069ipam.bluebunny.com/ui/[Infoblox DNS Mgr]{set:cellbgcolor:}
+
+|*vCenter* {set:cellbgcolor:#a9e2f3}
+|*Management*
+|
+|*Console*
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|  {set:cellbgcolor:#000000}
+8+| http://plv001rhn6.bluebunny.com/users/login[RedHat Satellite]{set:cellbgcolor:}
+
+| dav010vctr
+a| image::html5.png[link=https://dav010vctr.bluebunny.com/ui/,window=_blank,width=30,role=left]
+|
+a| image::vcenter.png[link=https://pav010vctrapps.bluebunny.com:5480/,window=_blank,role=left,width=30]
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://monitor.bluebunny.com/[Server Monitoring]{set:cellbgcolor:}
+
+| dav010vctrvdi-sux
+a| image::html5.png[link=https://dav010vctrvdi-sux.bluebunny.com/ui/,window=_blank,width=30,role=left]
+|
+a| image::vcenter.png[link=https://dav010vctrvdi-sux.bluebunny.com:5480/,window=_blank,role=left,width=30]
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://view.bluebunny.com/[View]{set:cellbgcolor:}
+
+|
+|
+|
+|
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://viewdr.bluebunny.com/[View DR]{set:cellbgcolor:}
+
+|
+|
+|
+|
+|
+|{set:cellbgcolor:#000000}
+|{set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| https://linux.oracle.com/pls/apex/f?p=101:3:16635646795027::NO[Unbreakable Linux]{set:cellbgcolor:}
+
+5+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://pwv032cert1.bluebunny.com/certsrv/[Certificate Server]{set:cellbgcolor:}
+
+5+|
+|{set:cellbgcolor:#000000}
+3+|{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+5+|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| *Office 365* {set:cellbgcolor:#d6d3cf}
+
+| {set:cellbgcolor:}
+2+|
+2+|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://outlook.office365.com/owa[Outlook]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://bluebunny-my.sharepoint.com/[OneDrive]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.office.com/launch/word[Word]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.office.com/launch/excel[Excel]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.office.com/launch/onenote[OneNote]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://aka.ms/mstfw[Teams]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.yammer.com/office365[Yammer]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+|
+3+| {set:cellbgcolor:}
+|
+8+|{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+|
+3+| {set:cellbgcolor:}
+|
+8+|{set:cellbgcolor:}
+
+|
+|
+|
+|
+|
+|
+| {set:cellbgcolor:}
+|
+|
+|
+| {set:cellbgcolor:}
+|
+|
+|
+|
+|
+|
+|
+
+5+|
+|
+| {set:cellbgcolor:}
+|
+|
+|
+| {set:cellbgcolor:}
+|
+|
+|
+|
+|
+|
+|
+
+|
+2+|
+2+|
+|
+3+| {set:cellbgcolor:}
+|
+8+|{set:cellbgcolor:}
+
+{set:cellbgcolor:}
+|
+2+|
+2+|
+|
+3+| {set:cellbgcolor:}
+|
+8+|{set:cellbgcolor:}
+|====================

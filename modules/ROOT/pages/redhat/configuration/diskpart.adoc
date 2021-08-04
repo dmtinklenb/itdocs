@@ -1,0 +1,129 @@
+=== Disk Partitioning
+
+==== fdisk
+
+[NOTE]
+ASSUMPTIONS: A disk has been zoned and masked to the system.
+
+. Login to system as root.
++
+[source]
+----
+$ ssh root@computer
+----
+
+. Use the fdisk command to determine all disks on the system.
++
+[source]
+----
+# fdisk -l | grep "Disk /dev/"
+Disk /dev/sdc doesn't contain a valid partition table
+Disk /dev/sda: 18.2 GB, 18210037760 bytes
+Disk /dev/sdb: 18.2 GB, 18210037760 bytes
+Disk /dev/sdc: 23 MB, 23592960 bytes
+Disk /dev/sdd: 10.4 GB, 10442833920 bytes
+----
+
++
+[NOTE]
+All of the disks on the system are displayed. This includes disks already in use. To view the existing partition tables to help figure out which disks are already being used, use the fdisk -l command without piping the output through grep.
+
+. Determine the disks already in use by LVM.
++
+[source]
+----
+# pvdisplay -v 2&gt;/dev/null | awk '/PV Name/ {print $3}'
+----
+
+. Edit the disk partition table on the new disk.
++
+[source]
+----
+# fdisk /dev/sdd
+----
+
+. Type "n" and press <ENTER> to create a new partition.
++
+[source]
+----
+The number of cylinders for this disk is set to 1269.
+There is nothing wrong with that, but this is larger than 1024,
+and could in certain setups cause problems with:
+1) software that runs at boot time (e.g., old versions of LILO)
+2) booting and partitioning software from other OSs
+   (e.g., DOS FDISK, OS/2 FDISK)
+
+Command (m for help): n
+----
+
+. Type "p" and press <ENTER> to create a primary partition.
++
+[source]
+----
+Command action
+    e extended
+    p primary partition (1-4) p
+----
+
+. Type "1" and press <ENTER> to create partition number 1.
++
+[source]
+----
+Partition number (1-4): 1
+----
+
+. Press <ENTER> to start the partition at cylinder 1.
++
+[source]
+----
+First cylinder (1-1269, default 1): 1
+----
+
+. Press <ENTER> to end the partition at the last cylinder.
++
+[source]
+----
+Using default value 1
+Last cylinder or +size or +sizeM or +sizeK (1-1269, default 1269):
+----
+
+. Type "t" and press <ENTER> to change the partition type.
++
+[source]
+----
+Using default value 1269
+
+Command (m for help): t
+----
+
+. Type "8e" and press <ENTER> to select the Linux LVM partition type.
++
+[source]
+----
+Selected partition 1
+Hex code (type L to list codes): 8e
+----
+
+. Type "w" and press <ENTER> to save the partition table and exit fdisk.
++
+[source]
+----
+Changed system type of partition 1 to 8e (Linux LVM)
+
+Command (m for help): w
+
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+----
+
+==== parted
+
+Creating an optimally aligned fully partitioned disk with parted.
+[source]
+----
+# parted -s -a optimal /dev/sda mklabel gpt
+# parted -s -a optimal /dev sda mkpart primary ext4 0% 100%
+# mkfs -t ext4 /dev/sda1
+----

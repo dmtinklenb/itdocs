@@ -1,0 +1,11 @@
+= L20 | ASRS DB (plv005emsdb) | 05 MIN
+
+===================
+IMPORTANT: Tier 0, xref:chapter4/tier1a/linux/L19.adoc[L19] must be completed before this step.
+===================
+
+==  plv005emsdb (172.23.5.38) | COLD
+
+*ASRS DB (EMSPRD Datastore, Database Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.

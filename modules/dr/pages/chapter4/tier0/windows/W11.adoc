@@ -1,0 +1,60 @@
+= W11 | SQL Servers (PWV017SQL1, PWV017SQL2, PWV001SQLWIT, PWV001SQL1, PWV001SQL2, PWV008SQL, PWV012SQL, DWV088SQL, PWV014SQL1, PWV014SQL2) | 30 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+====
+*SQL Servers*
+[cols="3*"]
+|===
+|PWV001SQLWIT
+|172.23.110.207
+|Cold
+
+|PWV001SQL1
+|172.23.120.237
+|Cold
+
+|PWV001SQL2
+|172.23.120.238
+|Cold
+
+|PWV008SQL
+|172.23.10.101
+|Cold
+
+|PWV012SQL
+|172.23.10.52
+|Cold
+
+|DWV088SQL
+|172.27.98.115
+|
+
+|PWV014SQL1
+|172.23.6.21
+|
+
+|PWV014SQL2
+|172.23.120.151
+|
+
+|PWV017SQL1
+|172.23.120.237
+|
+
+|PWV017SQL2
+|172.23.120.238
+|
+|===
+====
+- Highlight server name in Failover Cluster Manager
+
+-  Right click then click "Start"
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+= A17 | Appendix 17 ( Stop Server Paging)
+
+1. Open Putty -> double click on plv001lxadm if it is in the Saved Sessions field or enter plv001lxadm in the Host Name field at the top
+2. If the name doesn't resolve use the IP address - 172.23.5.241
+3. log in as an authorized user -> sudo -s for root access
+4. type crontab -e to enter the scheduling editor
+5. scroll down to the ## Make sure all servers are up section by hitting the J letter to move down
+6. on these 2 lines put an # in the first position.
+0-59/10 *     * * *     /sysop/bin/check_servers.sh -d 1>/dev/null 2>&1
+0-59/10 *     * * *     /sysop/bin/check_servers.sh -e 1>/dev/null 2>&1
+7. position the cursor on the first position -> hit the i key to insert ->  hit the # key -> the # should be the first character in the line
+8. hit the escape key -> hit the J to move to the next line -> hit the i key to insert -> hit the # key -> hit escape
+9. hit the :wq! keys to save and write the file
+10. to verify that the file has been changed enter crontab -l -> scroll down to the section just edited -> there should be a # key as the first character in the 2 lines

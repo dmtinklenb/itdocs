@@ -1,0 +1,13 @@
+= W03 | DHCP (PWV001DHCP1, PWV001DHCP2, PWV001DHCPVPN1, PWV051DNSDHCP) | 70 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+pwv001dhcp1 (172.23.10.170), pwv001dhcp2 (172..23.10.171), pwv001dhcpvpn1 (172.23.29.71), pwv051dnsdhcp (172.26.1.160) | COLD
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server
+
+VLAN98 is for onsite DR testing.  VLAN198 is for DR testing from corporate.
+
+From the pre-test steps, VLAN98 should be active.

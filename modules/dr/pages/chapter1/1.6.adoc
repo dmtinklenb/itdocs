@@ -1,0 +1,49 @@
+= 1.6 | IT Security
+
+*IT Security provides a layer of protection from cyber-attacks and other security issues that can be very damaging and/or potentially destroy a business.  Cyber-attacks have become an organization's largest threat according to the Business Continuity Institute 2016.  Provisions are being made to address each of the security risks listed below.  Preventing Cyber-attacks is a never ending endeavor and Wells must stay well ahead of those who may potentially attack our business.*
+
+- Loss or theft
+
+ * Corporate asset reported lost or stolen including laptops, mobile devices, storage media, and compromised data
+
+ * Attempted or successful destruction, corruption, or discloser of sensitive corporate information or Intellectual Property (IP)
+
+- Compromised asset
+
+ * Compromised host (root acccount, trojan, rootkit), network device, application, user account.  This includes malware-infected hosts where an attacker is actively controlling the host
+
+- Internal hacking
+
+ * Reconnaissance or suspicious activity originating from inside the corporate network excluding malware
+
+- External hacking
+
+ * Reconnaissance or suspicious activity originating from outside the corporate network excluding malware
+
+- Malware
+
+ * A virus, worm, or botnet affecting multiple systems.  This does not include compromised hosts that are being actively controller by an attacker via a backdoor or Trojan
+
+- Denial of Service (DoS)
+
+ * DoS, DDOS (Distributed), DRDoS (Distribution Reflection)
+
+- Website
+
+ * Website redirection, website defacement, or compromised URLs
+
+- Social media
+
+ * Compromised social media acccount or inappropriate posted comment
+
+- Social engineering
+
+* Unsolicited email targeting in order to obtain information considered personal, confidential or sensitive, also including malicious links or attachments. This pertains to phone calls or physical contact attempted to obtain unauthorized information or access
+
+- Policy violation
+
+ * Intentional or unintentional behavior that falls outside the corporate security policies or standards, unapproved policies or standards, unapproved policy exceptions, or actions that do not align with corporate code of conduct
+
+- Unlawful activity
+
+ * Computer-related incidents of a criminal nature, likely involving law enforcement, federal investigation, or loss prevention.  This includes theft, fraud, human safety, or child pornography

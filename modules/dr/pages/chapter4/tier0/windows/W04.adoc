@@ -1,0 +1,20 @@
+= W04 | Configure Domain Controller (PWV001DC10) | 60 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+. Configure PWV001DC10 (HOT in DR) from existing VM for Exchange 2016.
+
+. Bring online. Add to domain.
+
+. Add DNS, DFS, and AD roles then promote to DC.
+
+. Add 172.23.10.69 to network adapter
+
+== When adding new domain controller to LeMars site on subnet 172.23.10.x
+
+- Add 172.23.10.69 as second IP address to new DC for DNS resolution
+----
+netsh int IPv 4 add address ethernet 172.23.10.69 SkipAsSource=True
+----

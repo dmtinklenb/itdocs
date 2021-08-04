@@ -1,0 +1,10 @@
+= W51 | Demantra Administration Console (PWV001DMADMCON) | 5 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier2/linux/L31.adoc[L31] must be completed before this step.
+===================
+
+
+- PWV001DMADMCON (172.23.10.99)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

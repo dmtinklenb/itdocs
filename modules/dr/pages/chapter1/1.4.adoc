@@ -1,0 +1,31 @@
+= Alternate Data Center
+
+Wells Enterprises, Inc. has contracted with Long Lines for dedicated data center space to house its IT recovery capabilities.
+
+The alternate data center is located on Western Iowa Tech Community College's campus:
+
+    Woodbury County E-911 Center
+    4647 Stone Boulevard
+    Building J
+    Sioux City, Iowa 51106
+
+    Long Lines - NOC (Business Hours) - 712-271-4662
+    Main Operation at Long Lines - 712-271-4000
+    Long Lines - On-Call (After Business Hours) - 712-271-4662
+
+
+
+Wells Enterprises, Inc. has contracted with Woodbury County Emergency Services for classroom space if Wells needs to declare a disaster and activate the business from the alternate data center.
+
+    Woodbury County Emergency Management Coordinator - Rebecca Socknat (Primary)
+    Office:  712-222-4421   Email: rsocknat@woodburycountyiowa.gov
+    Woodbury County Emergency Management
+    601 Douglas Room 103
+    Sioux City, Iowa 51101
+
+
+
+    WITCC Contact - Tony Jasman (Secondary)
+    The Security Institute
+    4647 Stone Avenue, Lower Level
+    Sioux City, Iowa 51106

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>APPSPRD RESTORE PROCEDURE :: Wells IT Docs</title>
+    <link rel="canonical" href="http://plv001antora.bluebunny.com/wellsdocs/1.0/Appsprd_Restore.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://plv001antora.bluebunny.com">Wells IT Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="wellsdocs" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Wells IT Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="Appsprd_Restore.html">Appsprd Restore</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Wells IT Documentation</span>
+    <span class="version">1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Wells IT Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Wells IT Documentation</a></li>
+    <li><a href="index.html">Introduction</a></li>
+    <li><a href="Appsprd_Restore.html">Appsprd Restore</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///docs/modules/ROOT/pages/Appsprd_Restore.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">APPSPRD RESTORE PROCEDURE</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Doug Tinklenberg &lt;<a href="mailto:dmtinklenb@bluebunny.com">dmtinklenb@bluebunny.com</a>&gt; 6/14/2021</p>
+</div>
+<div class="paragraph">
+<p>This document outlines the procedure for restoring Appsprd applications from backup to the required test environment.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_start_veeam_restore_process"><a class="anchor" href="#_start_veeam_restore_process"></a>Start Veeam restore process</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>RDP to pwv011vmmgr and open the Veeam Backup &amp; Replication Console.</p>
+</li>
+<li>
+<p>On VBR Home screen select Backups &#8594; Disk and expand <strong>NAS-WBBPRD</strong>.</p>
+</li>
+<li>
+<p>Right-click on plv001veeamprxy and choose <strong>Export disk content as virtual disk</strong>.</p>
+</li>
+<li>
+<p>Select the date you want to restore from and click Next.</p>
+</li>
+<li>
+<p>Select <strong>Disk 0</strong> and click Next.</p>
+</li>
+<li>
+<p>On the next screen select the ESX host that is currently hosting the test server you&#8217;re going to use for the refresh.</p>
+</li>
+<li>
+<p>In the <strong>Path to Folder</strong> section click Browse and select 71-VeeamRestore.</p>
+</li>
+<li>
+<p>Set <strong>Disk type</strong> to Thin an click Next.</p>
+</li>
+<li>
+<p>Add a <strong>Restore reason</strong> if you want.   This is optional.  Click Next.</p>
+</li>
+<li>
+<p>Click Finish.   This will start the process of restoring the backup to a virtual disk (VMDK).</p>
+</li>
+<li>
+<p>While this process is running you can immediately move on to <strong>Remove oracle.old folder</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_remove_oracle_old_folder"><a class="anchor" href="#_remove_oracle_old_folder"></a>Remove oracle.old folder</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In AWX, launch the <strong>Test(x) Appsprd Prestore Folder Removal</strong> template in the test environment which is getting refreshed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_assign_restored_vmdk_to_ebs_test_vm"><a class="anchor" href="#_assign_restored_vmdk_to_ebs_test_vm"></a>Assign restored VMDK to EBS Test VM</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the vCenter console - <a href="https://pav010vctrapps" class="bare">https://pav010vctrapps</a></p>
+</li>
+<li>
+<p>Right-click on the VM you&#8217;re using for the refresh and select <strong>Edit Settings</strong>.</p>
+</li>
+<li>
+<p>In the Edit Settings window, click <strong>Add New Device</strong> and select <strong>Existing Hard Disk</strong>.</p>
+</li>
+<li>
+<p>In the Select File window scroll down and click <strong>71-VeeamRestore</strong> and then select plv001veeamprxy_Disk0.vmdk.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> in the Edit Settings window.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mount_disk_in_vm"><a class="anchor" href="#_mount_disk_in_vm"></a>Mount disk in VM.</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>SSH to the VM</p>
+</li>
+<li>
+<p>Change to root user.</p>
+</li>
+<li>
+<p><strong>mount /dev/sdc1 /restore</strong></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copy_oracle_folder_from_restore_to_u04restored"><a class="anchor" href="#_copy_oracle_folder_from_restore_to_u04restored"></a>Copy Oracle folder from /restore to /u04/restored</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In AWX, launch the Oracle Copy template for the particular environment or run <strong>cp -Rp /restore/u04/oracle /u04/restore</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_the_appsprd_restore_process"><a class="anchor" href="#_run_the_appsprd_restore_process"></a>Run the APPSPRD restore process.</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In AWS, launch the <strong>Test(x) Appsprd Refresh</strong> template.</p>
+</li>
+<li>
+<p>Verify all folders have been moved correctly and all directory permissions are correct.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cleanup"><a class="anchor" href="#_cleanup"></a>Cleanup</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On the VM, run <strong>umount /restore</strong></p>
+</li>
+<li>
+<p>In the vCenter console, right-click on the VM, select <strong>Edit Settings</strong> and delete the hard drive you added previously, making sure you check <strong>Delete files from datastore</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

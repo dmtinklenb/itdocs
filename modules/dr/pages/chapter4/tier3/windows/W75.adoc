@@ -1,0 +1,14 @@
+=  W75 | Hyperion (PWV011HYP, PWV012HYP, PWV013HYPB, PWV014HYPTOOLS) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+
+- PWV011HYP (172.23.110.49)
+- PWV012HYP (172.23.110.50)
+- PWV013HYPB (OVM)
+- PWV014HYPTOOLS (172.23.110.52)
+
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

@@ -1,0 +1,60 @@
+= 2.8   |  Vendor List
+
+*The following list contains the vendors whose hardware, software, and support are currently utilized by Wells' Enterprises, Inc.*
+
+====
+*Vendor List*
+[cols="2*",options="header"]
+|===
+|Title
+|Support Number
+
+|Brocade
+|800-752-8061
+
+|CDW
+|800-383-4239
+
+|Cisco
+|800-553-6387
+
+|IBM
+|800-426-7378
+
+|Kemp
+|844-556-4398
+
+|Long Lines (After Hours)
+|712-271-4662
+
+|Long Lines Main Switchboard
+|712-271-4000
+
+|Microsoft
+|800-642-7676
+
+|Oracle
+|800-392-2999
+
+|Pure Storage
+|402-415-8304
+
+|Red Hat
+|888-733-4281
+
+|Rimini Street (Oracle Support - John Hutsell)
+|248-880-7356
+
+|VMWare (Cust # - 115119240)
+|877-486-9273
+
+|Woodbury County (Rebecca Socknat)
+|712-222-4421 (office) 712-560-5944 (cell)
+
+|Woodbury County Emergency Center Office
+|712-222-4421
+
+|WWT
+|402-686-9817
+|===
+====

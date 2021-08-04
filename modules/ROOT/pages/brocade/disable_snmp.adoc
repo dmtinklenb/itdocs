@@ -1,0 +1,16 @@
+= Disable snmpv1
+
+== Login to the device as root.
+----
+$ ssh root@BrocadeDevice
+----
+
+== Show current snmpv1 state
+----
+drsan6520-a:FID128:root> snmpConfig --show snmpv1
+----
+
+== Disable snmpv1
+----
+drsan6520-a:FID128:root> snmpConfig --disable snmpv1
+----

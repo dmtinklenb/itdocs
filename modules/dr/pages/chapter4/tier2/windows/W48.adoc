@@ -1,0 +1,16 @@
+= W48 | Camera System (PWV001CAM*, PWV002CAM*, PWV003CAM, PWV004CAM, PWV005CAM, PSV001CAMMGMT, PWV006CAM*) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+Remove data disks that aren't getting replicated before starting the VM
+
+- PWV001CAMREC (camera recording server)
+- PWV001CAMREC2 (failover milestone recording server)
+- PWV002CAMREC
+- PWV002CAMWEB
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

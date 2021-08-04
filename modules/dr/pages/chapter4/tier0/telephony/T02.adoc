@@ -1,0 +1,8 @@
+= T02 | Verify Paging (Loud Speaker -Informacast) | 05 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+
+

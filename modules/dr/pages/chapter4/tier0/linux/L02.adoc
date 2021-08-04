@@ -1,0 +1,70 @@
+= L02 | Prepare ESX Servers | 40 MIN |
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L01.adoc[L01], xref:chapter4/tier0/network/N04.adoc[N04], xref:chapter4/tier0/storage/S02.adoc[S02] must be completed before this step.
+===================
+
+===================
+Applications -    des071esx20 (172.27.97.105) , des071esx21 (172.27.97.106), des071esx22 (172.27.97.107
+
+DB - des073esx30 (172.72.97.225, des073esx31(172.72.97.226)
+
+DMZ - des074esx20 (172.27.97.120)
+
+DMZ Large CPU - des075esx20 (172.72.97.140)
+
+Windows - des077esx21 (172.27.97.42), des077esx22 (172.27.97.43), des077esx23 (172.27.97.44), des0077esx24 (172.27.97.45)   [red]*If these are hot servers  - DO NOT REBOOT*
+
+Process Controls - des078esx31 (172.27.97.32).des078esx32 (172.27.97.530
+
+Quad CPU - des079esx20 (172.27.97.104)
+===================
+
+OPTION 1
+
+    Scan the storage.  If the volumes show up, continue to L03 without rebooting.  This will save time by not needing to reboot.
+
+OPTION 2
+
+      Scan the storage.  If the volumes do not show up after scanning the storage, reboot the ESX servers.  Choose one of the following 3 reboot options.  When the reboots are complete continue to L03.
+
+**There are 2 ways to reboot ESX servers - (1) HTML5 client reboot and (2) CLI reboot.  Both options are described below.  Perform the steps on only one option.**
+
+*Option #1 - HTML5 CLIENT REBOOT*
+
+*1. Open a browser and go to the vCenter vSphere Manager and login as the administrator@vsphere.local.user*
+
+image::L02-01.jpg[]
+
+*2. Click on the "Hosts and Clusters" tab in the top left hand corner*
+
+image::L02-02.jpg[]
+
+*3.  Select the ESXi server to be rebooted by traversing he tree in the left hand pane*
+
+image::L02-03.jpg[]
+
+*4. Click on the "Actions" menu then "Power" option and then the "Reboot" option*
+
+image::L02-04.jpg[]
+
+*5.  Enter the reason for the reboot in the Text box and then click on the "OK" button to reboot the server.*
+
+image::L02-05.jpg[]
+
+*Option #2 - CLI REBOOT*
+
+*1. Login to system as root*
+----
+$ ssh root@des071esx20
+----
+
+*2. Type the reboot command and press the ENTER key.*
+----
+# reboot
+----
+
+*3. Take the ESX servers out of maintenance mode*

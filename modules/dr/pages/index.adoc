@@ -1,0 +1,10 @@
+= WELLS ENTERPRISES, INC. DISASTER RECOVERY MANUAL
+
+image::dr:CC.jpg[]
+
+Wells Enterprises, Inc. is the world's largest family owned ice cream manufacturer. As the world's largest manufacturer of ice cream in one location, Wells Enterprises, Inc. has made Le Mars, Iowa, the "Ice Cream Capital of the World." BLUE BUNNY® branded items are distributed across the nation and in many foreign countries. Over 2,500 production, sales, office, and support personnel make up the Wells Enterprises family. With its state-of-the-art production facilities in LeMars, Iowa, the company is cited by many industry experts as one of the most technically advanced in the industry.​
+
+The Wells' Information Technology Disaster Recovery manual deals solely on IT recovery procedures caused by an event that affects the entirety of the corporate data center functions. Through diligent planning and testing, the Disaster Recovery Plan ensures minimal outage time if forced to operate from an alternate data center.  Wells Enterprises, Inc. has contracted with Long Lines and Woodbury County Emergency Services to provide data center space, infrastructure, and the classrooms required to continue Wells' business and IT operations from the alternate data center.
+
+== Preface
+Wells Enterprises, Inc. has a comprehensive Disaster Recovery plan in place.  A Disaster Recovery site is maintained 30 miles from our Corporate data center.  Company information systems are backup up routinely according to Wells' internal IT controls policy; either several times a day, daily or weekly according to the type of data and importance.  System backups are replicated off-line to a virtual tape library.  In addition, critical company transactional data is actively replicated to the disaster recovery site on a continual basis.  The disaster recovery plan calls for the full recovery of all business critical systems according to their criticality; within 8 hours, 12 hours or 24 hours.  The plan procedure is tested quarterly, with a full disaster recovery test scheduled annually.

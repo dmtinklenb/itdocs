@@ -1,0 +1,7 @@
+= 3.1  |  Computer System Environment
+
+The current IT system information is gathered using utility programs and reporting tools to report the various configurations for ESXi servers, virtual Linux machines, Microsoft Windows, Hitachi storage navigator and Kemp.
+
+The system information is housed in a central directory on a shared drive available at both the corporate and alternate data center.
+
+Click on the link to get reports and configurations for the following systems.  The link directs you to the Production Site Reports folder which houses these configuration folders.

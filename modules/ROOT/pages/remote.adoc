@@ -1,0 +1,329 @@
+:author: Doug Tinklenberg
+:email: <dmtinklenb@bluebunny.com>
+
+:frame: all
+:grid: all
+
+[width="100%",options="header"]
+[cols="^,^,^", frame=none, grid=none]
+|====================
+3+| Welcome to Wells IT Docs {set:cellbgcolor:#1885c7}
+3+| *Remote Offices* {set:cellbgcolor:#d6d3cf}
+| link:http://plv001antora.bluebunny.com/itdocs/index.html[Le Mars] {set:cellbgcolor:} | link:http://plv001antora.bluebunny.com/itdocs/dr.html[Sioux City] | *Remote*
+|====================
+
+[width="100%",options="header"]
+[cols="22,5,5,5,5,1,16,5,5,1,9,3,3,3,3,3,3,3", frame=none, grid=none]
+|====================
+5+| *Server* {set:cellbgcolor:#1885c7}
+|  {set:cellbgcolor:#000000}
+3+| *Storage* {set:cellbgcolor:#1885c7}
+|  {set:cellbgcolor:#000000}
+8+| *Links* {set:cellbgcolor:#1885c7}
+
+5+| *Cisco UCS* {set:cellbgcolor:#d6d3cf}
+|  {set:cellbgcolor:#000000}
+3+| *Dell* {set:cellbgcolor:#d6d3cf}
+|  {set:cellbgcolor:#000000}
+8+| *Wells* {set:cellbgcolor:#d6d3cf}
+
+
+| *Device* {set:cellbgcolor:#a9e2f3}
+| *UCSM*
+| *Cluster*
+| *CIMC1*
+| *CIMC2*
+|  {set:cellbgcolor:#000000}
+| Dun-ME4012 {set:cellbgcolor:}
+| https://dun-dell-me4012-01.bluebunny.com/[Ctrl1]
+| https://dun-dell-me4012-02.bluebunny.com/[Ctrl2]
+| {set:cellbgcolor:#000000}
+8+| http://bunnynet.bluebunny.com/is/DisasterRecovery[DR Documentation] {set:cellbgcolor:}
+
+| benhx001
+| https://benhx001.bluebunny.com/[UCSM]
+| https://pes082-msc.bluebunny.com/[Hyperflex]
+|
+|
+| {set:cellbgcolor:#000000}
+| Hen-ME4012 {set:cellbgcolor:}
+| https://hen-dell-me4012-01.bluebunny.com/[Ctrl1]
+| https://hen-dell-me4012-02.bluebunny.com/[Ctrl2]
+|{set:cellbgcolor:#000000}
+8+| http://bunnynet.bluebunny.com/[Bunnynet]{set:cellbgcolor:}
+
+| chihx001
+| https://chihx001.bluebunny.com[UCSM]
+| https://pes081-msc.bluebunny.com/[Hyperflex]
+|
+|
+|{set:cellbgcolor:#000000}
+3+|{set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| http://pwv001sdm.bluebunny.com:8080/CAisd/pdmweb.exe[Helpdesk]{set:cellbgcolor:}
+
+| dunhx001
+| https://dunhx001.bluebunny.com[UCSM]
+| https://pes083-msc.bluebunny.com/[Hyperflex]
+|
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| http://usdnet.bluebunny.com/[ServiceDesk]{set:cellbgcolor:}
+
+| henhx001
+| https://henhx001.bluebunny.com[UCSM]
+| https://pes085-msc.bluebunny.com/[Hyperflex]
+| https://cimc-pes085esx01.bluebunny.com/[pes085esx01]
+| https://cimc-pes085esx02.bluebunny.com/[pes085esx02]
+|{set:cellbgcolor:#000000}
+|{set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| http://www.wellshr.com/[Oracle HCM]{set:cellbgcolor:}
+
+| lakhx001
+| https://lakhx001.bluebunny.com[UCSM]
+| https://pes086-msc.bluebunny.com/[Hyperflex]
+| https://cimc-pes086esx01.bluebunny.com/[pes086esx01]
+| https://cimc-pes086esx02.bluebunny.com/[pes086esx02]
+|{set:cellbgcolor:#000000}
+3+| *NetApp* {set:cellbgcolor:#d6d3cf}
+|  {set:cellbgcolor:#000000}
+8+| https://portal.manage.microsoft.com/#HelpDeskDialog[InTune Portal]{set:cellbgcolor:}
+
+| pes084esx01 (Dun Sec.)
+|
+|
+| https://cimc-pes084esx01.bluebunny.com/[pes084esx01]
+|
+|{set:cellbgcolor:#000000}
+| Hend-c190{set:cellbgcolor:}
+| https://hend-netapp-c190.bluebunny.com/[ONTAP]{set:cellbgcolor:}
+|
+|{set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+| pes087esx01 (Lak Sec.)
+|
+|
+| https://cimc-pes087esx01.bluebunny.com/[pes087esx01]
+|
+|{set:cellbgcolor:#000000}
+| {set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| *Misc.* {set:cellbgcolor:#d6d3cf}
+
+| pes088esx01 (Hen Sec.){set:cellbgcolor:}
+|
+|
+| https://cimc-pes088esx30.bluebunny.com[pes088esx30,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+|{set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| https://plv069ipam.bluebunny.com/ui/[Infoblox DNS Mgr]{set:cellbgcolor:}
+
+| pws048cvmedia
+|
+|
+| https://cimc-pws048cvmedia.bluebunny.com/[pws048cvmedia]
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|  {set:cellbgcolor:#000000}
+8+| http://plv001rhn6.bluebunny.com/users/login[RedHat Satellite]{set:cellbgcolor:}
+
+| pes089esx01
+|
+|
+| https://cimc-pes089esx01.bluebunny.com/[pes089esx01,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://monitor.bluebunny.com/[Server Monitoring]{set:cellbgcolor:}
+
+| pes089esx02
+|
+|
+| https://cimc-pes089esx02.bluebunny.com/[pes089esx02,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://view.bluebunny.com/[View]{set:cellbgcolor:}
+
+| pes089esx03
+|
+|
+| https://cimc-pes089esx03.bluebunny.com/[pes089esx03,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://viewdr.bluebunny.com/[View DR]{set:cellbgcolor:}
+
+| pws089hnvmprxy
+|
+|
+| https://cimc-pws089hnvmprxy.bluebunny.com[pws089hnvmprxy,window=_blank]
+|
+|{set:cellbgcolor:#000000}
+|{set:cellbgcolor:}
+|
+|
+|{set:cellbgcolor:#000000}
+8+| https://linux.oracle.com/pls/apex/f?p=101:3:16635646795027::NO[Unbreakable Linux]{set:cellbgcolor:}
+
+5+| https://intersight.com/[Cisco Intersight,window=_blank]
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://pwv032cert1.bluebunny.com/certsrv/[Certificate Server]{set:cellbgcolor:}
+
+5+|
+|{set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+5+| *VMware vCenters* {set:cellbgcolor:#1885c7}
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| *Office 365* {set:cellbgcolor:#d6d3cf}
+
+| *vCenter* {set:cellbgcolor:#a9e2f3}
+2+| *Management*
+2+| *Console*
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+|{set:cellbgcolor:#000000}
+8+| https://outlook.office365.com/owa[Outlook]{set:cellbgcolor:}
+
+| pav010vctrmisc
+2+a| image::html5.png[link=https://pav010vctrmisc.bluebunny.com/ui/,window=_blank,width=30,role=left]
+2+a| image::vcenter.png[link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,role=left,width=30]
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://bluebunny-my.sharepoint.com/[OneDrive]{set:cellbgcolor:}
+
+| pav010vctrtrapx
+2+a| image::html5.png[link=https://pav010vctrtrapx.bluebunny.com/ui/,window=_blank,width=30,role=left]
+2+a| image::vcenter.png[link=https://pav010vctrtrapx.bluebunny.com:5480/,window=_blank,role=left,width=30]
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.office.com/launch/word[Word]{set:cellbgcolor:}
+
+|
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.office.com/launch/excel[Excel]{set:cellbgcolor:}
+
+| *Dell*  {set:cellbgcolor:#1885c7}
+2+a|
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.office.com/launch/onenote[OneNote]{set:cellbgcolor:}
+
+| PWS048DUMSTONE
+2+| https://idrac-pws048dumstone.bluebunny.com/[IDRAC]
+2+|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://aka.ms/mstfw[Teams]{set:cellbgcolor:}
+
+| PWS089HNMSTONE
+2+| https://idrac-pws089hnmstone.bluebunny.com/[IDRAC]
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+| https://www.yammer.com/office365[Yammer]{set:cellbgcolor:}
+
+| IHPMVH01
+2+| https://idrac-IHPMVH01.bluebunny.com/[IDRAC]
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+| IHPMVH02
+2+| https://idrac-IHPMVH02.bluebunny.com/[IDRAC]
+2+a|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+| IHPMVH03
+| https://idrac-IHPMVH03.bluebunny.com/[IDRAC]
+|
+|
+|
+| {set:cellbgcolor:#000000}
+| {set:cellbgcolor:}
+|
+|
+| {set:cellbgcolor:#000000}
+| {set:cellbgcolor:}
+|
+|
+|
+|
+|
+|
+|
+
+| IHPMVH04
+| https://idrac-IHPMVH04.bluebunny.com/[IDRAC]
+|
+|
+|
+|  {set:cellbgcolor:#000000}
+| {set:cellbgcolor:}
+|
+|
+|  {set:cellbgcolor:#000000}
+| {set:cellbgcolor:}
+|
+|
+|
+|
+|
+|
+|
+
+|
+2+|
+2+|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+
+{set:cellbgcolor:}
+|
+2+|
+2+|
+| {set:cellbgcolor:#000000}
+3+| {set:cellbgcolor:}
+| {set:cellbgcolor:#000000}
+8+|{set:cellbgcolor:}
+|====================

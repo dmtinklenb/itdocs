@@ -1,0 +1,80 @@
+= A03  | Appendix 03 (Manual Data Recovery)
+
+== Restore the Unix Servers
+
+The following steps may be necessary if data is not SAN protected or lost
+
+- Veeam restore
+- RMAN (Oracle database restore)
+
+== RMAN Recovering from Failure
+
+*This process would be used as a last resort to recover a database if it’s been corrupted or because of a total disk/hardware failure.*
+
+By default, RMAN restores archive logs to the log_archive_dest directory of the instances to which it connects as specified in the init.ora file. If you are using multiple nodes to restore and recover, the archive logs may be restored to any of the nodes doing the restore and recover. The node that will actually read the restored logs and perform the roll-forward is the target node to which it is initially connected. For recovery to use these logs, you must ensure that the logs are on a mount point readable from that node.
+When you invoke this script, RMAN identifies the most appropriate backup from which to restore, requests the required tape volumes, and restores the data files.
+If an incremental-backup strategy is in place, then it will restore a combination of levels 0 and above. RMAN then determines which archive logs are required for rolling forward to the current point in time, requests that they are restored from tape, and recovers the database.
+Recovery throughput is related to the number of channels and the number of distinct backup sets that RMAN must read in order to perform the recovery.
+----
+RMAN> run {
+allocate channel t1 type 'sbt_tape';
+restore database;
+recover database;
+release channel t1;
+ }
+----
+
+== Control Files Restore and Recovery Script
+
+*This process would be used as a last resort to recover if the database has been corrupted or because of a total disk/hardware failure.*
+
+Startup the target database in no-mount mode and set the following variables: export NLS_LANG=american
+export NLS_DATE_FORMAT='Mon DD YYYY HH24:MI:SS'
+Run the following script to restore the control file and copy this restored file to each location indicated in the control files parameter in the init.ora file. After all the control files are restored, the database is mounted and opened with resetlogs.
+----
+run {
+allocate channel ca type disk;
+restore controllable to '/oracle/oradata/snap/control01.ctl;
+replicate control file from '/opt/oracle/snap/contro.ctll;
+sql "alter database mount";
+recover database;
+sql "alter database open resetlogs";
+release channel c1;
+}
+----
+After the script is run, the database can be opened with resetlogs (outside of RMAN). A reset database must be invoked within RMAN.
+----
+RMAN>reset database;
+----
+
+*Full recovery of the DATA1 tablespace following loss of its supporting data file:
+The instance is still accessible, and transactions that do not need to access DATA1 continue unaffected.*
+----
+RMAN run {
+allocate channel t1 type 'sbt_tape';
+sql "alter tablespace data1 offline immediate";
+restore tablespace data1;
+recover tablespace data1;
+sql "alter tablespace data1 online";
+release channel t1;
+}
+----
+
+*Full-database recovery to a previous point in time:*
+----
+RMAN run {
+allocate channel t1 type 'sbt_tape';
+allocate channel t2 type 'sbt_tape';
+set until time '28-MAY-1999 12:32';
+restore database;
+recover database;
+sql "alter database open resetlogs";
+release channel t1;
+release channel t2;
+}
+RMAN reset database;
+----
+
+
+[NOTE]
+The date format in the SET UNTIL clause must match the date format of the NLS_DATE_FORMAT environment setting. If you have opened the database with RESETLOGS, you must register this fact in the recovery catalog, using the RESET DATABASE; command.

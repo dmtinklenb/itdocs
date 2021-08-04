@@ -1,0 +1,17 @@
+= A04  | Appendix 04 (VMware VM Troubleshooting)
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+== VM Won't Start
+
+*VM may need to be removed from inventory and re-added.*
+
+. Right-Click on the VM to be removed and select "Remove from Inventory"
+
++
+image::A04-01[]
++
+
+. Click 'Yes' to confirm.
+
+. To add the VM back into the Inventory, select the Datastore view.

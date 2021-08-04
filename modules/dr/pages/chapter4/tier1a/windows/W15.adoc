@@ -1,0 +1,8 @@
+= W15 | DMZ SQL DB (PWV051DBEXT) | 05 MIN
+
+*PWV051DBEXT    COLD     (172.26.1.169)*
+
+- For https://www.bluebunny.com
+
+* Highlight server name in Failover Cluster Manager
+* Right click then click "Start"

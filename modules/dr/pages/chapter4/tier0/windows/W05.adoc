@@ -1,0 +1,9 @@
+= W05 | File Servers - (PWV001FILE (172.23.110.85), PWV092FILE (172.23.110.111), PWV003FILE (172.23.10.191), PWV004FILE (172.23.10.233), PWV005FILE (172.23.10.237), PWV006FILE (172.23.10.236), PWV001DA (pwv001da) | 30 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- Highlight server name in Failover Cluster Manager
+
+- Right click then click "Start"

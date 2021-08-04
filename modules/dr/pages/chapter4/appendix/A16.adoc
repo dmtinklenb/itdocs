@@ -1,0 +1,14 @@
+= A16 | Appendix 16 (Editing Linux /etc/resolv.conf files)
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+== Editing Linux files requires logging onto a server with access to it
+
+. Open a putty session to plv001adm
+
++
+image::A16-01[]
++
+
+
+

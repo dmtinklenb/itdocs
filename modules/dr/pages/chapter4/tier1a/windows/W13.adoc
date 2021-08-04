@@ -1,0 +1,19 @@
+= W13 | Exchange 2016 (PWV011MAIL, PWV001OFFONLINE, PWV051MRELAY) | 60 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+PWV001DC10 setup must be completed before Exchange can be fully functional.
+RDP may not work - Access server through the Console
+
+*Exchange 2016*
+
+- PWV011MAIL                (172.23.10.250)
+- PWV051OFFLINE   COLD      (172.26.1.224)
+- PWV051RELAY     COLD      (172.26.1.151)
+
+* Highlight server name in Failover Cluster Manager
+* Right click then click "Start"

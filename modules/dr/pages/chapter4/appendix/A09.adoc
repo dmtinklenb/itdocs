@@ -1,0 +1,54 @@
+= A09  | Appendix 09 | Active Directory test steps for seizing roles, authoritative restore and time | 45-60 Minutes
+
+
+[NOTE]
+Must use domain admin to complete these steps.
+
+== Use copy of DR Domain Controllers
+
+=== Bring online mirror copy of the Domain Controller Hot VMs from DWS088HV1 to DWS088HV2
+
+. Shutdown DR hot VMs on dws088hv1
+. On HUSVM split pairs between dws088hv1 and dws088hv2 - make writable (linux admins)
+. On dws088hv2 import dwv088dc1, dwv088dc2, dwv088dc3, dwv088dc4 in hyper-v manager on dws088hv2
+. Change vlan on network adapters from vlan98 to vlan198
+
+== Import VMs w/ Copy
+
+== Rename VMs in Hyper-V for DR TEST only
+
+== Seize roles on dwv088dc1
+
+1. Click Start, click Run, type ntdsutil in the Open box, and then click OK.
+2. Type "roles", and then press ENTER.
+3. Type "connections", and then press ENTER.
+4. Type "connect to server dwv088dc1", and then press ENTER, where servername is the name of the domain controller that you want to assign the FSMO role to.
+5. At the server connections prompt, type q, and then press ENTER.
+6. Type seize role, where role is the role that you want to seize. For a list of roles that you can seize, type ? at the fsmo maintenance prompt, and then press ENTER, or see the list of roles at the start of this article. For example, to seize the RID master role, type seize rid master. The one exception is for the PDC emulator role, whose syntax is seize pdc, not seize pdc emulator.
+7. At the fsmo maintenance prompt, type q, and then press ENTER to gain access to the ntdsutil prompt. Type q, and then press ENTER to quit the Ntdsutil utility.
+
+== Set NTP settings on dwv088dc1, PDC emulator is the main NTP server for the domain
+----
+w32tm /config /manualpeerlist:"0.us.pool.ntp.org 1.us.pool.ntp.org 2.us.pool.ntp.org" /syncfromflags:manual /reliable:yes /update
+
+net stop w32time & net start w32time
+----
+
+== Then start dwv088dc2, dwv088dc3, dwv088dc4 then run the following commands on each DC - dwv088dc2,then dwv088dc3, dwv088dc4
+----
+w32tm /config /syncfromflags:DOMHIER /update
+
+net stop w32time & net start w32time
+
+w32tm /resync /force
+----
+Run the next commanod on dwv088dc2, dwv088dc3, dwv088dc4 to verify they are getting their source from dwv088dc1
+
+----
+w32tm /query /status
+----
+
+To verify AD replication, run this powershell command:
+----
+get-adreplicationpartnermetadata -target dwv088dc1.bluebunny.com | fl server,partner,lastreplicationattempt,lastreplicationresult,lastreplicationsuccess
+----

@@ -1,0 +1,20 @@
+= Multipath Commands
+
+To show information about a multipath, mpath1 in this case, run the following command.
+====
+# dmsetup info mpath1
+====
+To show all the multipath devices configured on the system use the following command.
+====
+# dmsetup ls --target=multipath
+====
+To determine which multipath a disk, /dev/sdd in this case, belongs run the following command.
+====
+# multipath -l /dev/sdd
+====
+To determine which disks are included in a multipath, mpath1 in this case, run the following
+command.
+====
+# multipath -l mpath1
+====
+The multipath name (mpath1, mpath..) are persistently bound to the WWID and are stored in the /var/lib/multipath/bindings file.

@@ -1,0 +1,9 @@
+= L25 | Operations Web (plv060adfweb) | 5 MIN
+
+===================
+IMPORTANT: Tier 0, xref:chapter4/tier1a/linux/L15.adoc[L15], xref:chapter4/tier1a/linux/L23.adoc[L23]] must be completed before this step.
+===================
+
+==  plv060adfweb (172.23.5.85)
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.

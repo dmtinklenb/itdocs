@@ -1,0 +1,20 @@
+= 2.0 |  Recovery Plan Teams Overview
+
+This chapter identifies the essential teams required to activate Wells Enterprises Inc.'s disaster recovery plan at the alternate data center.  Each team's duties are outlined, team  members are identified with name, title, and contact information.
+Wells Enterprises Inc.'s Disaster Recovery Plan deals wholly with crisis situations where the corporate data center has incurred a catastrophic event causing a total outage forcing   Wells Enterprises, Inc. to activate the Disaster Recovery Plan.
+
+While there are several other teams associated with a Business Continuity Plan, the Disaster Recovery Plan is specific to the Information Technology department.  The Disaster Recovery Plan details the chronological process needed to start the Tier 0 and Tier 1 environments quickly and efficiently to reduce the outage window and begin production as defined in the Service Level Agreements.  Other tier processes will be started accordingly.
+
+*The teams crucial to the Disaster Recovery Plan are:*
+
+- Executive Management Team
+
+- Damage Assessment / Recovery Team
+
+- IT Crisis Management Team
+
+- Disaster Recovery Coordinator
+
+- Information Technology Team
+
+- Support Team

@@ -1,0 +1,13 @@
+= W61 | System Center 2012 - Operation Manager (PWV0002SCOM1, PWV002SCOM2, PWV002SCOMSQL) | 15 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+
+- PWV0002SCOM1 (172.23.110.141)
+- PWV002SCOM2 (172.23.110.142)
+- PWV002SCOMSQL (172.23.110.245)
+
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

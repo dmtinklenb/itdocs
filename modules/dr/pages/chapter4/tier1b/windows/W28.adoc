@@ -1,0 +1,11 @@
+= W28 | Print Server (PWV001PRINT) | 05 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- PWV001PRINT                   COLD     172.23.10.159
+* Highlight server name in Failover Cluster Manager
+* Right click then click "Start"
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

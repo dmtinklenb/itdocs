@@ -1,0 +1,10 @@
+=  L43 | Red Hat Network (PLV001RHN6) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+
+- PLLV001RHN6 (172.23.5.238)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

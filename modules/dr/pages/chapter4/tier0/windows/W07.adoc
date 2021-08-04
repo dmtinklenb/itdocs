@@ -1,0 +1,15 @@
+= W07 | Microsoft Licensing Server (PWV002KMS, PWV003KMS, PWV004KMS) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+== M/S Licensing Server         COLD
+
+pwv002kms (172.23.110.139)
+pwv003kms (172.23.110.177)
+pwv004kms (172.23.110.31)
+
+- Highlight server name in Failover Cluster Manager
+
+- Right click then click "Start

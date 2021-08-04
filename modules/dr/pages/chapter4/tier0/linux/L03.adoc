@@ -1,0 +1,78 @@
+= L03 | Start plv001ntp, plv001lxlog, plv001foswiki, plv001lxadm | 10 MIN |
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/network/N04.adoc[N04], xref:chapter4/tier0/storage/S02.adoc[S02], xref:chapter4/tier0/linux/L02.adoc[L02] must be completed before this step.
+===================
+===================
+IMPORTANT: MAKE SURE DOMAIN CONTROLLERS ARE UP BEFORE USING VMWARE (verify with the windows admins)
+===================
+
+plv001ntp
+
+  Description: Time Server
+
+  IP Address: 172.23.5.237
+
+  VLAN: 5 - Network adapter 1
+
+  ESXi Cluster: Apps
+
+  Datastore: 71-LXAdmin
+
+
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] for boot up procedure.
+
+
+
+plv001lxlog
+
+  Description: Logging Server
+
+  IP Address: 172.23.5.240
+
+  VLAN: 5 - Network adapter 1
+
+  ESXi Cluster: Apps
+
+  Datastore: 71-LXAdmin
+
+
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] for boot up procedure.
+
+
+
+plv001foswiki
+
+  Description: Time Server
+
+  IP Address: 172.23.5.246
+
+  VLAN: 5 - Network adapter 1
+
+  ESXi Cluster: Apps
+
+  Datastore: 71-LXAdmin
+
+
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] for boot up procedure.
+
+
+
+plv001lxadm
+
+  Description: Time Server
+
+  IP Address: 172.23.5.241
+
+  VLAN: 5 - Network adapter 1
+
+  ESXi Cluster: Apps
+
+  Datastore: 71-LXAdmin
+
+
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] for boot up procedure.

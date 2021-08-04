@@ -1,0 +1,12 @@
+= L07 | OAMWEB (plv047oamweb (172.23.5.57) | 5 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02], xref:chapter4/tier0/linux/L05.adoc[L05] must be completed before this step.
+===================
+
+*ssh root@plv047oamweb*
+----
+su - oracle
+
+/u01/app/oracle/product/Middleware/Oracle_WT1/instances/instance1/bin/opmnctl startall
+----

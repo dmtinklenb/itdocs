@@ -1,0 +1,11 @@
+= L12 | Paging Servers (plv001page (172.23.5.12), plv002page (172.23.5.18) | 05 MIN
+
+==  Loudspeaker paging primary server (Paging Datastore, Applications Cluster)
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02] must be completed before this step.
+===================
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix - A02] on starting a VM server and finding the vCenter where it lives
+- InformaCast starts automatically
+- Telephony admin makes DNS changes

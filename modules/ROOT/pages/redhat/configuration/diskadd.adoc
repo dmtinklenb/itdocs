@@ -1,0 +1,37 @@
+=== Disk Addition
+
+[NOTE]
+====
+ASSUMPTIONS: A disk has been zoned and masked to the system.
+====
+
+. Login to system as root.
++
+[source]
+----
+$ ssh root@computer
+----
+
+. Determine what disks you have on your system.
++
+[source]
+----
+# cat /proc/scsi/scsi
+----
+
+. Do a SAN Fabric rediscover for a specific HBA, host0 in this scenerio.
++
+[source]
+----
+# echo "1" > /sys/class/fc_host/host0/issue_lip
+# echo "- - -" > /sys/class/scsi_host/host0/scan
+----
+
+. Determine what disks you now have on your system.
++
+[source]
+----
+# cat /proc/scsi/scsi
+----
+
+

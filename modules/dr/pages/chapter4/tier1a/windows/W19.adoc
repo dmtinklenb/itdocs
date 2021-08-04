@@ -1,0 +1,16 @@
+= W19 | Process Controls Freezer (PWV045FRZ*) | 30 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- PWV045FRZDA1 (172.22.120.25)
+- PWV045FRZDA2 (172.22.120.26)
+- PWV045FRZENG (172.22.120.23)
+- PWV045FRZFTD (172.22.120.24)
+- PWV045FRZHMI1 (172.22.120.27)
+- PWV045FRZHMI2 (172.22.120.28)
+- PWV045FRZRD1 (172.22.120.29)
+- PWV045FRZRD2 ()172.22.120.30
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

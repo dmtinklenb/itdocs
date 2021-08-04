@@ -1,0 +1,110 @@
+= CentOS / RHEL 7 : Tips on Troubleshooting NTP / chrony Issues
+
+*The chrony service does not change the time*
+
+The often misconception is that the chrony service is setting the time to the one given by the NTP server. This is incorrect – what actually happens is that based on the answer from the NTP server, chrony just tells the system clock to go faster or slower. For this reason, sometimes even though the time is wrong and the NTP server is working, the time does not get corrected immediately.
+
+== Only time when chrony sets time
+*When the chrony service starts, there are some settings in the /etc/chrony/chrony.conf file that tells it to actually set the time if specific conditions occur:*
+----
+# Force system clock correction at boot time.
+makestep 1000 10
+----
+*which means that if chrony detects during the first 10 measurements after its start that the time is off by more than 1000 seconds it will set the clock.*
+
+== Some useful commands
+*Below are some useful commands which can be used for the troubleshooting of chrony related issues.*
+----
+# chronyc tracking
+# chronyc sources
+# chronyc sourcestats
+# systemctl status chronyd
+# chronyc activity
+# timedatectl
+----
+== Check chronyd status
+*To check the status of the chronyd daemon :*
+----
+# systemctl status -l chronyd
+● chronyd.service - NTP client/server
+   Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2016-08-12 13:22:22 IST; 1s ago
+  Process: 33263 ExecStartPost=/usr/libexec/chrony-helper update-daemon (code=exited, status=0/SUCCESS)
+  Process: 33259 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+ Main PID: 33261 (chronyd)
+   CGroup: /system.slice/chronyd.service
+           └─33261 /usr/sbin/chronyd
+
+Aug 12 13:22:22 NVMBD1S11BKPMED03 systemd[1]: Starting NTP client/server...
+Aug 12 13:22:22 NVMBD1S11BKPMED03 chronyd[33261]: chronyd version 2.1.1 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +DEBUG +ASYNCDNS +IPV6 +SECHASH)
+Aug 12 13:22:22 NVMBD1S11BKPMED03 chronyd[33261]: Frequency 0.000 +/- 1000000.000 ppm read from /var/lib/chrony/drift
+Aug 12 13:22:22 NVMBD1S11BKPMED03 systemd[1]: Started NTP client/server.
+----
+== The chronyc sources command
+*Running chronyc sources -v shows the current state of the NTP server/s configured in the system. Here is an example output, in which ntp.example.com shows as a valid server which is online:*
+----
+# chronyc sources -v
+210 Number of sources = 1
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current synced, '+' = OK for sync, '?' = unreachable,
+| /                'x' = time may be in error, '~' = time is too variable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||                                                /   xxxx = adjusted offset,
+||         Log2(Polling interval) -.             |    yyyy = measured offset,
+||                                              |    zzzz = estimated error.
+||                                   |           |
+MS Name/IP address           Stratum Poll LastRx Last sample
+============================================================================
+^* ntp.example.com          3    6     40    +31us[  -98us] +/-  118ms
+----
+Note that a Source state different than ‘*’ usually indicates a problem with the NTP server.
+
+*Source state ‘~’ means that the time is too variable*
+If the Source state is ‘~‘, it probably means that the server is accessible but the time is too variable. This can happen if the server responds too slow or responds sometimes slower and sometimes faster. You could check the response time of the pings to the server to see if they are slow or variable. This state has also been noticed when the server is running on virtual machines which are too slow causing timing issues.
+
+== Chrony check and restart every hour
+Once an hour, the chrony service checks the output of the chronyc sources -v command, by running script /usr/sbin/palladion_chrony_healthcheck which runs /usr/sbin/palladion_check_chrony and checks its output:
+
+* if /usr/sbin/palladion_check_chrony returns 1 – it means there was no online source (no source with Source state = ‘*’) , so chrony restarts in an attempt to re-initialize the server status
+* if /usr/sbin/palladion_check_chrony returns 0 – this means everything is ok, chrony does not need to be restarted because it already has a valid online source
+----
+# cat /etc/cron.d/chrony
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#
+# Check chrony every hour and restart if necessary.
+#
+16 * * * *     root    /usr/sbin/palladion_chrony_healthcheck
+----
+
+== Chrony logs
+There are several chrony logs that can be used to troubleshoot. Most of them are located in /var/log/chrony/. Note that the latest file is not always the *.log one. Sometimes it happens that even the *.log.2 or *.log.3 file are the ones that are more recent. Here is an example of listing the files with sorting by the most recent:
+----
+# ls -lisaht  /var/log/chrony/
+total 1.5M
+3801115 580K -rw-r--r--  1 root root 574K Oct 21 14:56 measurements.log.3
+3801131 544K -rw-r--r--  1 root root 540K Oct 21 14:56 statistics.log.3
+3801166 356K -rw-r--r--  1 root root 350K Oct 21 14:56 tracking.log.3
+3801089 4.0K drwxr-xr-x 16 root root 4.0K Oct 21 00:01 ..
+3801114 4.0K drwxr-xr-x  2 root root 4.0K Oct 21 00:01 .
+3801128    0 -rw-r--r--  1 root root    0 Oct 21 00:01 tracking.log
+3801110    0 -rw-r--r--  1 root root    0 Oct 21 00:01 measurements.log
+3801120    0 -rw-r--r--  1 root root    0 Oct 21 00:01 statistics.log
+3801167    0 -rw-r--r--  1 root root    0 Oct 20 00:01 tracking.log.1
+3801165    0 -rw-r--r--  1 root root    0 Oct 20 00:01 statistics.log.1
+3801159    0 -rw-r--r--  1 root root    0 Oct 20 00:01 measurements.log.1
+----
+
+== Try setting only one NTP server by entering its IP address
+If until now you have been using two or more NTP servers (either because they were set or because you entered an FQDN that resolves in different IP addresses), try to set one single NTP server by entering only one IP address. This may solve your NTP related issue.
+
+== Tracing the communication with the NTP server
+*To double check if the NTP server is answering or not, it is possible to trace the traffic between chrony and the NTP server for a period of time while monitoring the server:*
+
+. Start a pcap trace with tcpdump on the NTP port 123 and leave it running until the issue appears (run it in ‘screen’ or with ‘nohup’ to avoid it from being stopped if you disconnect from the shell command)
+.  As soon as the issue re-appears, get a System Diagnostics covering the entire history since you have set the server to DNS name until the gap reoccurred. If this produces a file that is too big, just get the System Diagnostics for Current data and in addition copy all the files from /var/log/chrony/, and all files called /var/log/syslog* . Remember to stop the trace you started at step 1
+
+*REFERENCE:* https://www.thegeekdiary.com/centos-rhel-7-tips-on-troubleshooting-ntp-chrony-issues/[CentOS / RHEL 7 : Tips on Troubleshooting NTP / chrony Issues]
+
+

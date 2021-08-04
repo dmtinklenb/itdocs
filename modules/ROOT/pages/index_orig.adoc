@@ -1,0 +1,50 @@
+:author: Scott Linden
+:email: <sdlinden@bluebunny.com>
+
+[width="100%",options="header"]
+[cols="^,^,^", frame=none, grid=none]
+|====================
+3+| Welcome to LinuxWiki! {set:cellbgcolor:#1885c7}
+3+| *Le Mars Data Center* {set:cellbgcolor:#d6d3cf}
+| *Le Mars* {set:cellbgcolor:} | Sioux City | Remote
+|====================
+
+[width="100%",options="header"]
+[cols="22,5,5,5,5,1,16,5,5,1,9,3,3,3,3,3,3,3", frame=none, grid=none]
+|====================
+5+| *Server* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} 3+| *Storage* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} 8+| *Wells Links* {set:cellbgcolor:#d6d3cf}
+5+| *Cisco UCS* |  {set:cellbgcolor:} 3+| *Brocade* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} | *Office 365* {set:cellbgcolor:#d6d3cf} a| image:outlook.png[link=https://outlook.office365.com/owa,window=_blank,width=30,role=center] a| image:onedrive.png[link=https://bluebunny-my.sharepoint.com/,window=_blank,width=30,role=center] a| image:word.png[link=https://www.office.com/launch/word,window=_blank,width=30,role=center] a| image:excel.png[link=https://www.office.com/launch/excel,window=_blank,width=30,role=center] a| image:onenote.png[link=https://www.office.com/launch/onenote,window=_blank,width=30,role=center] a| image::teams.png[link=https://aka.ms/mstfw,window=_blank,width=30,role=center] a| image:yammer.png[link=https://www.yammer.com/office365,window=_blank,width=30,role=center]
+| *Device* {set:cellbgcolor:#a9e2f3} | *UCSM* | *Cluster* | *CIMC1* | *CIMC2* |  {set:cellbgcolor:} 3+| https://pwv001sanadmin.bluebunny.com/dcm-client/dcmclient.jnlp[BNA Desktop Client] |  8+| http://bunnynet.bluebunny.com/is/DisasterRecovery[DR Documentation] 
+| lemhx001 | https://lemhx001.bluebunny.com[UCSM] | https://pes076-msc.bluebunny.com/[Hyperflex] |  |  |  3+| https://pwv001sanadmin.bluebunny.com/[BNA (pwv001sanadmin)] |  8+| http://bunnynet.bluebunny.com/[Bunnynet] 
+| lemucs002 | https://lemucs002.bluebunny.com[UCSM] |  |  |  |  3+| http://br8510-a.bluebunny.com/switchExplorer.html[Brocade 8510a] |  8+| http://pwv001sdm.bluebunny.com:8080/CAisd/pdmweb.exe[Bluebunny Helpdesk]
+| pes069esx01 (sec) |  |  | https://cimc-pes069esx01.bluebunny.com[pes069esx01,window=_blank] |  |  3+| http://br8510-b.bluebunny.com/switchExplorer.html[Brocade 8510b] |  8+| http://usdnet.bluebunny.com/[ServiceDesk Dashboard]
+| pes073esx30 (DB)  |  |  | https://cimc-pes073esx30.bluebunny.com[pes073esx30,window=_blank] |  |  |  |  |  |  8+| http://www.wellshr.com/[Oracle HCM]
+| pes073esx31 (DB)  |  |  | https://cimc-pes073esx31.bluebunny.com[pes073esx31,window=_blank] |  |  3+| *NetApp* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} 8+| https://portal.manage.microsoft.com/#HelpDeskDialog[Company Portal (InTune)]
+| pes073esx32 (DB)  |  |  | https://cimc-pes073esx32.bluebunny.com[pes073esx32,window=_blank] |  |  | LEM-NetApp-Prod | https://lem-netapp-prod.bluebunny.com/[ONTAP] | https://lem-netapp-deploy-prod.bluebunny.com/[Deploy] |  8+|  
+| pes073esx33 (DB)  |  |  | https://cimc-pes073esx33.bluebunny.com[pes073esx33,window=_blank] |  |  | LEM-NetApp-Test | https://lem-netapp-test.bluebunny.com/[ONTAP] | https://lem-netapp-deploy-test.bluebunny.com/[Deploy] |  8+| *Misc.* {set:cellbgcolor:#d6d3cf}
+| pes078esx30 (Proc Controls) {set:cellbgcolor:} |  |  | https://cimc-pes078esx30.bluebunny.com[pes078esx30,window=_blank] |  |  |  |  |  |  8+| https://plv069ipam.bluebunny.com/ui/[Infoblox DNS Manager]
+| pes078esx31 (Proc Controls) |  |  | https://cimc-pes078esx31.bluebunny.com[pes078esx31,window=_blank] |  |  3+| *Pure Storage* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} 8+| http://plv001rhn6.bluebunny.com/users/login[RedHat Satellite Server 6]
+| pes078esx32 (Proc Controls) |  |  | https://cimc-pes078esx32.bluebunny.com[pes078esx32,window=_blank] |  |  3+| https://lempurem50.bluebunny.com/[LEMPureM50] |  8+| https://monitor.bluebunny.com/[Server Monitoring]
+| pes078esx33 (Proc Controls) |  |  | https://cimc-pes078esx33.bluebunny.com[pes078esx33,window=_blank] |  |  3+| https://lempurex70.bluebunny.com/[LEMPureX70] |  8+| https://view.bluebunny.com/[View]
+| pls001vidarch |  |  | https://cimc-pls001vidarc.bluebunny.com[pls001vidarch,window=_blank] |  |  3+| https://pure1.purestorage.com/[Pure1] |  8+| https://viewdr.bluebunny.com/[View DR]
+| pws011vmprxy |  |  | https://cimc-pws011vmprxy.bluebunny.com[pws011vmprxy,window=_blank] |  |  |  |  |  |  8+| https://linux.oracle.com/pls/apex/f?p=101:3:16635646795027::NO[Unbreakable Linux Network]
+5+| https://intersight.com/[Cisco Intersight,window=_blank] |  3+| *Rockstor* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} 8+| https://pwv032cert1.bluebunny.com/certsrv/[Certificate Server]
+5+|  |  3+| https://pav010nfs01.bluebunny.com/[NFS01 (pav010nfs01)] |  8+|  
+5+| *VMware vCenters* {set:cellbgcolor:#d6d3cf} |  {set:cellbgcolor:} 3+| https://pav010rman01.bluebunny.com/[RMAN01 (pav010rman01)] |  8+|  
+| *vCenter* {set:cellbgcolor:#a9e2f3} 2+| *Management* 2+| *Console* | {set:cellbgcolor:} 3+| https://pav010rman02.bluebunny.com/[RMAN02 (pav010rman02)] |  8+|  
+| pav010vctrapps 2+a| image::html5.png[link=https://pav010vctrapps.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrapps.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+|
+| pav010vctrdb 2+a| image::html5.png[link=https://pav010vctrdb.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrdb.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+| pav010vctrhyp 2+a| image::html5.png[link=https://pav010vctrhyp.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrhyp.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+| pav010vctrmisc 2+a| image::html5.png[link=https://pav010vctrmisc.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+| pav010vctrquad 2+a| image::html5.png[link=https://pav010vctrquad.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrquad.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+| pav010vctrtrapx 2+a| image::html5.png[link=https://pav010vctrtrapx.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrtrapx.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+| pav010vctrvdi-lem 2+a| image::html5.png[link=https://pav010vctrvdi-lem.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrvdi-lem.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+| pav010vctrweb 2+a| image::html5.png[link=https://pav010vctrweb.bluebunny.com/ui/,window=_blank,width=30,role=center] 2+a| image::vcenter.png[link=https://pav010vctrweb.bluebunny.com:5480/,window=_blank,role=center,width=30] 13+| 
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+5+| *Kemp*  {set:cellbgcolor:#d6d3cf}  |  {set:cellbgcolor:} |  |  |  |  |  |  |  |  |  |  |  | 
+| *Cluster* {set:cellbgcolor:#a9e2f3} 2+| *Node 1* 2+| *Node 2* 13+| {set:cellbgcolor:}
+| https://pav010kemp.bluebunny.com/[pav010kemp] 2+| https://pav010kemp01.bluebunny.com/[pav010kemp01] 2+| https://pav010kemp02.bluebunny.com/[pav010kemp02] 13+|
+|====================
+
+
+

@@ -1,0 +1,13 @@
+= W06 | Tools Servers (TOOLSx, PWV022x , PWV023X (VMware View) | 60 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+== Tools Servers | COLD
+
+- Needed for IT Tools/Applications.  Servers starting with TOOL* and PWV022*
+
+. Highlight server name in Failover Cluster Manager
+
+. Right click then click "Start"

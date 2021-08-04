@@ -1,0 +1,16 @@
+= L17 | OTM APP (plv080otmapp, plxvm083, plv084otmweb, plv088otmwebx, plv080milemkr) | 10 MIN
+
+===================
+IMPORTANT: Tier 0, xref:chapter4/tier1a/linux/L16.adoc[L16] must be completed before this step.
+===================
+
+== OTM Apps Middle Tiers | COLD
+
+- Refer to Appendix 02 on starting a VM servers for the following:
+
+* plv080otmapp      172.23.6.95
+* plxvm083          172.23.6.91
+* plv084otmweb      172.23.6.96
+* plv088otmwebx     172.23.6.97
+* plv080milemkr     172.23.5.63
+

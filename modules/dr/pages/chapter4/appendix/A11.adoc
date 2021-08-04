@@ -1,0 +1,31 @@
+= A11  | Appendix 11 | WIN DR-TEST ONLY STEPS | 15 MIN
+
+
+[NOTE]
+If this is a YEARLY DR Test, shutdown these VM's at DR and export them to the sandbox environment.
+
+
+- DWV001BNA
+- DWV001DHCP
+- DWV001FAXB
+- DWV001LYNC1
+- DWV001LYNC2
+- DWV001MAIL1 - HOT
+- DWV001MAIL2
+- DWV001OFFWEB
+- DWV001SQL - HOT
+- DWV051LYNCEDGE1
+- DWV052LYNCEDGE2 - HOT
+- DWV088VMM
+- DWV088DC1
+- DWV088DC2
+- DWV088DC3
+- DWV088DC4,
+- DWV011V6SEC - HOT
+
+====
+. Open up Hyper-V Manager.
+. Connect to DWS088hv1.
+. Right click on each VM.
+. Choose Shutdown.
+====

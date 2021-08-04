@@ -1,0 +1,50 @@
+= S02 | Preparing PURE Hot VM Volumes | 15 MIN |
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+
+*1. Open a browser go to https://suxpurem50.bluebunny.com or https://172.27.100.20 and login with the pureuser account.*
+
+image::DR-CH4-S01-01.jpg[]
+
+*2. Select "Protection" from the left side menu.*
+
+image::S01-02.jpg[]
+
+*3. Select the "Protection Groups" tab at the top of the main window.*
+
+image::S01-03.jpg[]
+
+*4. Click on the DR-PG-Local Protection Group*
+
+image::S02-01.jpg[]
+
+*5. Copy the latest snapshot from the "Protection Group Snapshots" section at the bottom of the page.*
+
+image::S02-02.jpg[]
+
+*6. Click on the "Copy Snapshot" button for the DR-DWS088-Hot volume in the "Volume Snapshot" window.*
+
+image::S02-03.jpg[]
+
+*7. In the name text box type a descriptive name and click the Copy button.*
+
+image::S02-04.jpg[]
+
+*8. Click on the "Close" button in the "Volume Snapshots" window.*
+
+image::S02-05.jpg[]
+
+*9. Select the "Hosts" tab at the top of the main window.*
+
+image::S02-06.jpg[]
+
+*10. Select the host group "dws088-cold" from the "Host Groups" section at the bottom of the page.*
+
+image::S02-07.jpg[]
+
+*11. Click on the three vertical dots in the "Connected Volumes" section and select "Connect".*
+
+image::S02-08.jpg[]
+
+*12.  Click the checkbox next to the volume that was just created and click the Connect button.*

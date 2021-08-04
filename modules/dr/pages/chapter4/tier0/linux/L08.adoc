@@ -1,0 +1,17 @@
+= L08 | OAMEBS (plv048oamebs (172.23.5.58) | 5 MIN
+
+*ssh root@plv048oamebs*
+
+----
+su - oracle
+
+/u01/oracle/start_ebsoam.sh
+----
+
+*You don't have to wait for the script to finish to run the next command.*
+
+*Open a new terminal window.*
+
+----
+su - oracle -c /u01/app/oracle/product/Middleware/Oracle_WT1/instances/instance1/bin/opmnctl startall
+----

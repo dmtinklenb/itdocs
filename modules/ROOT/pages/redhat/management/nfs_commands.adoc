@@ -1,0 +1,70 @@
+= NFS Commands
+
+If the program uses file locking, issue the following commands (on either the client or the server) to make sure rpc.statd and rpc.lockd are available and responding to RPC requests:
+====
+# /usr/bin/rpcinfo -u servername status
+# /usr/bin/rpcinfo -u servername llockmgr
+# /usr/bin/rpcinfo -u servername nlockmgr
+# /usr/bin/rpcinfo -u clientname status
+# /usr/bin/rpcinfo -u clientname llockmgr
+# /usr/bin/rpcinfo -u clientname nlockmgr
+====
+If any of these commands returns RPC_TIMED_OUT, the rpc.statd or rpc.lockd process may be hung. Follow these steps to restart rpc.statd and rpc.lockd:
+
+. Issue the following commands, on both the NFS client and the NFS server, to kill rpc.statd and rpc.lockd (PID is a process ID returned by the ps command):
++
+====
+# /usr/bin/ps -ef | /usr/bin/grep rpc.statd
+# /usr/bin/kill PID
+# /usr/bin/ps -ef | /usr/bin/grep rpc.lockd
+# /usr/bin/kill PID
+====
++
+. Issue the following commands, on both the client and the server, to remove the contents of the sm and sm.bak directories:
++
+====
+# /usr/bin/rm -r /etc/sm
+# /usr/bin/rm -r /etc/sm.bak
+====
++
+. Issue the following commands to restart rpc.statd and rpc.lockd on both the client and the server:
++
+====
+# /usr/sbin/rpc.statd
+# /usr/sbin/rpc.lockd
+====
++
+NOTE: Always start rpc.statd before starting rpc.lockd.
+
+. Issue the following commands to verify that rpc.statd, rpc.lockd, and nfsd are all running and responding to RPC requests:
++
+====
+# /usr/bin/rpcinfo -u servername status
+# /usr/bin/rpcinfo -u servername llockmgr
+# /usr/bin/rpcinfo -u servername nlockmgr
+# /usr/bin/rpcinfo -u servername nfs
+# /usr/bin/rpcinfo -u clientname status
+# /usr/bin/rpcinfo -u clientname llockmgr
+# /usr/bin/rpcinfo -u clientname nlockmgr
+# /usr/bin/rpcinfo -u clientname nfs
+====
++
+. Wait two minutes before retrying the mount that caused the program to hang.
+. If the problem persists, restart rpc.statd and rpc.lockd, and turn on tracing. See "To Start and Stop Detailed Logging of rpc.stat and rpc.lockd" and "To Start and Stop Basic Logging of rpc.statd and rpc.lockd".
+
+== If Data is Lost Between the Client and the Server
+* Make sure the directory is exported from the server with the noasync option (the default). If the directory is exported with the async option, the NFS server will acknowledge NFS writes before actually writing data to disk. Changing an exported directory from async to noasync degrades write performance for that directory.
+* If users or applications will be writing to the NFS-mounted directory, make sure it is mounted with the hard option (the default), rather than the soft option.
+* If you have a small number of NFS applications that require absolute data integrity, add the O_SYNC flag to the open() calls in your applications. When you open a file with the O_SYNC flag, a write() call will not return until the write request has been sent to the NFS server and acknowledged. The O_SYNC flag degrades write performance for applications that use it.
+* If you have a large number of NFS applications requiring absolute data integrity, or if your entire installation needs a high degree of data integrity, set the NUM_NFSIOD variable to 0 in the /etc/rc.config.d/nfsconf file on each client, as follows,
+====
+NUM_NFSIOD=0
+====
+and issue the following commands to kill all the biod processes (PID is a process ID returned by the ps command):
+====
+# /usr/bin/ps -ef | /usr/bin/grep biod # /usr/bin/kill ''PID PID'' ...
+====
+* The biod daemons improve performance by handling NFS read and write requests from users and applications. After a write request is passed to a biod daemon, control is returned to the user or application. Running a client without biod daemons degrades NFS performance for all users and applications on that client.
+* If multiple NFS users will be writing to the same file, add the lockf() call to your applications to lock the file so that only one user may modify it at a time.
+
+* If multiple users on different NFS clients will be writing to the file, you must also turn off attribute caching on those clients by mounting the file with the noac mount option. Turning off attribute caching degrades NFS performance.

@@ -1,0 +1,21 @@
+= Brocade Manuals
+
+== Administration
+
+* link:{attachmentsdir}/fos-82x-adminguide.pdf[Brocade Fabric OS Admin Guide 8.2]
+* link:{attachmentsdir}/san-admin-best-practices-bp.pdf[SAN Fabric Admin Best Practices Guide]
+
+== Installation
+
+* link:{attachmentsdir}/b6520-installguide.pdf[Brocade 6520 Hardware Installation Guide]
+* link:{attachmentsdir}/53-1004781-02.pdf[SAN Design and Best Practices
+Design Guide]
+* link:{attachmentsdir}/sannav-21x-install.pdf[Brocade® SANnav™ Management Portal Installation and
+Migration Guide]
+
+== Configuration
+
+* link:{attachmentsdir}/fos-82x-commandref.pdf[Brocade® Fabric OS® Command Reference Manual 8.2]
+* link:{attachmentsdir}/53-1004609-04.pdf[SAN Fabric Resiliency and Administration Best Practices
+User Guide]
+* link:{attachmentsdir}/fos-82x-upg.pdf[Brocade® Fabric OS® Software Upgrade User Guide]

@@ -1,0 +1,11 @@
+= L36 | IMGPRD Docfinity (PLV099IMGDB) | 15 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+- plv099imgdb                       COLD     (172.23.5.27)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*
+
+* Database does not autostart.

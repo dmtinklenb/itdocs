@@ -1,0 +1,45 @@
+* xref:index.adoc[Home]
+* Brocade
+** Configuration
+*** xref:brocade/enable_disable_snmp.adoc[Enable/Disable SNMP]
+*** xref:brocade/set_ntp.adoc[Setup NTP]
+** xref:brocade/manuals/brocade_manuals.adoc[Manuals]
+* Cisco
+** How-To
+*** xref:cisco/regenerate_ucs_cert.adoc[Regenerate UCS Certificate]
+** xref:cisco/manuals/manuals.adoc[Manuals]
+* Red Hat
+** Configuration
+*** Services
+**** xref:redhat/configuration/kerberos_config.adoc[Configure Kerberos]
+**** xref:redhat/configuration/chrony.adoc[Install/Configure Chrony]
+*** System
+**** xref:redhat/configuration/AD_Authentication.adoc[AD Authentication]
+**** xref:redhat/configuration/diskadd.adoc[Disk Addition]
+**** xref:redhat/configuration/diskpart.adoc[Disk Partition]
+** xref:redhat/documentation/documentation.adoc[Documentation & Support]
+** Installation
+*** xref:redhat/installation/rhel8mininstall.adoc[RHEL 8 Minimal Install]
+** Management
+*** xref:redhat/management/chrony_troubleshooting.adoc[Chrony/NTP Troubleshooting]
+*** xref:redhat/management/create_checksums.adoc[Creating and Checking Checksums in RedHat]
+*** xref:redhat/management/cups_commands.adoc[Cups Commands]
+*** xref:redhat/management/multipath_commands.adoc[Multipath Commands]
+*** xref:redhat/management/nfs_commands.adoc[NFS Commands]
+*** link:{attachmentsdir}/rh_yum_cheatsheet_1214_jcs_print-1.pdf[YUM Cheat Sheet]
+* Veeam
+** xref:veeam/overview.adoc[Backup Overview]
+** xref:veeam/backup_schedule.adoc[Backup Schedule]
+** How-To
+*** xref:veeam/Appsprd_Restore.adoc[Appsprd Restore]
+*** xref:veeam/ransomware_recovery.adoc[Ransomware Recovery]
+* VMWare
+** How To
+*** xref:vmware/Add_Shared_Disk_VM.adoc[Add Shared Disk to VM]
+
+
+
+
+
+
+

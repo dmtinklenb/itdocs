@@ -1,0 +1,478 @@
+== Corporate
+:table-caption!:
+
+====
+*Servers*
+[cols="5*",options="header"]
+|===
+|Device
+|UCSM
+|Cluster
+|CIMC1
+|CIMC2
+
+|lemhx001
+|https://lemhx001.bluebunny.com/[UCSM]
+|https://pes076-msc.bluebunny.com/[Hyperflex]
+|
+|
+
+|lemucs002
+|https://lemucs002.bluebunny.com/[UCSM]
+|
+|
+|
+
+|pes069esx01 (Security)
+|
+|
+|https://cimc-pes069esx01.bluebunny.com/[pes069esx01]
+|
+
+|pes073esx30 (DB)
+|
+|
+|https://cimc-pes073esx30.bluebunny.com/[pes073esx30]
+|
+
+|pes073esx31 (DB)
+|
+|
+|https://cimc-pes073esx31.bluebunny.com/[pes073esx31]
+|
+
+|pes073esx32 (DB)
+|
+|
+|https://cimc-pes073esx32.bluebunny.com/[pes073esx32]
+|
+
+|pes073esx33 (DB)
+|
+|
+|https://cimc-pes073esx33.bluebunny.com/[pes073esx33]
+|
+
+|pls001vidarch
+|
+|
+|https://cimc-pls001vidarch.bluebunny.com/[pls001vidarch]
+|
+
+|pws011vmprxy
+|
+|
+|https://cimc-pws011vmprxy.bluebunny.com/[pws011vmprxy]
+|
+
+|https://intersight.com/[Cisco Intersight]
+|
+|
+|
+|
+
+|===
+====
+====
+*vCenter Servers*
+[cols="3*",options="header"]
+|===
+|vCenter
+|Management
+|Console
+
+|pav010vctrapps
+a|image::html5.png[Link=https://pav010vctrapps.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrapps.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrdb
+a|image::html5.png[Link=https://pav010vctrdb.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrdb.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrhyp
+a|image::html5.png[Link=https://pav010vctrhyp.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrhyp.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrmisc
+a|image::html5.png[Link=https://pav010vctrmisc.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrmisc.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrquad
+a|image::html5.png[Link=https://pav010vctrquad.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrquad.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrtrapx
+a|image::html5.png[Link=https://pav010vctrtrapx.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrtrapx.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrvdi-lem
+a|image::html5.png[Link=https://pav010vctrvdi-lem.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrvdi-lem.bluebunny.com:5480/,window=_blank,width=30,role=left]
+
+|pav010vctrweb
+a|image::html5.png[Link=https://pav010vctrweb.bluebunny.com/ui,window=_blank,width=30,role=left]
+a|image::vcenter.png[Link=https://pav010vctrweb.bluebunny.com:5480/,window=_blank,width=30,role=left]
+|===
+====
+====
+*Kemp*
+[cols="3*",options="header"]
+|===
+|Cluster
+|Node1
+|Node2
+
+|https://pav010kemp.bluebunny.com/[pav010kemp]
+|https://pav010kemp01.bluebunny.com/[pav010kemp01]
+|https://pav010kemp02.bluebunny.com/[pav010kemp02]
+|===
+====
+
+====
+*Storage*
+[cols="2*",options="header"]
+|===
+|Brocade
+|
+
+|https://pwv001sanadmin.bluebunny.com/dcm-client/dcmclient.jnlp[BNA Desktop Client]
+|https://pwv001sanadmin.bluebunny.com/[BNA (pwv001sadadmin)]
+
+|http://br8510-a.bluebunny.com/switchExplorer.html[Brocade 8510a]
+|http://br8510-b.bluebunny.com/switchExplorer.html[Brocade 8510b]
+|===
+[cols="3*",options="header"]
+|===
+|NetApp
+|
+|
+
+|LEM-NetApp-Prod
+|https://lem-netapp-prod.bluebunny.com/[ONTAP]
+|https://lem-netapp-deploy-prod.bluebunny.com/[Deploy]
+
+|LEM-NetApp-Test
+|https://lem-netapp-test.bluebunny.com/[ONTAP]
+|https://lem-netapp-deploy-test.bluebunny.com/[Deploy]
+
+|===
+[cols="2*",options="header"]
+|===
+|Pure Storage
+|
+
+|https://lempurem50.bluebunny.com/[LEMPureM50]
+|https://lempurem70.bluebunny.com/[LEMPureM70]
+
+|https://pure1.purestorage.com/[Pure1]
+|
+|===
+====
+====
+.Misc Links
+[cols="4*",options="header"]
+|===
+|Office 365
+|
+|
+|
+
+a| image::outlook.png[Link=https://outlook.office365.com/owa,window=_blank,width=30,role=center]
+a| image::onedrive.png[link=https://bluebunny-my.sharepoint.com/,window=_blank,width=30,role=center]
+a| image::word.png[link=https://www.office.com/launch/word,window=_blank,width=30,role=center]
+a| image::excel.png[link=https://www.office.com/launch/excel,window=_blank,width=30,role=center]
+
+a| image::onenote.png[link=https://www.office.com/launch/onenote,window=_blank,width=30,role=center]
+a| image::teams.png[link=https://aka.ms/mstfw,window=_blank,width=30,role=center]
+a| image::yammer.png[link=https://www.yammer.com/office365,window=_blank,width=30,role=center]
+|
+|===
+[cols="4*",options="header"]
+|===
+|Misc
+|
+|
+|
+
+|http://plv001antora.bluebunny.com/itdocs/dr/index.html[Disaster Recovery Documentation]
+|http://bunnynet.bluebunny.com/[BunnyNet]
+|http://pwv001sdm.bluebunny.com:8080/CAisd/pdmweb.exe[Bluebunny Help Desk]
+|http://usdnet.bluebunny.com/[Service Desk Dashboard]
+
+|http://www.wellshr.com/[Oracle HCM]
+|https://portal.manage.microsoft.com/#HelpDeskDialog[Company Portal (InTune)]
+|https://plv069ipam.bluebunny.com/ui/[Infoblox DNS Manager]
+|http://plv001rhn6.bluebunny.com/users/login[Red Hat Satellite]
+
+|https://monitor.bluebunny.com/[Server Monitoring]
+|https://view.bluebunny.com/[View]
+|https://viewdr.bluebunny.com/[View DR]
+|https://linux.oracle.com/pls/apex/f?p=101:3:16635646795027::NO[Unbreakable Linux Network]
+
+|https://pwv032cert1.bluebunny.com/certsrv/[Certificate Server]
+|https://pav010velo.bluebunny.com:5480/[Velo OpsRamp Gateway]
+|https://pwv011vmmgr.bluebunny.com:9443/#!dashboard[Veeam Backup Enterprise Manager]
+|
+|===
+
+====
+
+
+
+
+== DR
+:table-caption!:
+
+====
+.Servers
+[cols="5*",options="header"]
+|===
+|Device
+|UCSM
+|Cluster
+|CIMC1
+|CIMC2
+
+|suxhx001
+|https://suxhx001.bluebunny.com/[UCSM]
+|https://des076-msc.bluebunny.com/[Hyperflex]
+|
+|
+
+|suxucs001
+|https://suxucs001.bluebunny.com/[UCSM]
+|
+|
+|
+
+|des078esx31 (Proc Cntrls)
+|https://cimc-des078esx31.bluebunny.com/[des078esx31]
+|
+|
+|
+
+|des078esx32 (Proc Cntrls)
+|https://cimc-des078esx32.bluebunny.com/[des078esx32]
+|
+|
+|
+
+|dws088vmprxy
+|https://cimc-dws088vmprxy.bluebunny.com/[dws088vmprxy]
+|
+|
+|
+
+|https://intersight.com/[Cisco Intersight]
+|
+|
+|
+|
+
+|===
+====
+====
+.vCenter Servers
+[cols="3*",options="header"]
+|===
+|vCenter
+|Management
+|Console
+
+|dav010vctr
+|https://dav010vctr.bluebunny.com/ui/[UI]
+|https://dav010vctr.bluebunny.com:5480/[Console]
+
+|dav010vctrvdi-sux
+|https://dav010vctrvdi-sux.bluebunny.com/ui/[UI]
+|https://dav010vctrvdi-sux.bluebunny.com:5480/[Console]
+|===
+====
+====
+.Storage
+[cols="2*",options="header"]
+|===
+|Brocade
+|
+
+|https://dwv001sanadmin.bluebunny.com/dcm-client/dcmclient.jnlp[BNA Desktop Client]
+|https://dwv001sanadmin.bluebunny.com//[BNA (dwv001sadadmin)]
+
+|https://drsan6520-a.bluebunny.com/[Brocade 6520a]
+|https://drsan6520-b.bluebunny.com/[Brocade 6520b]
+|===
+[cols="2*",options="header"]
+|===
+|Pure Storage
+|
+
+|https://suxpurem50.bluebunny.com/[SUXPureM50]
+|https://pure1.purestorage.com/[Pure1]
+|===
+====
+
+== Remote Offices
+:table-caption!:
+
+====
+.Servers
+[cols="5*",options="header"]
+|===
+|Device
+|UCSM
+|Cluster
+|CIMC1
+|CIMC2
+
+|benhx001
+|https://benhx001.bluebunny.com/[UCSM]
+|https://pes082-msc.bluebunny.com/[Hyperflex]
+|
+|
+
+|chihx001
+|https://chihx001.bluebunny.com/[UCSM]
+|https://pes081-msc.bluebunny.com/[Hyperflex]
+|
+|
+
+|dunhx001
+|https://dunhx001.bluebunny.com/[UCSM]
+|https://pes083-msc.bluebunny.com/[Hyperflex]
+|
+|
+
+|henhx001
+|
+|https://pes085-msc.bluebunny.com/[Hyperflex]
+|https://cimc-pes085esx01.bluebunny.com/[pes085esx01]
+|https://cimc-pes085esx02.bluebunny.com/[pes085esx02]
+
+|lakhx001
+|
+|https://pes086-msc.bluebunny.com/[Hyperflex]
+|https://cimc-pes086esx01.bluebunny.com/[pes086esx01]
+|https://cimc-pes086esx02.bluebunny.com/[pes086esx02]
+
+|pes084esx01 (Dun Sec.)
+|
+|
+|https://cimc-pes084esx01.bluebunny.com/[pes084esx01]
+|
+
+|pes087esx01 (Lak Sec.)
+|
+|
+|https://cimc-pes087esx01.bluebunny.com/[pes087esx01]
+|
+
+|pes088esx01 (Hen Sec.)
+|
+|
+|https://cimc-pes088esx01.bluebunny.com/[pes088esx01]
+|
+
+|pws048cvmedia
+|
+|
+|https://cimc-pws048cvmedia.bluebunny.com/[pws048cvmedia]
+|
+
+|pes089esx01
+|
+|
+|https://cimc-pes089esx01.bluebunny.com/[pes089esx01]
+|
+
+|pes089esx02
+|
+|
+|https://cimc-pes089esx02.bluebunny.com/[pes089esx02]
+|
+
+|pes089esx03
+|
+|
+|https://cimc-pes089esx03.bluebunny.com/[pes089esx03]
+|
+
+|pws089hnvmprxy
+|
+|
+|https://cimc-pws089hnvmprxy.bluebunny.com/[pws089hnvmprxy]
+|
+
+|https://intersight.com/[Cisco Intersight]
+|
+|
+|
+|
+
+|===
+====
+====
+.vCenter Servers
+[cols="3*",options="header"]
+|===
+|vCenter
+|Management
+|Console
+
+|pav010vctrmisc
+|https://pav010vctrmisc.bluebunny.com/ui/[UI]
+|https://pav010vctrmisc.bluebunny.com:5480/[Console]
+
+|pav010vctrtrapx
+|https://pav010vctrtrapx.bluebunny.com/ui/[UI]
+|https://pav010vctrtrapx.bluebunny.com:5480/[Console]
+|===
+====
+====
+.Dell
+[cols="2*"]
+|===
+|PWS048DUMSTONE
+|https://idrac-pws048dumstone/[iDrac]
+
+|PWS089HNMSTONE
+|https://idrac-pws089hnmstone/[iDrac]
+
+|IHPMVH01
+|https://idrac-ihpmvh01.bluebunny.com/[iDrac]
+
+|IHPMVH02
+|https://idrac-ihpmvh02.bluebunny.com/[iDrac]
+
+|IHPMVH03
+|https://idrac-ihpmvh03.bluebunny.com/[iDrac]
+
+|IHPMVH04
+|https://idrac-ihpmvh04.bluebunny.com/[iDrac]
+|===
+
+====
+====
+.Storage
+[cols="3*",options="header"]
+|===
+|Dell
+|
+|
+
+|Dun-Dell-ME4012
+|https://dun-dell-me4012-01.bluebunny.com/[Controller 1]
+|https://dun-dell-me4012-02.bluebunny.com/[Controller 2]
+
+|Hen-Dell-ME4012
+|https://hen-dell-me4012-01.bluebunny.com/[Controller 1]
+|https://hen-dell-me4012-02.bluebunny.com/[Controller 2]
+|===
+[cols="2*",options="header"]
+|===
+|NetApp
+|
+
+|Hend-NetApp-c190
+|https://hend-netapp-c190.bluebunny.com/[ONTAP]
+|===
+====

@@ -1,0 +1,16 @@
+= W32 | EXTERNAL WEBSITES - (PWV051EXTWEB1, PWV051EXTWEB2, PWV001WEBSVC) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier1a/windows/W15.adoc[W15] must be completed before this step.
+===================
+
+- PWV051WEBEXT1 (172.23.10.145)
+- PWV051WEBEXT2 (172.26.1.129)
+- PWV001WEBSVC (172.23.10.182)          COLD
+
+*Bluebunny / Bombpops / Etc.*
+
+* Highlight server name in Failover Cluster Manager
+* Right click then click "Start"
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

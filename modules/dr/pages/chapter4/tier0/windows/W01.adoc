@@ -1,0 +1,26 @@
+= W01 | Hot Hyper-V Servers Prep (Cold VMs - DWS088HV2, DWS088HV3, DWS088HVSQL1, DWS088HVSQL2) | WIN | 30 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/storage/S02.adoc[S02] must be completed before this step.
+===================
+
+== DWS088HV2 (172.27.98.105), DWS088HV3 (172.27.98.106) | HOT
+- For failover cluster manager, use cluster name DRHVCLUSTER66.bluebunny.com
+
+== DWS088HVSQL1 (172.27.98.108), DWS088HVSQL2 (172.27.98.109) | HOT | Microsoft SQL VMs
+- For failover cluster manager, use cluster name DRHVCLUSTER77.bluebunny.com
+
+== For Hyper-V servers:  This is being updated during the DR test
+
+. Use the UCS console to access either DWS088HV2 (172.27.98.105)  or HV3 (172.27.98.106) using Active Directory account:　 Bluebunny\dradmin and password.
+
+.  In Server Manager, click on TOOLS then Computer Management then select Disk Management
+
+.  After the Volumes are presented to the hosts, they will show in Disk Management as Offline.
+
+. In Disk Management, Right-Click on the Offline Disks and select "Online".
+
+.. There will be several disks that will need to be brought Online
+
+*IF the disks cannot be seen - reboot the host*
+

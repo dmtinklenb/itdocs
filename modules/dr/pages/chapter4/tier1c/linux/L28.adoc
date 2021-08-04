@@ -1,0 +1,28 @@
+= L28 | HR DB (PLV014HRDB) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02], xref:chapter4/tier0/storage/S01.adoc[S01] must be completed before this step.
+===================
+
+- plv014hrdb                     COLD    (172.23.5.40)
+
+*HR/Lawson DB Server (HRPRD Datastore, Quad CPU Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.
+
+.Startup Notes
+[NOTE]
+===============================
+The production HR environment has a special startup process.
+
+. If possible, verify that these CIFS shares in the /etc/fstab file on plv014hrdb are commented out.  If not, the server takes considerable time booting since it's looking for 3 files that are shared from PWV001HRPR.
+
+* #//pwv001hrpr/WEI-HRPR            /WEI-HRPR
+* #//pwv001hrpr/photos              /photos
+* #//pwv004file/Apps-E/OracleHCM    /OracleHCM
+
+. Start the Linux VM = PLV014HRDB
+. Have the HRPRD database started and verified.
+. When the HRPRD database is started, power on PWV001HRPR
+. Then mount the CIFS shares from PWV014HRDB    (mount /CIFS name works;  mount -a did have issues which should be resolved)
+===============================

@@ -1,0 +1,88 @@
+= 2.3 | IT Crisis Management
+
+== IT Crisis Management
+
+The overall coordination of an organization's response to a crisis, in an effective, timely manner, with the goal of avoiding or minimizing damage to the organization's profitability, reputation, and ability to operate.
+
+== IT Crisis Management Team
+
+- Team of IT senior management for overall management of a potentially disastrous event.
+
+* Determining the need to initiate the Disaster Recovery plans
+
+* Establishing an IT command / control center
+
+* Activating the Disaster Recovery teams
+
+* Issuing 'disaster declarations' to recovery service providers, if applicable
+
+* Determining when to move to the next phase of the DRP plans
+
+* Coordinating communications between DRP teams
+
+* Authorizing and prioritizing team activities
+
+* Tracking completion of activities and reporting progress to key stakeholders
+
+* Approving any external communications related to the event
+
+* Authorizing the return to normal operations
+
+== Crisis Management Leader
+
+- This role must possess the right balance of technical skills, business process knowledge, leadership, and the attitudes to successfully maintain an effective Disaster Recovery Plan.
+
+* Receives disaster declaration from the Executive Management Team
+
+* Assesses the aftermath of an event
+
+* Provides the initial and periodic updates to the Information Technology department
+
+* Assembles team leaders
+
+* Tracks the progression of the alternate data center disaster recovery process
+
+* Provides timely updates to whom this position reports
+
+* Assess overall performance of the teams during the recovery process
+
+====
+*Crisis Management Team*
+[cols="4*",options="header"]
+|===
+|Name
+|Title
+|Cell#
+|Home#
+
+|Ryan Schaap - Crisis Mgmt Leader
+|VP IT & CIO
+|712-202-4453
+|712-943-1213
+
+|Mike Kooistra
+|Director of Technology
+|712-540-1142
+|
+
+|Scott Grosenheider
+|Applications Director
+|712-540-5412
+|
+
+|Jasen Heaton
+|Applications Director
+|712-301-8995
+|
+
+|Ron Zellers
+|SR MGR of Enterprise Computing
+|712-540-4369
+|
+
+|Kevin Wadle
+|SR MGR IT Applications
+|712-305-1632
+|712-546-8331
+|===
+====

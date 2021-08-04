@@ -1,0 +1,11 @@
+= L40 | Service Desk DB (PLV009SDMDB) | 15 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+- plv009sdmdb                        COLD     (172.23.5.71)
+
+*SDM (Database) (SDMPRD Datastore, Database Cluster)*
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

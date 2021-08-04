@@ -1,0 +1,7 @@
+= 3.0  | Computer Environment Overview
+
+This chapter concedes the possibility that the corporate data center could suffer partial or total physical loss.  Although the business will operate from the alternate data center, strategies need to be defined to replace the failed or lost equipment as quickly as the corporate data center is available.
+
+Dynamic documentation, spreadsheets, and system configurations will assure us that we have the latest footprint of the computer environment.  The networking and telephony information is dynamic and resides in this chapter but are segregated for the Networking team use.  These files will be used as a last line of defense meaning if something happens that corrupts the configuration files on the servers, storage, or network equipment.
+
+An overview of the data retention policy is incorporated in Chapter 3.  Not only is the physical environment mission critical but how the data is backed up and restored is equally as important if not moreso. 

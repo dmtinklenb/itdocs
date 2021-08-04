@@ -1,0 +1,9 @@
+= L37 | Kofax Database Server (PLV071KFXDB) | 10 MIN
+
+===================
+IMPORTANT: Tier 0, xref:chapter4/tier1a/linux/L16.adoc[L16], xref:chapter4/tier1a/linux/L18.adoc[L18] must be completed before this step.
+===================
+
+- PLV071KFXWEB (172.23.22.69)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

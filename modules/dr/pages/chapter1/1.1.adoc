@@ -1,0 +1,34 @@
+= 1.1  |  IT Disaster Recovery Plan Overview
+
+*Wells Enterprises, Inc.'s Information Technology's Disaster Recovery Plan has been created to deal with outages resulting from events such as:*
+
+ - System, hardware, network, data, and software failures
+
+ - Natural disasters such as tornadoes, floods, and severe storms
+
+ - Sabotage or major security breaches such as cyber-attacks that require operational shutdown
+
+ - Man-made disasters such as power outages, hazardous material spills, and terrorist attacks
+
+ - Recovering from an extended corporate data center outage event
+
+*Each section of the Disaster Recovery Plan has been designed to provide as much information and preparation as is required to recover from a  loss of service.*
+
+*The IT Disaster Recovery Plan is designed to identify and to mitigate risks associated with Wells Enterprises, Inc.'s computer and telecommunication resources.  The process ensures efficient and effective resumption of vital business functions in the event of a major interruption.*
+
+*Due to the growing dependence on information technologies to support essential business processes, business growth and change, the following methodology is used in the development of the IT Disaster Recovery Plan:*
+
+ - Risk assessment
+evaluating the potential risks associated with Wells Enterprises Inc. that could cause an IT Disaster Recovery Plan declaration
+
+ - Business Impact Analysis (BIA) Summary
+systematic process to determine and evaluate the potential effects of an interruption to critical business operations as a result of an event that disrupts business operations
+
+ - Business Continuity
+the capability of a business to continue delivery of products or services at acceptable predefined levels following a disruptive event
+
+ - Recovery Plan Testing and Exercising
+perform periodic disaster recovery tests to ensure that Wells Enterprises Inc.’s IT Disaster Recovery Plan produces the required results
+
+ - Awareness and Training
+Updating processes and maintaining an up-to-plan IT DRP is crucial to the ‘plan’. Training new employees is a key component to the plan

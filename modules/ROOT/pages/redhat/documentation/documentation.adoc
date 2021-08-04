@@ -1,0 +1,14 @@
+= Documentation
+
+== Red Hat Enterprise Linux 7
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index[Security Guide Red Hat Enterprise Linux 7]
+
+== Red Hat Satellite
+* https://access.redhat.com/documentation/en-US/Red_Hat_Satellite/6.9/[Documentation]
+* https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/administering_red_hat_satellite/[Administering Red Hat Satellite]
+* https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/[Product Documentation for Red Hat Subscription Management]
+
+== Support
+* https://access.redhat.com/support/[Red Hat Support]
+* https://access.redhat.com/discussions/[Red Hat Discussions]
+

@@ -1,0 +1,16 @@
+= L15 | WBBPRD (plv050ebsdb) | 10 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+== plv050ebsdb (172.23.6.12) | COLD
+
+*Oracle Database (DB Tier) (WBBPRD_OS Datastore, Database Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives:
+- Database starts automatically
+- Verify the Oracle database has started with the following command:
+====
+ps -ef | grep pmon
+====

@@ -1,0 +1,169 @@
+=== Chrony
+==== Installing Chrony
+
+. Set timezone.
++
+[source]
+----
+$ sudo timedatectl set-timezone America/Chicago
+----
+
+. Chrony can be installed on Red Hat Enterprise Linux 8 from the package manager.
++
+[source]
+----
+$ sudo yum -y install chrony
+----
+
+. After the installation, start and enable chronyd service.
++
+[source]
+----
+$ sudo systemctl enable --now chronyd
+----
+
+. The service status should show running
++
+[source]
+----
+$ systemctl status chronyd
+ ● chronyd.service - NTP client/server
+    Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; vendor preset: enabled)
+    Active: active (running) since Mon 2018-12-31 08:11:50 EAT; 5min ago
+      Docs: man:chronyd(8)
+            man:chrony.conf(5)
+  Main PID: 743 (chronyd)
+     Tasks: 1 (limit: 5061)
+    Memory: 1.7M
+    CGroup: /system.slice/chronyd.service
+            └─743 /usr/sbin/chronyd
+----
+
+==== Configuring Chrony
+
+After the installation, you can make the changes on Chrony main configuration file /etc/chrony.conf
+
+. One main configuration change you can make is to set the time servers closest to you.
++
+[source]
+----
+$ sudo vi /etc/chrony.conf
+----
+
+. Comment out the first pool line and add a list of NTP servers.
++
+[source]
+----
+#pool 2.rhel.pool.ntp.org iburst
+server 0.pool.ntp.org iburst
+server 1.pool.ntp.org iburst
+server 2.pool.ntp.org iburst
+server 3.pool.ntp.org iburst
+----
+
+. You can also add CentOS NTP servers if you don’t have ones close to you.
++
+[source]
+----
+server 0.centos.pool.ntp.org iburst
+server 1.centos.pool.ntp.org iburst
+server 2.centos.pool.ntp.org iburst
+server 3.centos.pool.ntp.org iburst
+----
+
+. Set NTP synchronization.
++
+[source]
+----
+$ sudo timedatectl set-ntp true
+----
+
+. Restart chronyd service after making the change.
++
+[source]
+----
+$ sudo systemctl restart chronyd
+----
+
+. You can also specify IP addresses or network address block that is allowed to access your NTP server.
++
+[source]
+----
+#Allow NTP client access from local network.
+allow 192.168.25.0/24
+----
+
+. If you have active firewalld service, allow ntp port.
++
+[source]
+----
+$ sudo firewall-cmd --add-service=ntp --permanent 
+$ sudo firewall-cmd --reload
+----
+
+. Check if NTP server is working.
++
+[source]
+----
+$ chronyc sources
+ 210 Number of sources = 3
+ MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+ ^+ ntp.dts.mg                    2   7   377   127  +2102us[+1979us] +/-   98ms
+ ^* 196.9.24.88                   2   7   377     2    -11ms[  -11ms] +/-  103ms
+ ^+ jhb-ntp.mweb.co.za            3   7   377   132    -76us[ +158us] +/-  103ms
+ [root@rhel8 ~]# 
+----
+
+==== Configuring NTP Client
+
+Now that you have Chrony NTP Server installed and configured, you can configure NTP client.
+
+. Set timezone.
++
+[source]
+----
+$ sudo timedatectl set-timezone America/Chicago
+----
+
+. Install chrony and configure it as NTP client.
++
+[source]
+----
+$ sudo yum -y install chrony
+----
+
+. Edit the configuration file to set NTP server to point your newly configured NTP server.
++
+[source]
+----
+$ sudo vi /etc/chrony.conf
+server 192.168.25.3
+----
+
+. Set NTP synchronization.
++
+[source]
+----
+$ sudo timedatectl set-ntp true
+----
+
+. Start and enable the service.
++
+[source]
+----
+$ sudo systemctl enable --now chronyd
+----
+
+. Verify the setting using the following command:
++
+[source]
+----
+$ chronyc sources
+ 210 Number of sources = 3
+ MS Name/IP address                 Stratum Poll Reach LastRx Last sample               
+ ^+ 192.168.25.3                    2   7   377    61    +12ms[  +12ms] +/-  100ms
+----
+
+That’s all. You now have NTP server working on RHEL 8 server. See how you can use the timedatectl command to synchronize the system clock with NTP server.
+
+Information taken from Computing for Geeks article https://computingforgeeks.com/how-to-configure-ntp-server-using-chrony-on-rhel-8/[How to Configure NTP Server Using Chrony on RHEL8 / CentOS 8].

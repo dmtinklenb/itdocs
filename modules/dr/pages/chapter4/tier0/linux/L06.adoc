@@ -1,0 +1,14 @@
+= L06 | OAM APP SERVER (plv046oamoim (172.23.5.32) | 5 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02], xref:chapter4/tier0/linux/L05.adoc[L05] must be completed before this step.
+===================
+
+== plv046oamoim | COLD
+*ssh root@plv046oamoim*
+----
+su - oracle
+  --start app server
+cd /sysop/bin/astech
+./start_oamoim.sh
+----

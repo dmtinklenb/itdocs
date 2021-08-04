@@ -1,0 +1,66 @@
+= 2.A | WEI Access to Woodbury County Emergency Services
+
+*The following list shows Wells Enterprises' employees who have approved access to the alternate data center.  Or, in special circumstances, the approved requestor (on the list below) can provide a name of a Wells' employee that needs access.  In either case, employees must always show their badge to a Long Lines representative to get into the Datacenter at the Security Institute.*
+
+====
+*Authorized WEI Employees at WITCC*
+[cols="2*",options="header"]
+|===
+|Title
+|Position
+
+|Ryan Schaap
+|IT VP & CIO
+
+|Mike Kooistra
+|Technology Director
+
+|Ron Zellers
+|Senior Manager Enterprise Computing
+
+|Jeff Wolthuizen
+|Technical Services Manager
+
+|Mark Vos
+|Senior Network Engineer
+
+|John Johnson
+|Network Engineer
+
+|Leo Brennan
+|Senior Network Administrator
+
+|Randy Schiltz
+|Network Engineer
+
+|Scott Linden
+|Senior System Engineer
+
+|Nick Cook
+|System Engineer
+
+|Jason Verros
+|System Engineer
+
+|Greg Haverdink
+|Senior Audio Video Engineer
+
+|Aileen Meyer
+|Service Desk Manager
+
+|Teresa Held
+|Lead Service Desk Technician
+
+|Sandy Eickholt
+|Senior Service Desk Engineer
+
+|Matt Powell
+|Service Desk Technician
+
+|Paige List
+|Service Desk Technician
+
+|Jeffrey Priestley
+|Associate System Engineer
+|===
+====

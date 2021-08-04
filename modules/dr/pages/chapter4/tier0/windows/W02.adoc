@@ -1,0 +1,16 @@
+= W02 | Domain Controllers (DWV088DC1 , DWV088DC2 , DWV088DC3, DWV088DC4, DWV001DHCP)  | 45 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/network/N04.adoc[N04] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+Must be domain admin to complete these steps
+
+DWV088DC1 (172.27.98.101), DWV088DC2 (172.27.98.102), DWV088DC3 (172.27.98.102), DWV088DC4 (172.27.98.104), DWV001DHCP | HOT |
+
+*See xref:chapter4/appendix/A09.adoc[Appendix A09] for active directory remote tests only*
+
+- After the snapshot, verify that the volumes are present.
+

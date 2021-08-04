@@ -1,0 +1,9 @@
+=  L27 | Prescient (PLV011PRSDB) | 10 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+- plv011prsdb  (172.23.5.35)
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.

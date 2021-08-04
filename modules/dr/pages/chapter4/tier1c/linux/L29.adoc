@@ -1,0 +1,9 @@
+= L29 | KRONOS DB (PLV017KRNSDB) | 5 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02], xref:chapter4/tier0/storage/S01.adoc[S01] must be completed before this step.
+===================
+
+- plv017krndb          COLD     (172.23.5.73)
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.

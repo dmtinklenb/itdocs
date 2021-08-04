@@ -1,0 +1,17 @@
+= W30 | Bunnynet/Sharepoint (PWV001SP1, PWV001SP2, PWV001SP3) | 35 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/windows/W10.adoc[W10] must be completed before this step.
+===================
+
+- PWV001SP1 (172.23.10.216)
+- PWV001SP2 (172.23.10.145)
+- PWV001SP3 (172.23.10.218)           COLD
+
+*Bunnynet - Sharepoint*
+
+* Highlight server name in Failover Cluster Manager
+* Right click then click "Start"
+* WBBPRD requires Sharepoint be running before the link for Oracle apps is available. Sharepoint is slow to start until Microsoft SQL database is online.
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

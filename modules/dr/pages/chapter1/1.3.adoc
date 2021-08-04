@@ -1,0 +1,62 @@
+= 1.3 |  Business Impact Analysis (BIA)
+
+*The Business Impact Analysis is the foundation of any Business Continuity Plan.  The purpose of the BIA is to pinpoint the processes crucial to the continued operations and delivery of technologies to the organization.*
+
+*The Business Impact Analysis is based on a worse-case, total outage of Wells' corporate data center and operating from the Security Institute on WITCC's campus.*
+
+*Recovery Time Objective (RTO) and Recovery Point Objective (RPO) are two of the most important terms in the Business Impact Analysis.*
+
+- RTO - the targeted duration of time in which systems must be restored after a disaster or outage event.
+
+- RTO designates the amount of "real time" that can pass before the disruption begins to seriously impede the flow of normal business operations.
+
+- RPO – the amount of time between the last 'data save' and the amount of data that could be lost during a disaster event.
+
+- RPO designates the variable "amount of data" that will be lost or will have to be re-entered during an outage event.
+
+
+*The following tiers and timeframes list the critical components and applications that need to be available before proceeding to the next tier level.*
+
+== 0 - 4 hours
+
+- Pure storage - disk storage devices used to house company data
+- Network - configuring hardware and settings that allow computer equipment to interact together
+- Start all physical and virtual servers - but not the applications
+- Oracle servers - single sign-on for Oracle, Apex, all that use Oracle SSO (single sign-on)
+- Start IT tool servers - allows engineers to administer servers
+
+== 4 - 8 hours
+
+- Oracle applications – ERP system that manages and integrates production, inventory, and financial functions
+- Oracle transportation management – system for managing interactions with trucking companies
+- ASRS / EMS – south ice cream freezer automated inventory management
+- EDI – exchange business critical data electronically in 'real-time' frequency
+- Exchange email system – electronic mail system
+- Ring Central - telephony system including messaging, video conferencing
+- Bunnynet – Microsoft Sharepoint for Wells' employees
+- Process control servers – plant automation
+- Identity and access management – single sign-on
+
+== 8 - 12 hours
+
+- Oracle line side reconciliation – system for production lines around mixes and batching
+- Yard management – system for tracking trailers and shag drivers
+- Web sites – internal/external
+- Door Security
+
+== 12 - 24 hours
+
+- Kronos – hourly employee time reporting and employee scheduling
+- HCM & HR – payroll, benefits, training and other employee related processing and information
+- Prescient – production scheduling, inventory planning and replenishment planning
+- WHIMS / Plant floor data collection
+- IVR – phone call in for tankers
+- Consumer web sites
+- Enterprise asset management scheduling
+
+== 7 days
+
+- Service desk – system to track support tickets
+- Hyperion – analytical database application used for financial reporting
+- Red Hat network – Linux operating system administration
+- Veeam data retention – enterprise data backup system

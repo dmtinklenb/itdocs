@@ -1,0 +1,24 @@
+* xref:index.adoc[Home]
+* Brocade
+** Configuration
+*** xref:brocade/enable_disable_snmp.adoc[Enable/Disable SNMP]
+*** xref:brocade/set_ntp.adoc[Setup NTP]
+* Cisco
+** How-To
+*** xref:cisco/regenerate_ucs_cert.adoc[Regenerate UCS Certificate]
+** Manuals
+*** xref:cisco/manuals/cisco_Wells_LEMUCS001_UCS_Design_and_Deployment_Guide.pdf[UCS Design and Deployment Guide (LEMUCS001)]
+*** xref:cisco/manuals/cisco_Wells_SUXUCS001_UCS_Design_and_Deployment_Guide.pdf[UCS Design and Deployment Guide (SUXUCS001)]
+* Red Hat
+** Configuration
+*** Services
+**** xref:redhat/configuration/kerberos_config.adoc[Configure Kerberos]
+*** System
+**** xref:redhat/configuration/AD_Authentication.adoc[AD Authentication]
+** xref:redhat/documentation/documentation.adoc[Documentation & Support]
+** Management
+*** xref:redhat/management/chrony_troubleshooting.adoc[Chrony/NTP Troubleshooting]
+*** xref:redhat/management/create_checksums.adoc[Creating and Checking Checksums in RedHat]
+* Veeam
+** xref:veeam/Appsprd_Restore.adoc[Appsprd Restore]
+

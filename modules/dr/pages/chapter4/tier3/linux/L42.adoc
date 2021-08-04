@@ -1,0 +1,9 @@
+= L42 | STAT (PLV016STATDB) | 10 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+- PLV016STATDB (172.23.5.119)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

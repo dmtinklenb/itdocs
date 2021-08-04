@@ -1,0 +1,10 @@
+= L10 | OEMPRD (plv033oemdb (172.23.12.20) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier0/linux/L02.adoc[L02] must be completed before this step.
+===================
+
+== plv033oemdb | COLD
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix - A02] on starting a VM server and finding the vCenter where it lives
+- DB Starts Automatically.

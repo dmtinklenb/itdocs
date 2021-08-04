@@ -1,0 +1,59 @@
+= S01 | Pure Storage | 15 MIN | Before breaking the Network Connection
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+
+.Note
+[IMPORTANT]
+S01 is used in DR Testing and actual DR Events.
+
+*1. Open a browser go to https://suxpurem50.bluebunny.com or https://172.27.100.20 and login with the pureuser account.*
+
+image::DR-CH4-S01-01.jpg[]
+
+*2. Select "Protection" from the left side menu.*
+
+image::S01-02.jpg[]
+
+*3. Select the "Protection Groups" tab at the top of the main window.*
+
+image::S01-03.jpg[]
+
+*4. Scroll down and click on the LEMPureX70:PG-DR-Replication Protection Group.*
+
+image::S01-04.jpg[]
+
+*5. Click on the "Copy Protection Group" button for the latest snapshot from the "Protection Group Snapshots" section at the bottom of the page.*
+
+image::S01-05.jpg[]
+
+*6. In the name text box type a descriptive name and click the Create button*
+
+image::S01-06.jpg[]
+
+*7. Now click Storage in the left side menu and then select the "Volumes" tab at the top of the main window. You will now see copies of the volumes which were part of the protection group.*
+
+image::S01-07.jpg[]
+
+*8. Select the "Hosts" tab at the top of the main window.*
+
+image::S01-08.jpg[]
+
+*9. Select the host group from the "Host Groups" section at the bottom of the page.*
+
+image::S01-09.jpg[]
+
+*10. Click on the three vertical dots in the "Connected Volumes" section and select "Connect".*
+
+image::S01-10.jpg[]
+
+*11. Click the checkbox next to all of the volumes that need to be assigned to the host group and click the Connect button*
+
+image::S01-11.jpg[]
+
+*12. Repeat steps 8-11 for all Host Groups.*
+
+*12. Repeat steps 3-12 for protection group LEMPureM70:PG-DR-Replication.*
+
+
+

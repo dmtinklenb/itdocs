@@ -1,0 +1,28 @@
+= L01 | Reboot vCenter Server (DAV010VCTR) | 20 MIN |
+
+:imagesdir: /wellsdocs/modules/dr/assets/images
+
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+*Open a browser go to https://dav010vctr.bluebunny.com:5480/login   https://172.27.97.12:5480/login and login with the root account.*
+
+image::L01-01.jpg[]
+
+*Click on the "Actions" menu in the top right hand corner and select Reboot.*
+
+image::L01-02.jpg[]
+
+*Click on the "Yes" button when the confirmation window pops up.*
+
+image::L01-03.jpg[]
+
+
+
+
+
+
+
+

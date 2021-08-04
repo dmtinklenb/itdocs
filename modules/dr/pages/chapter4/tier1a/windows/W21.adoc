@@ -1,0 +1,18 @@
+= W21 | Process Controls Mix (PWV045MIX*) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- PWV045MIXDA1 (172.22.120.38)
+- PWV045MIXDA2 (172.22.120.39)
+- PWV045MIXHMI1(172.22.120.40)
+- PWV045MIXHMI2 (172.22.120.41)
+- PWV045MIXPHMI1 (172.22.120.49)
+- PWV045MIXPHMI2 (172.22.120.50)
+- PWV045MIXPRD1 (172.22.120.51)
+- PWV045MIXPRD2 (172.22.120.52)
+- PWV045MIXRD1 (172.22.120.42)
+- PWV045MIXRD2 (172.22.120.43)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

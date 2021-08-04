@@ -1,0 +1,11 @@
+= L14 | ISE Appliances (PAV010ISE05 (172.23.5.100), PAV010ISE06 (172.23.5.101) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/network/N04.adoc[N04] must be completed before this step.
+===================
+
+pav010ise05, pav010ise06
+
+These are needed for devices using certificates and wireless access at DR
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix - A02] on starting a VM server

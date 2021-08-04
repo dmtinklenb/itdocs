@@ -1,0 +1,9 @@
+= K01 | KEMP (pav010kemp01, pav010kemp02) | 10 MIN
+
+== Load balancers
+
+*pav010kemp01 (172.23.5.213), pav010kemp02 (172.232.5.214)*
+
+- Refer to Appendix 02 on starting a VM server and finding the vCenter where it lives
+
+- The Kemp appliances live in PAV010VCTRAPPS

@@ -1,0 +1,15 @@
+= N03 | Enable DMZ | 05 MIN
+
+- *Connect to DR-ASA-A*
+
+----
+DR-ASA-A<CONFIG>#int gig 0/3 <enter>
+
+DR-ASA-A<CONFIG-IF>#no shut <enter>
+
+DR-ASA-A<CONFIG-IF>#int gig 0/0 <enter>
+
+ip address 204.126.23.130 255.255.254.0
+
+DR-ASA-A<CONFIG-IF># copy run start.
+----

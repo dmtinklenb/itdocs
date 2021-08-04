@@ -1,0 +1,123 @@
+= 1.2   |  Risk Assessment
+
+*The topics listed below identify potential risks to Wells' Enterprises, Inc. Information Technology arena.  Risks are categorized by probability and impact.  Typically, low probability risks have the highest impact.  For example, a flood has a low probability of occurring but has a high impact should one happen.*
+
+*Through risk assessments Wells has addressed vulnerabilities and created mitigation strategies that greatly reduce the impacts of those hazards.  Depending on the impact of the threat, IT operations can be disrupted from a short time to an extended outage that requires operating from an alternate data center.  A comprehensive plan utilizing a remote data center is addressed in Chapter 4.*
+
+====
+*Risks*
+[cols="3*",options="header"]
+|===
+|Natural Threats
+|Probability
+|Impact
+
+|Tornado
+|Medium
+|High
+
+|Flooding
+|Low
+|High
+
+|Snow/Ice Storms
+|High
+|Low
+
+|Lightning/Thunderstorms
+|High
+|Low
+
+|Earthquake
+|Low
+|High
+|===
+
+[cols="3*",options="header"]
+|===
+|Facility Threats
+|Probability
+|Impact
+
+|Fire
+|Medium
+|High
+
+|Power
+|Low
+|High
+
+|Water Damage
+|Medium
+|High
+
+|Explosion
+|Medium
+|High
+
+|Electrical
+|Low
+|High
+|===
+
+[cols="3*",options="header"]
+|===
+|Social Threats
+|Probability
+|Impact
+
+|Terrorism
+|Low
+|High
+
+|Bombing
+|Low
+|High
+
+|Vandalism
+|Low
+|High
+|===
+
+[cols="3*",options="header"]
+|===
+|Personnel Threats
+|Probability
+|Impact
+
+|Pandemic Event
+|Low
+|High
+
+|Loss of Key People
+|Low
+|High
+|===
+
+[cols="3*",options="header"]
+|===
+|IT Threats
+|Probability
+|Impact
+
+|Data Center Loss
+|Low
+|High
+
+|Data Loss
+|Medium
+|High
+
+|Network Connectivity
+|Medium
+|High
+
+|Cyber Attack
+|Medium
+|High
+
+|Equipment Loss
+|Low
+|Medium
+|===
+====

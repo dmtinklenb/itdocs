@@ -1,0 +1,13 @@
+= L23 | Operations DB (plv060adfdb) | 10 MIN
+
+===================
+IMPORTANT: Tier 0, xref:chapter4/tier1a/linux/L15.adoc[L15] must be completed before this step.
+===================
+
+==  plv060adfdb (172.23.5.61) | COLD
+
+*OPSPRD (Database)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.
+
+

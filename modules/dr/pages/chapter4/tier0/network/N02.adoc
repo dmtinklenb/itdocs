@@ -1,0 +1,34 @@
+= N02 | Change Gateway of last resort | 05 MIN
+
+- *SSH to DR-BB-GTW (this will need to be consoled into)*
+
+----
+- Username:drbbgtw <enter>
+
+
+- Password:xxxxx <enter>
+
+
+- DR-BB-GTW>enable <enter>
+
+
+- DR-BB-GTW>enablePWD <enter>
+
+
+- DR-BB-GTW># config t <enter>
+
+
+- DR-BB-GTW<CONFIG># int gig 0/1 <enter>
+
+
+- DR-BB-GTW<CONFIG-IF>#ip address 204.126.22.4 255.255.254.0 <enter>
+
+
+- DR-BB-GTW<CONFIG-IF># end
+
+
+- DR-BB-GTW># copy running-config startup-config <enter>
+
+
+- DR-BB-GTW>#exit <enter>
+----

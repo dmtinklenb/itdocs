@@ -1,0 +1,6 @@
+= 2.9  |  Long Lines / Woodbury County Emergency Department Contact Information
+
+*Ron Zellers and/or Jeff Wolthuizen are authorized to contact Long Lines / Woodbury County Emergency Department to inform them that an event has occurred at Wells forcing us to operate the business from the alternate data center for an undetermined time period.*
+
+
+- Refer to the xref:chapter1/1.4.adoc[Alternate Data Center] to see a complete list of Long Lines / Woodbury County contact information.

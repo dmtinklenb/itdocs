@@ -1,0 +1,40 @@
+= Regenerate UCS Expired Certificate
+
+== Login to the Fabric Interconnect using ssh
+----
+ssh lemucs001
+----
+
+== Change to the Security scope
+----
+LEMUCS001-A# scope security
+----
+
+== Change to the default Keyring scope
+----
+LEMUCS001-A /security # scope keyring default
+----
+
+== Regenerate the key
+----
+LEMUCS001-A /security/keyring # set regenerate yes
+----
+
+== Commit the changes
+----
+LEMUCS001-A /security/keyring* # commit-buffer
+----
+
+== Change back to the Security scope
+----
+LEMUCS001-A /security/keyring # scope security
+----
+
+== Check the status of the keyring. Be patient it takes some time to regenerate. Cert Status should say "Self Signed Certificate"
+----
+LEMUCS001-A /security # show keyring detail
+Keyring default:
+    RSA key modulus: Mod2048
+    Trustpoint CA:
+    Cert Status: Self Signed Certificate
+----

@@ -1,0 +1,73 @@
+= A01  | Appendix 01 (Manual Recovery of WBBPRD from RMAN)
+
+== Create an initWBBPRD.ora file for database
+
+=== Specify values for the following parameters:
+
+. Control files and location
+. archive log dest_1
+. default Undo tablespace
+. DB_NAME
+
+=== Entries required
+----
+control_files='+DATA/wbbprd/controlfile/current.290.762526295','+GRID/wbbprd/controlfile/current.256.762533981'
+undo_tablespace='UNDOTBS1'
+db_name=’WBBPRD’
+
+db_recovery_file_dest=’+DATA’
+db_recovery_file_dest_size=515396075520
+----
+
+== Run the following RM commands as the oracle account:
+
+----
+$ . ./.profile_11db
+$ rman target /    catalog rman/*****@rmprd startup force nomount pfile=/u01/app/oracle/product/11.2.0.2/db_1/dbs/initWBBPRD.ora
+
+RMAN>run {
+allocate channel 'dev_0' type 'sbt_tape'
+parms='ENV=(OB2BARTYPE=Oracle8,OB2APPNAME=WBBPRD,OB2BARLIST=plxvm050a-wbbprd)';
+restore CONTROLFILE from autobackup; }
+
+RMAN>run {
+allocate channel 'dev_1' type 'sbt_tape'
+parms='ENV=(OB2BARTYPE=Oracle8,OB2APPNAME=WBBPRD,OB2BARLIST=plxvm050a-wbbprd)';
+restore spfile fro autobackup; }
+
+RMAN>run {
+allocate channel 'dev_2' type 'sbt_tape'
+parms='ENV=(OB2BARTYPE=Oracle8,OB2APPNAME=WBBPRD,OB2BARLIST=plxvm050a-wbbprd)';
+restore database;
+recover database;
+alter database open resetlogs; }
+----
+
+[NOTE]
+You may have to set the SCN for this recovery to work. You will have to query the RM catalog to determine the SCN to use. Here is an example of the steps to be executed to obtain an scn number from the rman catalog.
+
+*EXAMPLE:*
+----
+$ . ./.profile_11db
+$ export NLS_DATE_FORMAT="DD-MON-YYYY:HH24:MI:SS"
+$ rman
+Recovery Manager: Release 10.2.0.4.0 - Production on Thu Nov 20 15:55:18 2008
+Copyright (c) 1982, 2007, Oracle.  All rights reserved.
+MAN> connect target /
+nnected to target database: WBBPRD (DBID=80828776)
+RMAN> connect catalog rman/******@rmnprd
+connected to recovery catalog database
+RMAN>list backup;
+BS Key  Type LV Size       Device Type Elapsed Time Completion Time
+------- ---- -- ---------- ----------- ------------ --------------------
+25256   Incr 0  645.57G    SBT_TAPE    01:29:49     08-DEC-2008:10:30:12
+        BP Key: 25259   Status: AVAILABLE  Compressed: NO  Tag: TAG20081208T210022
+        Handle: paxcl23a-wbbprd<WBBPRD_33536:672958823:1>.dbf   Media:
+  List of Datafiles in backup set 25256
+  File LV Type Ckp SCN    Ckp Time             Name
+  ---- -- ---- ---------- -------------------- ----
+  1    0  Incr 74957868547 08-DEC-2008:09:00:24 +DATA_GRP1/wbbprd/datafile/system.277.670931163
+  2    0  Incr 74957868547 08-DEC-2008:09:00:24 +DATA_GRP1/wbbprd/datafile/undotbs1.282.670935367
+  3    0  Incr 74957868547 08-DEC-2008:09:00:24 +DATA_GRP1/wbbprd/datafile/sysaux.269.670931555
+----
+*Change the rman recovery code on after allocating the tape channel, specify the SCN with 'SET UNTIL SCN=78630611816;'*

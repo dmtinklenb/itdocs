@@ -1,0 +1,21 @@
+= Cisco Manuals
+
+== Deployment Guides
+
+* link:{attachmentsdir}/cisco_Wells_LEMUCS001_UCS_Design_and_Deployment_Guide.pdf[UCS Design and Deployment Guide (LEMUCS001)]
+* link:{attachmentsdir}/cisco_Wells_SUXUCS001_UCS_Design_and_Deployment_Guide.pdf[UCS Design and Deployment Guide (SUXUCS001)]
+
+== UCS Spec Sheets
+
+* link:{attachmentsdir}/cisco_c240m3-sff-specsheet.pdf[Cisco UCS C240 M3 High-Density Rack Server (Small Form Factor Disk Drive Model)]
+* link:{attachmentsdir}/cisco_c240m4-sff-spec-sheet.pdf[Cisco UCS C240 M4 High-Density Rack Server (Small Form Factor Disk Drive Model)]
+
+== UCS Manuals
+
+* link:{attachmentsdir}/cisco_Cisco_UCS_6100_and_6200_Series_Configuration_Limits_for_Cisco_UCS_Manager_Release_2.1.pdf[Cisco UCS 6100 and 6200 Series Configuration Limits for Cisco UCS Manager, Release 2.1]
+* link:{attachmentsdir}/cisco_Cisco_UCS_B-Series_CLI_Firmware_Management_Guide_Release_2.1.pdf[Cisco UCS B-Series CLI Firmware Management Guide, Release 2.1]
+* link:{attachmentsdir}/cisco_Cisco_UCS_B-Series_GUI_Firmware_Management_Guide_Release_2.1.pdf[Cisco UCS B-Series GUI Firmware Management Guide, Release 2.1]
+* link:{attachmentsdir}/cisco_Cisco_UCS_Faults_and_Error_Messages_Reference_Release_2.0.pdf[Cisco UCS Faults and Error Messages Reference, Release 2.0]
+
+
+

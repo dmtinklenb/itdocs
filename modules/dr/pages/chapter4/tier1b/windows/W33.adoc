@@ -1,0 +1,12 @@
+= W33 | Internal / External transfer.bluebunny.com (PWV051FTP, PLV017PGP) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- pwv051ftp (172.26.1.158)
+- pwv017pgp (172.23.5.36)
+
+* logon to  https://transfer.bluebunny.com  If that is accessible that should suffice for this test.
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

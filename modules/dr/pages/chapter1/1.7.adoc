@@ -1,0 +1,5 @@
+= 1.7 |   IT Disaster Recovery Summary
+
+Disasters are a reality for which Wells Enterprises, Inc. needs to be well prepared.  We plan for the worst and hope for the best.  Disaster Recovery starts with sound planning and design.  Replicating data to an alternate data center is an essential requirement for our Disaster Recovery plan.  Being aware of disaster scenarios, preparing and testing to prevent them is critically important in protecting our data.  To have an effective Disaster Recovery plan, we must be able to recover the business.  The recovery process must function properly within a given timeframe defined by our Recovery Time Objective and Recovery Point Objective.
+
+The need for thorough documentation exists within each Disaster Recovery plan.  Having a step-by-step procedural document during an actual disaster event far outweighs trying to remember what to do and when to do it.  A dynamic, up-to-date document defining the infrastucture, components, servers and virtual machines inventory is included in Wells' Disaster Recovery plan.  The more dynamic information we can produce, the more robust our DR plan becomes.

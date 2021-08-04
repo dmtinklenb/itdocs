@@ -1,0 +1,13 @@
+= W31 | Remote Desktop Servers (PWV001RDS1, PWV001RDS2) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+- PWV001RDS1 (172.23.10.144)
+- PWV001RDS2 (172.23.10.145) COLD (client for DSI)
+
+* Highlight server name in Failover Cluster Manager
+* Right click then click "Start"
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

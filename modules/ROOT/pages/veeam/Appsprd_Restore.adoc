@@ -1,0 +1,87 @@
+= APPSPRD RESTORE PROCEDURE
+
+Doug Tinklenberg <dmtinklenb@bluebunny.com> 6/14/2021
+
+This document outlines the procedure for restoring Appsprd applications from backup to the required test environment.
+
+== Start Veeam restore process
+
+. RDP to pwv011vmmgr and open the Veeam Backup & Replication Console.
+. On VBR Home screen select Backups -> Disk and expand *NAS-WBBPRD*.
+. Right-click on plv001veeamprxy and choose *Export disk content as virtual disk*.
+. Select the date you want to restore from and click Next.
+. Select *Disk 0* and click Next.
+. On the next screen select the ESX host that is currently hosting the test server you're going to use for the refresh.
+. In the *Path to Folder* section click Browse and select 71-VeeamRestore.
+. Set *Disk type* to Thin an click Next.
+. Add a *Restore reason* if you want.   This is optional.  Click Next.
+. Click Finish.   This will start the process of restoring the backup to a virtual disk (VMDK).
+. While this process is running you can immediately move on to *Remove oracle.old folder*.
+
+== Remove oracle.old folder
+
+. In AWX, launch the *Test(x) Appsprd Prestore Folder Removal* template in the test environment which is getting refreshed.
+
+== Assign restored VMDK to EBS Test VM
+
+. Open the vCenter console - https://pav010vctrapps
+. Right-click on the VM you're using for the refresh and select *Edit Settings*.
+. In the Edit Settings window, click *Add New Device* and select *Existing Hard Disk*.
+. In the Select File window scroll down and click *71-VeeamRestore* and then select plv001veeamprxy_Disk0.vmdk.
+. Click *OK* in the Edit Settings window.
+
+== Mount disk in VM.
+
+. SSH to the VM
+. Change to root user.
+----
+mount /dev/sdc1 /restore
+----
+
+== Copy Oracle folder from /restore to /u04/restored
+----
+cp -Rp /restore/u04/oracle /u04/restore
+----
+
+[IMPORTANT]
+**#DO NOT START THE NEXT STEP UNTIL YOU'VE BEEN NOTIFIED THAT ALL APPS HAVE BEEN SHUTDOWN#**
+
+
+== Run the APPSPRD restore process.
+
+*There are two ways to accomplish the APPS restore*
+
+. Automate with Ansible
+ .. In AWX, launch the *Test(x) Appsprd Refresh* template.
+ .. Verify all folders have been moved correctly and all directory permissions are correct.
+
+. Manually move/copy the required folders.
+ .. On the server where the restored disk is mounted, run the following commands:
++
+----
+mv /u04/oracle /u04/oracle.old
+
+cd u04/restore/
+
+mv oracle /u04
+
+cd /u04/oracle
+
+mv WBBPRD WBBTST
+
+cd /u04/oracle/WBBTSTS/apps/apps_st/appl/xxcus/12.0.0
+
+mv bin bin.old
+
+cp -rp /u04/oracle.old/WBBTST/apps/apps_st/appl/xxcus/12.0.0/bin  /u04/oracle/WBBTST/apps/apps_st/appl/xxcus/12.0.0/
+----
++
+ .. Reboot the Oracle apps servers in the environment being refreshed.
+
+== Cleanup
+
+. On the VM, run
+----
+umount /restore
+----
+. In the vCenter console, right-click on the VM, select *Edit Settings* and delete the hard drive you added previously, making sure you check *Delete files from datastore*.

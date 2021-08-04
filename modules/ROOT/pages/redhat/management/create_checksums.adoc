@@ -1,0 +1,15 @@
+= Creating and Checking Checksums in Red Hat Linux
+
+*Getting a sha256sum checksum for a file.*
+----
+$ sha256sum epel-release-latest-8.noarch.rpm
+8949517e8a84556d06dba8b030fb5bc4553474b352d7ce25799469aa9af4cc62  epel-release-latest-8.noarch.rpm
+----
+*Creating a file with the sha256sum computation on all files in a directory recursively.*
+----
+sudo find . -type f -exec sha256sum {} \; | tee /tmp/output.sha256sum
+----
+*Check all the files in a directory with the shasum output file.*
+----
+sudo sha256sum -c /tmp/output.sha256sum | tee /tmp/output.check.out
+----

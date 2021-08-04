@@ -1,0 +1,11 @@
+= T04 | Ring Central Test | 05 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/network/N04.adoc[N04] must be completed before this step.
+===================
+
+. Sign into Ring Central Client
+
+. Send Instant Message (IM)
+
+. Test call to another internal number / user

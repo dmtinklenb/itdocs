@@ -1,0 +1,10 @@
+= W54 | Production Batch Validation for Invoices (PWV001KOFAXVAL) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02], xref:chapter4/tier2/linux/L37.adoc[L37] must be completed before this step.
+===================
+
+
+- PWV001KOFAXVAL (172.23.22.69)
+
+*Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.*

@@ -1,0 +1,9 @@
+= W09 | DNS for VPN Clients (PWV001DNSVPN1, PWV001DNSVPN2) | 10 MIN
+
+===================
+IMPORTANT: xref:chapter4/tier0/windows/W01.adoc[W01], xref:chapter4/tier0/windows/W02.adoc[W02] must be completed before this step.
+===================
+
+== pwv001dnsvpn1 (172.23.120.120), pwv001dnsvpn2 (172.23.120.121) | COLD
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.

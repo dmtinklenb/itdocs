@@ -1,0 +1,18 @@
+=  L21 | EDI (plv018ectrans, plv018eccom) | 05 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+==  plv018eccom (172.23.6.101) | COLD
+
+*EDI (EDI-Prod Datastore, Applications Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives.
+
+- It should autostart.  If not:
+----
+ssh root@plv018edi
+
+su - powere -c /powere/wellsscripts/startup_edi.sh
+----

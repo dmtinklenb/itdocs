@@ -1,0 +1,27 @@
+= L16 | OTMPRD (plv081otmdb, plv082soadb) | 05 MIN
+
+===================
+IMPORTANT: Tier 0 must be completed before this step.
+===================
+
+== plv081otmdb (172.23.6.80) | COLD
+
+*OTMPRD Database (OTMPRD Datastore, OTMPRD-Redo Datastore, Database Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives:
+- Database starts automatically
+- Verify the Oracle database has started with the following command:
+====
+ps -ef | grep pmon
+====
+
+== plv082soadb (172.23.6.21) | COLD
+
+*OTM SOA Repository DB (SOAPRD Datastore, Database Cluster)*
+
+- Refer to xref:chapter4/appendix/A02.adoc[Appendix A02] on starting a VM server and finding the vCenter where it lives:
+- Database starts automatically
+- Verify the Oracle database has started with the following command:
+====
+ps -ef | grep pmon
+====

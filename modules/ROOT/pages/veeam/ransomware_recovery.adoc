@@ -1,0 +1,75 @@
+= Ransomware Recovery
+
+== Data Recovery from AWS
+
+This article outlines the steps required to recover virtual machines, databases, NFS shares and file server data from the Veeam capacity tier in AWS.
+
+These steps would be used if any server, database or Veeam backup files have been corrupted by ransomware.
+
+=== Basic VM Restore from AWS
+
+[NOTE]
+Each virtual machine has its own backup file.  Veeam will only restore a VM from AWS backup files if the required backup file is no longer available in the local repository.
+
+. Remove the corrupted local backup file for the VM you need to restore.
+.. In Veeam B&R Console -> Home -> Backups -> Disk, find the VM you need to restore, right-click on its backup file and select Delete from Disk.
++
+image::veeam/rr_01.jpg[]
++
+
+. Rescan the Le Mars AWS Scale-Out Repository.
+.. In Veeam B&R Console -> Backup Infrastructure -> Scale-Out Repositories, right-click "Le Mars AWS Scale-Out Repository" and select Rescan.  [red]#The scan will take approximately 1.5 hours depending on the size of the VM's backup file.#
++
+image::veeam/rr_02.jpg[]
++
+
+. Restore the VM from AWS.
+.. In Veeam B&R Console -> Home -> Backups -> Object Storage, find the VM you need to restore and select Restore Entire VM.
++
+image::veeam/rr_03.jpg[]
++
+.. On the first screen, double-check to make sure it's the correct VM and click 'Next'
++
+image::veeam/rr_04.jpg[]
++
+.. The next screen configures the restore mode, choose Restore to the Original Location and click Next.
++
+image::veeam/rr_05.jpg[]
++
+.. Click 'Next' on the next two screens and the restore will begin.
+
+=== Restore Oracle Database VM
+
+[NOTE]
+Restoring an Oracle Database VM requires a restore of the entire VM and also requires downloading the Oracle RMAN backup file from AWS to the local repository.
+
+. Remove the corrupted local backup files for the Oracle VM you need to restore.
+.. In Veeam B&R Console -> Home -> Backups -> Disk, find the VM you need to restore, right-click on its backup file and select Delete from Disk.
++
+image::veeam/rr_06.jpg[]
++
+.. Also remove the Oracle RMAN backup file for the VM.
++
+image::veeam/rr_07.jpg[]
++
+. Rescan the Le Mars AWS Scale-Out Repository.
+.. In Veeam B&R Console -> Backup Infrastructure -> Scale-Out Repositories, right-click "Le Mars AWS Scale-Out Repository" and select Rescan.  [red]#The scan will take approximately 1.5 hours depending on the size of the VM's backup file.#
++
+image::veeam/rr_02.jpg[]
++
+. Restore the VM from AWS.
+.. In Veeam B&R Console -> Home -> Backups -> Object Storage, find the VM you need to restore and select Restore Entire VM.
++
+image::veeam/rr_03.jpg[]
++
+.. On the first screen, double-check to make sure it's the correct VM and click 'Next'
++
+image::veeam/rr_04.jpg[]
++
+.. The next screen configures the restore mode, choose Restore to the Original Location and click Next.
++
+image::veeam/rr_05.jpg[]
++
+.. Click 'Next' on the next two screens and the restore will begin.
+. Download the Oracle RMAN backup file from AWS to the local repository.
+.. In Veeam B&R Console -> Home -> Backups -> Object Storage, find the VM you need to restore and select Restore Entire VM.

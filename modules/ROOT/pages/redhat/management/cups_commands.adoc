@@ -1,0 +1,58 @@
+= Cups Commands
+
+Shows all status information:
+====
+# lpstat -t
+====
+Shows the accepting state of printer queues:
+====
+# lpstat -a
+====
+Shows the accepting state of a specific printer queue:
+====
+# lpstat -a [PRINTER]
+====
+Shows the printers and whether or not they are enabled for printing:
+====
+# lpstat -p
+====
+Shows the long listing of printer information:
+====
+# lpstat -l -p [PRINTER]
+====
+Shows whether or not a specific printer is enabled for printing:
+====
+# lpstat -p [PRINTER]
+====
+Shows the jobs queue on all printers:
+====
+# lpstat -o
+====
+Shows the jobs queue on the specified printer:
+====
+# lpstat -o [PRINTER]
+====
+Shows printer options:
+====
+# lpoptions -l -p [PRINTER]
+====
+Disable a printer:
+====
+# cupsdisable [PRINTER]
+====
+Enable a printer:
+====
+# cupsenable [PRINTER]
+====
+Cancel a printer job:
+====
+# cancel [JOB ID]
+====
+Create a printer:
+====
+# lpadmin -p [PRINTER] -P /etc/cups/ppd/Generic-PCL_5c_Printer-hpijs-pcl5c.ppd -v lpd://pwv001print.bluebunny.com/[PRINTER] -E
+====
+Delete a printer:
+====
+# lpadmin -x [PRINTER]
+====

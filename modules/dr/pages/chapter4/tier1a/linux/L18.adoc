@@ -1,0 +1,130 @@
+= L18 | Apps Middle Tiers | 30 MIN
+
+===================
+IMPORTANT: Tier 0, xref:chapter4/tier1a/linux/L15.adoc[L15], xref:chapter4/tier1a/linux/L16.adoc[L16] must be completed before this step.
+===================
+
+.Note
+[NOTE]
+MOUNT NETWORK FILE SYSTEMS (/u02, /u03, /u04) ON MIDDLE TIER SERVERS AFTER THE SERVERS ARE UP
+
+*Verify if the mounts work from Pure*
+
+*Change /etc/resolv.conf ( refer to xref:chapter4/appendix/A17.adoc[Appendix A17] )  - may require rebooting all VMs*
+
+== Oracle Apps Middle Tiers | COLD
+
+- Refer to Appendix 02 on starting a VM servers for the following:
+
+* plxvm070          172.23.22.51
+* plxvm071          172.23.22.52
+* plxvm072          172.23.22.53
+* plxvm073          172.23.22.54
+* plxvm074          172.23.22.27
+* plxvm075          172.23.22.28
+* plxvm076          172.23.22.29
+* plxvm077          172.23.22.55
+* plv070staylink    172.23.6.28
+* plv070btf         172.23.5.39
+* plv071endeca      172.23.22.71
+
+=== DBA group Start Oracle
+
+. ssh to plxvm070
+. Login as applmgr/applmgr_password
+. Verify on each node that there are no applmgr processes running
++
+----
+ps –ef | grep applmgr
+----
++
+. Start Oracle Apps
++
+----
+cd /u04/appl/bbadmin/bin
+./appsctrl.all.sh start
+----
++
+. Verify on each node that applmgr processes started
++
+----
+ps –ef | grep applmgr
+----
++
+. Login to single sign-on (Oracle Applications)
+* Choose Oracle tab at the top of bunnynet.
+* Use your network id and password to login to Single Sign-on.
+* Verify that apps are working correctly.
+
+.Troubleshooting
+[NOTE]
+===============================
+*One Node Start/Stop*
+
+* Shut down one node
+
+*Shut down listeners on all nodes*
+
+* Log onto Node you want to stop
+----
+cd $UTIL_TOP/bin
+./gsmctrl.sh stop
+----
+
+*Shut down all processes on one node*
+
+* Log onto the vm that you want to shut down
+----
+cd /u04/appl/comn/admin/scripts
+./adstrtal.sh
+----
+
+*Start listeners on all nodes*
+
+* Log onto the Node you stopped
+----
+cd $UTIL_TOP/bin
+./gsmctrl.sh start
+----
+
+*Bounce Concurrent Managers*
+
+* Log onto Admin Node
+----
+cd /u04/appl/comn/admin/scripts
+./adcmctl.sh stop
+ - Enter apps/<appspass> when prompted
+----
+
+* Verify that concurrent managers started on all nodes
+
+*Mobile Start/Stop*
+
+* Stop Mobile Applications
+** Log into the Mobile Node (WBBPRD/plxvm103)
+----
+cd $UTIL_TOP/bin
+./mwactrl.sh stop
+----
+** Verify mobile ports shut down
+
+* Start Mobile Applications
+** Log into the Mobile Node (WBBPRD/plxvm103)
+----
+cd $UTIL_TOP/bin
+./mwactrl.sh start
+----
+** Verify mobile started
+
+===============================
+
+
+
+
+
+
+
+
+
+
+
